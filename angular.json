@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "backoffice": "apps/backoffice",
-    "backoffice-e2e": "apps/backoffice-e2e"
+    "backoffice-e2e": "apps/backoffice-e2e",
+    "ui": "libs/ui"
   }
 }

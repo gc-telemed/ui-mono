@@ -1,0 +1,6 @@
+<p-dock [model]="dockItems" position="right" class="bg-gray-600 z-50 -mt-24 -pt-24">
+  <ng-template pTemplate="item" let-item>
+    <img alt="icon" [src]="item.icon" [alt]="item.label" width="100%">
+  </ng-template>
+</p-dock>
+<router-outlet></router-outlet>
