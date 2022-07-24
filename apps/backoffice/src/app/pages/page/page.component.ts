@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { TooltipOptions } from 'primeng/tooltip';
 
+type UsedMenuProps = 'label' | 'tooltipOptions' | 'command' | 'routerLink';
 @Component({
   selector: 'gita-page',
   templateUrl: './page.component.html',
@@ -10,6 +11,7 @@ import { TooltipOptions } from 'primeng/tooltip';
 export class PageComponent implements OnInit {
 
   dockItems!: MenuItem[];
+  showBottomBar = false;
 
   private tooltipDefaults: (t: string) => TooltipOptions
     = (tooltipLabel: string) => ({
@@ -20,10 +22,13 @@ export class PageComponent implements OnInit {
       showDelay: 500,
     });
 
-  private labeler: (l: string) => Pick<MenuItem, 'label' | 'tooltipOptions'>
+
+  private labeler: (l: string) => Pick<MenuItem, UsedMenuProps>
     = (label: string) => ({
       label,
+      command: () => this.showBottomBar = !this.showBottomBar,
       tooltipOptions: this.tooltipDefaults(label),
+      routerLink: [{ outlets: { bottomBar: [label.toLowerCase()] } }],
     })
 
   ngOnInit(): void {
@@ -33,23 +38,23 @@ export class PageComponent implements OnInit {
         icon: '/assets/img/onion-diagram.webp',
       },
       {
-        ...this.labeler('Graphs'),
+        ...this.labeler('Graph'),
         icon: '/assets/img/cthulhu.png',
       },
       {
-        ...this.labeler('Forms'),
+        ...this.labeler('Form'),
         icon: '/assets/img/forms.png',
       },
       {
-        ...this.labeler('Charts'),
+        ...this.labeler('Chart'),
         icon: '/assets/img/pie.png',
       },
       {
-        ...this.labeler('Tables'),
+        ...this.labeler('Table'),
         icon: '/assets/img/datable.png',
       },
       {
-        ...this.labeler('Schedules'),
+        ...this.labeler('Schedule'),
         icon: '/assets/img/temporal.png',
       },
     ];

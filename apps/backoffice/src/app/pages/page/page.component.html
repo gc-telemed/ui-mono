@@ -4,3 +4,8 @@
   </ng-template>
 </p-dock>
 <router-outlet></router-outlet>
+
+<p-sidebar [(visible)]="showBottomBar" position="bottom" [baseZIndex]="10000" styleClass="p-sidebar-md">
+  <h3>Bottom Sidebar</h3>
+  <router-outlet name="bottomBar"></router-outlet>
+</p-sidebar>
