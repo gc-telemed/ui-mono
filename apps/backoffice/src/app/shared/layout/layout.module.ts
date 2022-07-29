@@ -1,3 +1,5 @@
+import { SidebarModule } from 'primeng/sidebar';
+import { PanelMenuModule } from 'primeng/panelmenu';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
@@ -18,7 +20,9 @@ const COMPS = [
   ],
   imports: [
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    PanelMenuModule,
+    SidebarModule
   ],
   exports: [
     ...COMPS

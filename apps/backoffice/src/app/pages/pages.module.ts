@@ -1,3 +1,5 @@
+import { LayoutModule } from './../shared/layout/layout.module';
+import { ButtonModule } from 'primeng/button';
 import { FeaturesModule } from './../features/features.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -6,6 +8,7 @@ import { CardModule } from 'primeng/card';
 import { PagesRoutingModule } from './pages-routing.module';
 import { DockModule } from 'primeng/dock';
 import { SidebarModule } from 'primeng/sidebar';
+import { SlideMenuModule } from 'primeng/slidemenu';
 
 @NgModule({
   declarations: [PageComponent],
@@ -14,8 +17,11 @@ import { SidebarModule } from 'primeng/sidebar';
     CardModule,
     PagesRoutingModule,
     DockModule,
+    SlideMenuModule,
     SidebarModule,
-    FeaturesModule
+    FeaturesModule,
+    ButtonModule,
+    LayoutModule
   ],
 })
 export class PagesModule { }

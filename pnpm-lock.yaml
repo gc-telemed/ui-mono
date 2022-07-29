@@ -21,6 +21,7 @@ specifiers:
   '@fortawesome/free-brands-svg-icons': ^6.1.1
   '@fortawesome/free-regular-svg-icons': ^6.1.1
   '@fortawesome/free-solid-svg-icons': ^6.1.1
+  '@ngrx/schematics': ^14.0.2
   '@ngx-formly/core': ^5.12.6
   '@ngx-formly/primeng': ^5.12.6
   '@nrwl/angular': 14.4.3
@@ -70,6 +71,7 @@ dependencies:
   '@fortawesome/free-brands-svg-icons': 6.1.1
   '@fortawesome/free-regular-svg-icons': 6.1.1
   '@fortawesome/free-solid-svg-icons': 6.1.1
+  '@ngrx/schematics': 14.0.2
   '@ngx-formly/core': 5.12.6_xw57avwmxsayllqitgt7vrvrpq
   '@ngx-formly/primeng': 5.12.6_lo2e5hjcoh2k2qe3tj2hpyrgga
   '@nrwl/angular': 14.4.3_43mlxpshzhf5cedt7fn3wk772a
@@ -3137,6 +3139,10 @@ packages:
 
   /@leichtgewicht/ip-codec/2.0.4:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
+
+  /@ngrx/schematics/14.0.2:
+    resolution: {integrity: sha512-j1Jb0/aSmtgknJjPsR9LC33IlOaQ5lwWGWhG4ganYz68BkfakaLJ2jLesXl8IRQOYdJGrLUyXnyEFN8mbiWN9g==}
+    dev: false
 
   /@ngtools/webpack/14.0.6_giaol2cqnpelov2hqo3et4lvha:
     resolution: {integrity: sha512-mSmLqzRKxQgGiOhvJ8guvRLjXoTL17cVSWlL/Cz+Q3xc1bXa7537ZXBTQTEuZVU2ytdkniKc8l1HqXIx0pFNVQ==}

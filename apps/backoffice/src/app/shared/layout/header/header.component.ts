@@ -5,4 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent { }
+export class HeaderComponent {
+  displayer = false;
+
+  toggleSidebar() {
+    this.displayer = !this.displayer;
+    console.log("toggleDisplay", this.displayer);
+  }
+}

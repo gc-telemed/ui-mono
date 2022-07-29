@@ -1,1 +1,22 @@
-<p>sidebar works!</p>
+<div id="cont" class="mt-6">
+    <div id="menu-show">
+        <a href="#menu-collapse">
+            <i class="material-icons back pi pi-angle-double-left mt-2 ml-2"></i>
+        </a>
+        <a href="#menu-show">
+            <div class="logo">
+                <span></span>
+                <p class="mt-3 pl-4">Dr S. Karna</p>
+            </div>
+            <p class="pmenu">DOCS</p>
+        </a>
+        <hr class="mt-3 ml-6">
+        <ul class="menu">
+            <li class="flex flex-row place-items-center" *ngFor="let item of items">
+                <i class="pi material-icons" [ngClass]="item.icon!"></i>
+                <p>&nbsp; {{item.label}}</p>
+            </li>
+        </ul>
+        <i class="material-icons info pi pi-cog"></i>
+    </div>
+</div>

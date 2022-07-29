@@ -1,11 +1,15 @@
-<p-dock [model]="dockItems" position="right" class="bg-gray-600 z-50 -mt-24 -pt-24">
+<gita-sidebar></gita-sidebar>
+
+<p-dock [model]="dockItems" position="right" class="bg-gray-600 z-50 hidden lg:block shadow-lg shadow-cyan-500/50">
   <ng-template pTemplate="item" let-item>
     <img alt="icon" [src]="item.icon" [alt]="item.label" width="100%">
   </ng-template>
 </p-dock>
+
 <router-outlet></router-outlet>
 
-<p-sidebar [(visible)]="showBottomBar" position="bottom" [baseZIndex]="10000" styleClass="p-sidebar-md">
+<p-sidebar [visible]="(showBottomBar | async) ?? false" (visibleChange)="setBottomBar($event)" position="bottom"
+  [baseZIndex]="10000" styleClass="p-sidebar-md">
   <h3>Bottom Sidebar</h3>
   <router-outlet name="bottomBar"></router-outlet>
 </p-sidebar>

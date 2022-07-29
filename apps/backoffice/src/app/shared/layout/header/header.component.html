@@ -1,9 +1,13 @@
-<header class="h-8 mt-8 mb-2 flex items-center z-30 w-full">
+<header id="head" class="h-8 mt-8 mb-2 flex items-center z-30 w-full">
   <div class="container mx-auto px-6 flex items-center justify-between">
-    <span class="uppercase text-gray-800 dark:text-white font-black text-3xl">
-      OCT<span
-        class="text-indigo-800 hover:underline hover:underline-offset-4 hover:decoration-4 hover:decoration-indigo-800 text-3xl"><a
-          href='#'>O.Q</a></span>
+    <span class="uppercase text-gray-800 dark:text-white font-black text-3xl flex flex-row">
+      <a [href]="displayer ? '#menu-show' : '#menu-collapse'">
+        <i class="pi pt-1 mr-1 text-indigo-800 cursor-pointer" (click)="toggleSidebar()"
+          [ngClass]="displayer ? 'pi-angle-double-left' : 'pi-angle-double-right'" style="font-size: 1.75rem"></i>
+      </a>
+      <span>D<span
+          class="text-indigo-800 hover:underline hover:underline-offset-4 hover:decoration-4 hover:decoration-indigo-800 text-3xl"><a>O.Q</a></span>
+      </span>
     </span>
 
     <div class="flex items-center">

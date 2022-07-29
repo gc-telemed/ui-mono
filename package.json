@@ -24,6 +24,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@ngrx/schematics": "^14.0.2",
     "@ngx-formly/core": "^5.12.6",
     "@ngx-formly/primeng": "^5.12.6",
     "@nrwl/angular": "14.4.3",

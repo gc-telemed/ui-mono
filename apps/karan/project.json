@@ -1,0 +1,90 @@
+{
+  "projectType": "application",
+  "sourceRoot": "apps/karan/src",
+  "prefix": "gita",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/karan",
+        "index": "apps/karan/src/index.html",
+        "main": "apps/karan/src/main.ts",
+        "polyfills": "apps/karan/src/polyfills.ts",
+        "tsConfig": "apps/karan/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/karan/src/favicon.ico", "apps/karan/src/assets"],
+        "styles": ["apps/karan/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/karan/src/environments/environment.ts",
+              "with": "apps/karan/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "karan:build:production"
+        },
+        "development": {
+          "browserTarget": "karan:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4242
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "karan:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/karan/**/*.ts", "apps/karan/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/karan"],
+      "options": {
+        "jestConfig": "apps/karan/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["clinical"]
+}
