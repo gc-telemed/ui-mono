@@ -1,14 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { selectLayout } from './../../../core/store/layout/layout.selectors';
+
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { MenuItem } from 'primeng/api';
+import { Subject, takeUntil } from 'rxjs';
+import { collapseSidebar, expandSidebar } from '../../../core/store/layout/layout.actions';
 
 @Component({
   selector: 'gita-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit, OnDestroy {
 
-  items!: MenuItem[];
+  protected items!: MenuItem[];
+  onDestroy$ = new Subject<true>();
+
+  layout$ = this.store.select(selectLayout).pipe(takeUntil(this.onDestroy$));
+
+  protected onSidebarCollapse() {
+    this.store.dispatch(collapseSidebar());
+  }
+
+  protected onSidebarExpand() {
+    this.store.dispatch(expandSidebar());
+  }
+
+  constructor(private store: Store) { }
 
   ngOnInit() {
     this.items = [
@@ -25,17 +43,26 @@ export class SidebarComponent implements OnInit {
         icon: 'pi-fw pi-user-plus',
       },
       {
+        label: 'Billing',
+        icon: 'pi-fw pi-book',
+      },
+      {
         label: 'Inventory',
         icon: 'pi-fw pi-qrcode',
       },
       {
         label: 'Treatments',
-        icon: 'pi-fw pi-book',
+        icon: 'pi-fw pi-link',
       },
       {
         label: 'Statistics',
         icon: 'pi-fw pi-chart-line',
       }
     ];
+  }
+
+  ngOnDestroy() {
+    this.onDestroy$.next(true);
+    this.onDestroy$.complete();
   }
 }

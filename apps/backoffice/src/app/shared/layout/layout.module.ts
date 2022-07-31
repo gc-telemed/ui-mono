@@ -1,3 +1,4 @@
+import { LetModule, PushModule } from '@ngrx/component';
 import { SidebarModule } from 'primeng/sidebar';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { NgModule } from '@angular/core';
@@ -22,7 +23,9 @@ const COMPS = [
     CommonModule,
     FontAwesomeModule,
     PanelMenuModule,
-    SidebarModule
+    SidebarModule,
+    LetModule,
+    PushModule
   ],
   exports: [
     ...COMPS

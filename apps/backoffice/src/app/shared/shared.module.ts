@@ -2,14 +2,18 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { LayoutModule } from './layout/layout.module';
 
+
+const MODS = [
+  LayoutModule,
+]
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    LayoutModule
+    ...MODS
   ],
   exports: [
-    LayoutModule
+    ...MODS
   ]
 })
 export class SharedModule { }
