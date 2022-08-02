@@ -9,6 +9,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { DockModule } from 'primeng/dock';
 import { SidebarModule } from 'primeng/sidebar';
 import { SlideMenuModule } from 'primeng/slidemenu';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [PageComponent],

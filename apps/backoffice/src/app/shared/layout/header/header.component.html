@@ -2,8 +2,8 @@
   <div class="container mx-auto px-6 flex items-center justify-between">
     <span class="uppercase text-gray-800 dark:text-white font-black text-3xl flex flex-row">
       <ng-container *ngrxLet="layout$ as layout">
-        <a [href]="['hidden', 'collapsed'].includes(layout.sidebar) ? '#menu-default' : '#menu-show'">
-          <i class="pi pt-1 mr-1 text-indigo-800 cursor-pointer" (click)="toggleSidebar()"
+        <a (click)="toggleSidebar()">
+          <i class="pi pt-1 mr-1 text-indigo-800 cursor-pointer"
             [ngClass]="['hidden', 'collapsed'].includes(layout.sidebar) ? 'pi-angle-double-right' : 'pi-angle-double-left'"
             style="font-size: 1.75rem"></i>
         </a>

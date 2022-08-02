@@ -12,8 +12,9 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
-import { layoutReducer } from './core/store/layout/layout.reducer';
+
 import { environment } from '../environments/environment';
+import { layoutReducer } from './shared/layout/store/layout/layout.reducer';
 
 @NgModule({
   declarations: [AppComponent],

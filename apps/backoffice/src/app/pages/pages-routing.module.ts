@@ -8,6 +8,33 @@ import { PageComponent } from './page/page.component';
 import { NgModule } from "@angular/core";
 import { Route, RouterModule } from "@angular/router";
 
+const bottomRoutes: Route[] = [
+  {
+    path: 'composer',
+    component: ComposerComponent,
+  },
+  {
+    path: 'chart',
+    component: ChartComponent,
+  },
+  {
+    path: 'form',
+    component: FormComponent,
+  },
+  {
+    path: 'graph',
+    component: GraphComponent,
+  },
+  {
+    path: 'schedule',
+    component: ScheduleComponent,
+  },
+  {
+    path: 'table',
+    component: TableComponent,
+  }
+].map(route => ({ ...route, outlet: "bottomBar" }));
+
 const routes: Route[] = [
   {
     path: "",
@@ -18,40 +45,15 @@ const routes: Route[] = [
         loadChildren: () => import("./editor/editor.module").then(m => m.EditorModule)
       },
       {
+        path: "patients",
+        loadChildren: () => import("./patient/patient.module").then(m => m.PatientModule)
+      },
+      {
         path: "",
         pathMatch: "full",
         loadChildren: () => import("./index/index.module").then(m => m.IndexModule)
       },
-      {
-        path: 'composer',
-        component: ComposerComponent,
-        outlet: "bottomBar",
-      },
-      {
-        path: 'chart',
-        component: ChartComponent,
-        outlet: "bottomBar",
-      },
-      {
-        path: 'form',
-        component: FormComponent,
-        outlet: "bottomBar",
-      },
-      {
-        path: 'graph',
-        component: GraphComponent,
-        outlet: "bottomBar",
-      },
-      {
-        path: 'schedule',
-        component: ScheduleComponent,
-        outlet: "bottomBar",
-      },
-      {
-        path: 'table',
-        component: TableComponent,
-        outlet: "bottomBar",
-      }
+      ...bottomRoutes
     ],
   },
 ];

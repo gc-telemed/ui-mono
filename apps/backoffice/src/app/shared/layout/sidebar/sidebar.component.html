@@ -1,22 +1,36 @@
-<div id="cont" class="mt-6">
-    <div id="menu-show">
-        <a href="#menu-collapse">
-            <i class="material-icons back pi pi-angle-double-left mt-2 ml-2" (click)="onSidebarCollapse()"></i>
+<ng-container *ngrxLet="isSidebarExpanded$ as isSidebarExpanded">
+    <aside
+        class="flex flex-col text-gray-300 bg-black transition-all duration-300 ease-in-out z-20 fixed h-3/4 mt-24 drop-shadow-lg overflow-y-auto touch-pan-y"
+        [ngClass]="isSidebarExpanded ? 'w-48' : 'w-20'">
+        <a (click)="toggleSidebar()"
+            class="h-20 flex items-center px-4 bg-black hover:text-gray-100 hover:bg-opacity-50 focus:outline-none focus:text-gray-100 focus:bg-opacity-50 overflow-hidden relative group will-change-contents">
+            <img routerLink="/" src="/assets/img/logo-1024.png" alt="Gita Aspirations"
+                class="h-12 w-12 flex-shrink-0 group-hover:blur-sm">
+            <p class="ml-2 text-xl font-medium duration-300 ease-in-out flex flex-col" *ngIf="isSidebarExpanded">
+                <span class="text-md underline underline-offset-4 decoration-1">Dr S Karna</span>
+                <span class="text-sm flex justify-between"><span>GDFC</span> | <span>GAPL</span> </span>
+            </p>
+            <i class="pi opacity-0 group-hover:opacity-100 drop-shadow-2xl text-indigo-700 absolute text-4xl top-5 left-5"
+                [ngClass]="isSidebarExpanded ? 'pi-angle-double-left' : 'pi-angle-double-right'"></i>
         </a>
-        <a href="#menu-show">
-            <div class="logo" (click)="onSidebarExpand()">
-                <span></span>
-                <p class="mt-3 pl-4">Dr S. Karna</p>
-            </div>
-            <p class="pmenu" (click)="onSidebarExpand()">DOQS</p>
-        </a>
-        <hr class="mt-3 ml-6">
-        <ul class="menu">
-            <li class="flex flex-row place-items-center" *ngFor="let item of items">
-                <i class="pi material-icons" [ngClass]="item.icon!"></i>
-                <p>&nbsp; {{item.label}}</p>
-            </li>
-        </ul>
-        <i class="material-icons info pi pi-cog"></i>
-    </div>
-</div>
+        <hr class="border-1">
+        <nav class="p-4 space-y-2 font-medium will-change-contents">
+            <a *ngFor="let item of items" [routerLink]="item.routerLink" class="flex items-center flex-row place-items-center py-8 h-10 px-3 text-white hover:bg-indigo-700 rounded-lg 
+                            transition-colors duration-150 ease-in-out focus:outline-none focus:shadow-outline">
+                <i class="h-6 w-6 flex-shrink-0 pi" [ngClass]="item.icon!"></i>
+                <span class="ml-2 mb-1 duration-300 ease-in-out" *ngIf="isSidebarExpanded">{{item.label}}</span>
+            </a>
+        </nav>
+        <div class="border-t border-white p-4 font-medium mt-auto">
+            <a href="#"
+                class="flex items-center h-10 px-3 hover:text-gray-100 hover:bg-gray-600 hover:bg-opacity-25 rounded-lg transition-colors duration-150 ease-in-out focus:outline-none focus:shadow-outline">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6 flex-shrink-0">
+                    <path fill-rule="evenodd"
+                        d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                        clip-rule="evenodd" />
+                </svg>
+                <span class="ml-2 duration-300 ease-in-out" *ngIf="isSidebarExpanded">Settings</span>
+            </a>
+        </div>
+    </aside>
+</ng-container>

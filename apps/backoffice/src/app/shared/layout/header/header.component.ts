@@ -2,8 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subject, take, takeUntil } from 'rxjs';
 
-import { collapseSidebar, expandSidebar } from './../../../core/store/layout/layout.actions';
-import { selectLayout } from './../../../core/store/layout/layout.selectors';
+import { collapseSidebar, expandSidebar } from '../store/layout/layout.actions';
+import { selectLayout } from '../store/layout/layout.selectors';
 
 @Component({
   selector: 'gita-header',
