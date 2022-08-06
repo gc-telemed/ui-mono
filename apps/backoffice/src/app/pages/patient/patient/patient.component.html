@@ -1,0 +1,21 @@
+<section class='bg-white dark:bg-gray-800 flex relative z-0 items-center overflow-hidden'>
+    <div class='container mx-auto px-6 relative py-16'>
+        <div class="card">
+            <p-dataView [value]="products" [paginator]="true" [rows]="12" layout="grid"
+                (onChangeLayout)="onLayoutToggle($event)">
+                <ng-template pTemplate="header">
+                    <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+                </ng-template>
+                <ng-template let-prod pTemplate="listItem">
+                    <div class="block m-4 p-4 bg-slate-800 text-white">{{prod.id}}</div>
+                </ng-template>
+                <ng-template let-prod pTemplate="gridItem">
+                    <div #griddy class="m-4 p-4 bg-slate-800 text-white">{{prod.id}}</div>
+                </ng-template>
+                <ng-template pTemplate="footer">
+                    <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+                </ng-template>
+            </p-dataView>
+        </div>
+    </div>
+</section>

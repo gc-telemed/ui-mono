@@ -1,9 +1,9 @@
-<ng-container *ngrxLet="isSidebarExpanded$ as isSidebarExpanded">
-    <aside
+<ng-container *rxLet="isSidebarExpanded$ as isSidebarExpanded">
+    <aside (mouseover)="pauseIt()" (mouseleave)="unpauseIt()"
         class="flex flex-col text-gray-300 bg-black transition-all duration-300 ease-in-out z-20 fixed h-3/4 mt-24 drop-shadow-lg overflow-y-auto touch-pan-y"
         [ngClass]="isSidebarExpanded ? 'w-48' : 'w-20'">
         <a (click)="toggleSidebar()"
-            class="h-20 flex items-center px-4 bg-black hover:text-gray-100 hover:bg-opacity-50 focus:outline-none focus:text-gray-100 focus:bg-opacity-50 overflow-hidden relative group will-change-contents">
+            class="h-20 flex items-center px-4 bg-black hover:text-gray-100 hover:bg-opacity-50 focus:outline-none focus:text-gray-100 focus:bg-opacity-50 overflow-visible relative group will-change-contents">
             <img routerLink="/" src="/assets/img/logo-1024.png" alt="Gita Aspirations"
                 class="h-12 w-12 flex-shrink-0 group-hover:blur-sm">
             <p class="ml-2 text-xl font-medium duration-300 ease-in-out flex flex-col" *ngIf="isSidebarExpanded">
@@ -15,7 +15,8 @@
         </a>
         <hr class="border-1">
         <nav class="p-4 space-y-2 font-medium will-change-contents">
-            <a *ngFor="let item of items" [routerLink]="item.routerLink" class="flex items-center flex-row place-items-center py-8 h-10 px-3 text-white hover:bg-indigo-700 rounded-lg 
+            <a *ngFor="let item of items" [routerLink]="item.routerLink" routerLinkActive="bg-indigo-700"
+                [routerLinkActiveOptions]="{'exact': true}" class="flex items-center flex-row place-items-center pt-7 pb-6 h-10 px-3 text-white hover:bg-indigo-700 rounded-lg 
                             transition-colors duration-150 ease-in-out focus:outline-none focus:shadow-outline">
                 <i class="h-6 w-6 flex-shrink-0 pi" [ngClass]="item.icon!"></i>
                 <span class="ml-2 mb-1 duration-300 ease-in-out" *ngIf="isSidebarExpanded">{{item.label}}</span>

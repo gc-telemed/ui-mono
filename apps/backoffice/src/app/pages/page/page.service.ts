@@ -47,10 +47,6 @@ export class PageService {
 
         this.icons = [
             {
-                ...this.labeler('Composer'),
-                icon: '/assets/img/onion-diagram.webp',
-            },
-            {
                 ...this.labeler('Graph'),
                 icon: '/assets/img/cthulhu.png',
             },

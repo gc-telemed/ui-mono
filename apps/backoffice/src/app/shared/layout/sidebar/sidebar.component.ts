@@ -3,7 +3,7 @@ import { selectLayout } from '../store/layout/layout.selectors';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { MenuItem } from 'primeng/api';
-import { map, Subject, take, takeUntil } from 'rxjs';
+import { interval, map, noop, Subject, switchMap, take, takeUntil, takeWhile, tap } from 'rxjs';
 import { collapseSidebar, expandSidebar } from '../store/layout/layout.actions';
 
 @Component({
@@ -20,12 +20,29 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
   isSidebarExpanded$ = this.layout$.pipe(map(l => l.sidebar === 'shown'));
 
+  pauseCollapse = false;
+
   protected onSidebarCollapse() {
+    this.pauseCollapse = false;
     this.store.dispatch(collapseSidebar());
   }
 
   protected onSidebarExpand() {
     this.store.dispatch(expandSidebar());
+  }
+
+  private autoCollapse() {
+
+    this.isSidebarExpanded$.pipe(
+      takeUntil(this.onDestroy$),
+      switchMap((expanded) => interval(5000).pipe(
+        takeWhile(() => expanded) // TODO: story 1. leakage and subscriptions
+      )),
+      tap(() => !this.pauseCollapse ?
+        this.onSidebarCollapse() :
+        noop()
+      )
+    ).subscribe();
   }
 
   constructor(private store: Store) { }
@@ -40,12 +57,12 @@ export class SidebarComponent implements OnInit, OnDestroy {
       {
         label: 'Schedule',
         icon: 'pi-fw pi-calendar-plus',
-        routerLink: ['/schedule']
+        routerLink: ['schedule']
       },
       {
         label: 'Patients',
         icon: 'pi-fw pi-user-plus',
-        routerLink: ['/patients']
+        routerLink: ['patients']
       },
       {
         label: 'Billing',
@@ -68,6 +85,16 @@ export class SidebarComponent implements OnInit, OnDestroy {
         routerLink: ['/statistics']
       }
     ];
+
+    this.autoCollapse();
+  }
+
+  pauseIt() {
+    this.pauseCollapse = true;
+  }
+
+  unpauseIt() {
+    this.pauseCollapse = false;
   }
 
   toggleSidebar() {

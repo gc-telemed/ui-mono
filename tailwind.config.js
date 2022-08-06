@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./apps/backoffice/src/**/*.{html,ts}",
@@ -10,6 +11,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('daisyui'),
+    require('daisyui')
   ],
 }

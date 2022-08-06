@@ -1,12 +1,12 @@
-import { LetModule, PushModule } from '@ngrx/component';
-import { SidebarModule } from 'primeng/sidebar';
-import { PanelMenuModule } from 'primeng/panelmenu';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LetModule, PushModule } from '@rx-angular/template';
+import { PanelMenuModule } from 'primeng/panelmenu';
+import { SidebarModule } from 'primeng/sidebar';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 const COMPS = [
@@ -25,7 +25,7 @@ const COMPS = [
     PanelMenuModule,
     SidebarModule,
     LetModule,
-    PushModule
+    PushModule,
   ],
   exports: [
     ...COMPS

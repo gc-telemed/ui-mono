@@ -3,16 +3,11 @@ import { ScheduleComponent } from './../features/bartender/schedule/schedule.com
 import { GraphComponent } from './../features/bartender/graph/graph.component';
 import { FormComponent } from './../features/bartender/form/form.component';
 import { ChartComponent } from './../features/bartender/chart/chart.component';
-import { ComposerComponent } from './../features/bartender/composer/composer.component';
 import { PageComponent } from './page/page.component';
 import { NgModule } from "@angular/core";
 import { Route, RouterModule } from "@angular/router";
 
 const bottomRoutes: Route[] = [
-  {
-    path: 'composer',
-    component: ComposerComponent,
-  },
   {
     path: 'chart',
     component: ChartComponent,

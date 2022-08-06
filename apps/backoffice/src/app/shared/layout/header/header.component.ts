@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subject, take, takeUntil } from 'rxjs';
 
@@ -10,17 +10,13 @@ import { selectLayout } from '../store/layout/layout.selectors';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class HeaderComponent implements OnDestroy {
 
   onDestroy$ = new Subject<true>();
 
   layout$ = this.store.select(selectLayout).pipe(takeUntil(this.onDestroy$));
 
   constructor(private store: Store) { }
-
-  ngOnInit() {
-    this.layout$.subscribe(l => console.log("layout on header init", l.sidebar));
-  }
 
   toggleSidebar() {
     this.layout$.pipe(take(1)).subscribe(
