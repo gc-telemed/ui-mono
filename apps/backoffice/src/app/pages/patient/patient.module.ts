@@ -14,7 +14,11 @@ import { RippleModule } from 'primeng/ripple';
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
-  { path: '', component: PatientComponent }
+  {
+    path: '',
+    component: PatientComponent,
+    title: 'Patient',
+  }
 ]
 
 @NgModule({

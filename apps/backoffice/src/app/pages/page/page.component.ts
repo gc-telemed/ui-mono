@@ -13,6 +13,7 @@ import { PageService } from './page.service';
 export class PageComponent implements OnInit {
 
   dockItems!: MenuItem[];
+  floatItems!: MenuItem[];
   showBottomBar = this.service.isBottomBarShown();
 
   displayer = false;
@@ -21,6 +22,7 @@ export class PageComponent implements OnInit {
 
   ngOnInit(): void {
     this.dockItems = this.service.dockItems;
+    this.floatItems = this.service.floatItems;
   }
 
   setBottomBar(show: boolean): void {

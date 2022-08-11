@@ -3,12 +3,12 @@
     <img alt="icon" [src]="item.icon" [alt]="item.label" width="100%">
   </ng-template>
 </p-dock>
-
+<p-speedDial [model]="floatItems" [radius]="120" direction="up-left" type="quarter-circle"
+  class="fixed bottom-20 right-20 z-50 shadow-lg " buttonClassName="bg-black hover:bg-black"></p-speedDial>
 <router-outlet></router-outlet>
 
 
 <p-sidebar [visible]="(showBottomBar | async) ?? false" (visibleChange)="setBottomBar($event)" position="bottom"
-  [baseZIndex]="10000" styleClass="p-sidebar-md">
-  <h3>Bottom Sidebar</h3>
+  [baseZIndex]="10000" styleClass="p-sidebar-lg">
   <router-outlet name="bottomBar"></router-outlet>
 </p-sidebar>

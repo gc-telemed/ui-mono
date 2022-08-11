@@ -18,9 +18,16 @@ specifiers:
   '@angular/platform-browser-dynamic': ~14.0.0
   '@angular/router': ~14.0.0
   '@fortawesome/angular-fontawesome': ^0.11.1
+  '@fortawesome/fontawesome-svg-core': ^6.1.2
   '@fortawesome/free-brands-svg-icons': ^6.1.1
   '@fortawesome/free-regular-svg-icons': ^6.1.1
   '@fortawesome/free-solid-svg-icons': ^6.1.1
+  '@fullcalendar/angular': ^5.11.2
+  '@fullcalendar/core': ^5.11.2
+  '@fullcalendar/daygrid': ^5.11.2
+  '@fullcalendar/interaction': ^5.11.2
+  '@fullcalendar/list': ^5.11.2
+  '@fullcalendar/timegrid': ^5.11.2
   '@ngrx/eslint-plugin': ^14.0.2
   '@ngrx/schematics': ^14.0.2
   '@ngrx/store': ^14.0.2
@@ -73,10 +80,17 @@ dependencies:
   '@angular/platform-browser': 14.0.6_spn3at637jkuvsqjt7uncfwzje
   '@angular/platform-browser-dynamic': 14.0.6_5qq33cwqpmskqkofsmdwscvapm
   '@angular/router': 14.0.6_x7bxrt5gerelbc6qgr3iwopgve
-  '@fortawesome/angular-fontawesome': 0.11.1_y6d2mfy6tdlja6huyck6dwjpea
+  '@fortawesome/angular-fontawesome': 0.11.1_az54vttpz64hsjw6qtvuumyo2u
+  '@fortawesome/fontawesome-svg-core': 6.1.2
   '@fortawesome/free-brands-svg-icons': 6.1.1
   '@fortawesome/free-regular-svg-icons': 6.1.1
   '@fortawesome/free-solid-svg-icons': 6.1.1
+  '@fullcalendar/angular': 5.11.2_jgc7rjv6dmfsh4hhmn3evgouju
+  '@fullcalendar/core': 5.11.2
+  '@fullcalendar/daygrid': 5.11.2
+  '@fullcalendar/interaction': 5.11.2
+  '@fullcalendar/list': 5.11.2
+  '@fullcalendar/timegrid': 5.11.2
   '@ngrx/schematics': 14.0.2
   '@ngrx/store': 14.0.2_wvynqn5moc4acof2d4ypz7xkwa
   '@ngrx/store-devtools': 14.0.2_evm2pfp3d4xy5smz6b6mnvwyzm
@@ -2844,14 +2858,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@fortawesome/angular-fontawesome/0.11.1_y6d2mfy6tdlja6huyck6dwjpea:
+  /@fortawesome/angular-fontawesome/0.11.1_az54vttpz64hsjw6qtvuumyo2u:
     resolution: {integrity: sha512-Ngzm5MVxk76ZhYpPTNOI/mpYNz9bzwfBXC5L9mktLgOONjBuYBPVt+bH8lny8hNtDk0ppZzXsMN6CO7hckdfnw==}
     peerDependencies:
       '@angular/core': ^14.0.0
       '@fortawesome/fontawesome-svg-core': ~1.2.27 || ~1.3.0-beta2 || ^6.1.0
     dependencies:
       '@angular/core': 14.0.6_rxjs@7.4.0+zone.js@0.11.6
-      '@fortawesome/fontawesome-svg-core': 6.1.1
+      '@fortawesome/fontawesome-svg-core': 6.1.2
       tslib: 2.4.0
     dev: false
 
@@ -2861,12 +2875,18 @@ packages:
     requiresBuild: true
     dev: false
 
-  /@fortawesome/fontawesome-svg-core/6.1.1:
-    resolution: {integrity: sha512-NCg0w2YIp81f4V6cMGD9iomfsIj7GWrqmsa0ZsPh59G7PKiGN1KymZNxmF00ssuAlo/VZmpK6xazsGOwzKYUMg==}
+  /@fortawesome/fontawesome-common-types/6.1.2:
+    resolution: {integrity: sha512-wBaAPGz1Awxg05e0PBRkDRuTsy4B3dpBm+zreTTyd9TH4uUM27cAL4xWyWR0rLJCrRwzVsQ4hF3FvM6rqydKPA==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
+
+  /@fortawesome/fontawesome-svg-core/6.1.2:
+    resolution: {integrity: sha512-853G/Htp0BOdXnPoeCPTjFrVwyrJHpe8MhjB/DYE9XjwhnNDfuBCd3aKc2YUYbEfHEcBws4UAA0kA9dymZKGjA==}
     engines: {node: '>=6'}
     requiresBuild: true
     dependencies:
-      '@fortawesome/fontawesome-common-types': 6.1.1
+      '@fortawesome/fontawesome-common-types': 6.1.2
     dev: false
 
   /@fortawesome/free-brands-svg-icons/6.1.1:
@@ -2891,6 +2911,63 @@ packages:
     requiresBuild: true
     dependencies:
       '@fortawesome/fontawesome-common-types': 6.1.1
+    dev: false
+
+  /@fullcalendar/angular/5.11.2_jgc7rjv6dmfsh4hhmn3evgouju:
+    resolution: {integrity: sha512-o4IsB3DCS7mcwwXtbaAAWY5WVIT1hSelj/hvFwkr49/ZxmmQYjpjP00Gant0vxvSvu29ZYys/2Gg/ZFVtkkLhQ==}
+    engines: {node: '>= 6.9.0', npm: '>= 3.0.0'}
+    peerDependencies:
+      '@angular/common': 9 - 13
+      '@angular/core': 9 - 13
+    dependencies:
+      '@angular/common': 14.0.6_wvynqn5moc4acof2d4ypz7xkwa
+      '@angular/core': 14.0.6_rxjs@7.4.0+zone.js@0.11.6
+      '@fullcalendar/core': 5.11.2
+      fast-deep-equal: 3.1.3
+      tslib: 2.4.0
+    dev: false
+
+  /@fullcalendar/common/5.11.2:
+    resolution: {integrity: sha512-2YBRs4IFrZlo7UL7hEHK+QgnuQnVIfwSspCOy0Qe+DtU2hu3myPrxsW0Tt/8RaoWsRndRDw5jeJzpjcVHDSSGQ==}
+    dependencies:
+      tslib: 2.4.0
+    dev: false
+
+  /@fullcalendar/core/5.11.2:
+    resolution: {integrity: sha512-+lO4EWqssONDWF1NO+tiW8KYqKj+MluLAnnRhIKlnFfvNJXEoondWKR6q3jF9Yxe/VmbVFKPq9z6auIxc7zr3A==}
+    dependencies:
+      '@fullcalendar/common': 5.11.2
+      preact: 10.10.1
+      tslib: 2.4.0
+    dev: false
+
+  /@fullcalendar/daygrid/5.11.2:
+    resolution: {integrity: sha512-WmR8EAOR8Y9wyxlCK2gBW6lG/dPSN37eM8L7vgc7YgrQE1knL7ISgaUnDfFUNBFztmLakO/ZpeQQFpz3pnJwXg==}
+    dependencies:
+      '@fullcalendar/common': 5.11.2
+      tslib: 2.4.0
+    dev: false
+
+  /@fullcalendar/interaction/5.11.2:
+    resolution: {integrity: sha512-PlUXP9pW62tLgp2DttLC2f8IX5yeRLRboY/knnRKQRlWoX9tUvmIDK2vZPyAHbXikfYcKtL/B91oCaFWF/HrRA==}
+    dependencies:
+      '@fullcalendar/common': 5.11.2
+      tslib: 2.4.0
+    dev: false
+
+  /@fullcalendar/list/5.11.2:
+    resolution: {integrity: sha512-qzf0LwRif7gxjmoW2jxOARKscsTB//b+9IzQXtbnfGlm00f+YPYP21lUK83O7ztsmvunCWZPSZSFgk2yz72WVQ==}
+    dependencies:
+      '@fullcalendar/common': 5.11.2
+      tslib: 2.4.0
+    dev: false
+
+  /@fullcalendar/timegrid/5.11.2:
+    resolution: {integrity: sha512-Ue/c78Op5FDsHM0DmjZYQ+t1bnd8ZWFZeWhjqCNVV7cgCZnp48BllOZjYCyssFxVpMe+Dj+tS4WcNrrXP8M4Hg==}
+    dependencies:
+      '@fullcalendar/common': 5.11.2
+      '@fullcalendar/daygrid': 5.11.2
+      tslib: 2.4.0
     dev: false
 
   /@gar/promisify/1.1.3:
@@ -10628,6 +10705,10 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
+
+  /preact/10.10.1:
+    resolution: {integrity: sha512-cXljG59ylGtSLismoLojXPAGvnh2ipQr3BYz9KZQr+1sdASCT+sR/v8dSMDS96xGCdtln2wHfAHCnLJK+XcBNg==}
+    dev: false
 
   /prelude-ls/1.1.2:
     resolution: {integrity: sha512-ESF23V4SKG6lVSGZgYNpbsiaAkdab6ZgOxe52p7+Kid3W3u3bxR4Vfd/o21dmN7jSt0IwgZ4v5MUd26FEtXE9w==}

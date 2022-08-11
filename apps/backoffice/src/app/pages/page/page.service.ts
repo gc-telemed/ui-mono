@@ -11,10 +11,16 @@ export class PageService {
 
     private icons!: MenuItem[];
 
+    private floatingItems!: MenuItem[];
+
     private showBottomBar = new BehaviorSubject<boolean>(false);
 
     get dockItems(): MenuItem[] {
-        return this.icons;
+        return this.icons.slice();
+    }
+
+    get floatItems(): MenuItem[] {
+        return this.floatingItems.slice();
     }
 
     isBottomBarShown(): Observable<boolean> {
@@ -66,6 +72,27 @@ export class PageService {
                 ...this.labeler('Schedule'),
                 icon: '/assets/img/temporal.png',
             },
+        ];
+
+        this.floatingItems = [
+            {
+                icon: 'pi pi-pencil',
+                command: () => {
+                    console.log({ severity: 'info', summary: 'Add', detail: 'Data Added' });
+                }
+            },
+            {
+                icon: 'pi pi-refresh',
+                command: () => {
+                    console.log({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
+                }
+            },
+            {
+                icon: 'pi pi-trash',
+                command: () => {
+                    console.log({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
+                }
+            }
         ];
 
     }

@@ -9,7 +9,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { DockModule } from 'primeng/dock';
 import { SidebarModule } from 'primeng/sidebar';
 import { SlideMenuModule } from 'primeng/slidemenu';
-import { FormsModule } from '@angular/forms';
+import { SpeedDialModule } from 'primeng/speeddial';
 
 @NgModule({
   declarations: [PageComponent],
@@ -22,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     SidebarModule,
     FeaturesModule,
     ButtonModule,
-    LayoutModule
+    LayoutModule,
+    SpeedDialModule
   ],
 })
 export class PagesModule { }

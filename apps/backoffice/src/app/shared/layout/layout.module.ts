@@ -1,3 +1,4 @@
+import { UiModule } from '@gita/ui';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -26,6 +27,7 @@ const COMPS = [
     SidebarModule,
     LetModule,
     PushModule,
+    UiModule
   ],
   exports: [
     ...COMPS

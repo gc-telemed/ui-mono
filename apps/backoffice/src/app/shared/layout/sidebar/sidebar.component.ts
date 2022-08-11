@@ -3,7 +3,7 @@ import { selectLayout } from '../store/layout/layout.selectors';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { MenuItem } from 'primeng/api';
-import { interval, map, noop, Subject, switchMap, take, takeUntil, takeWhile, tap } from 'rxjs';
+import { map, Subject, takeUntil } from 'rxjs';
 import { collapseSidebar, expandSidebar } from '../store/layout/layout.actions';
 
 @Component({
@@ -13,37 +13,16 @@ import { collapseSidebar, expandSidebar } from '../store/layout/layout.actions';
 })
 export class SidebarComponent implements OnInit, OnDestroy {
 
+  private onDestroy$ = new Subject<true>();
+  private layout$ = this.store.select(selectLayout).pipe(takeUntil(this.onDestroy$));
+
   protected items!: MenuItem[];
-  onDestroy$ = new Subject<true>();
+  protected isSidebarExpanded$ = this.layout$.pipe(map(l => l.sidebar === 'shown'));
 
-  layout$ = this.store.select(selectLayout).pipe(takeUntil(this.onDestroy$));
+  protected logoPath = '/assets/img/logo-1024.png'
 
-  isSidebarExpanded$ = this.layout$.pipe(map(l => l.sidebar === 'shown'));
-
-  pauseCollapse = false;
-
-  protected onSidebarCollapse() {
-    this.pauseCollapse = false;
-    this.store.dispatch(collapseSidebar());
-  }
-
-  protected onSidebarExpand() {
-    this.store.dispatch(expandSidebar());
-  }
-
-  private autoCollapse() {
-
-    this.isSidebarExpanded$.pipe(
-      takeUntil(this.onDestroy$),
-      switchMap((expanded) => interval(5000).pipe(
-        takeWhile(() => expanded) // TODO: story 1. leakage and subscriptions
-      )),
-      tap(() => !this.pauseCollapse ?
-        this.onSidebarCollapse() :
-        noop()
-      )
-    ).subscribe();
-  }
+  protected collapser: () => void = () => this.store.dispatch(collapseSidebar());
+  protected expander: () => void = () => this.store.dispatch(expandSidebar());
 
   constructor(private store: Store) { }
 
@@ -57,7 +36,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
       {
         label: 'Schedule',
         icon: 'pi-fw pi-calendar-plus',
-        routerLink: ['schedule']
+        routerLink: ['appointments']
       },
       {
         label: 'Patients',
@@ -67,50 +46,30 @@ export class SidebarComponent implements OnInit, OnDestroy {
       {
         label: 'Billing',
         icon: 'pi-fw pi-book',
-        routerLink: ['/billing']
+        routerLink: ['billing']
       },
       {
         label: 'Inventory',
         icon: 'pi-fw pi-qrcode',
-        routerLink: ['/inventory']
+        routerLink: ['inventory']
       },
       {
         label: 'Treatments',
         icon: 'pi-fw pi-link',
-        routerLink: ['/treatments']
+        routerLink: ['treatments']
       },
       {
         label: 'Statistics',
         icon: 'pi-fw pi-chart-line',
-        routerLink: ['/statistics']
+        routerLink: ['statistics']
       }
     ];
 
-    this.autoCollapse();
   }
 
-  pauseIt() {
-    this.pauseCollapse = true;
-  }
-
-  unpauseIt() {
-    this.pauseCollapse = false;
-  }
-
-  toggleSidebar() {
-    this.isSidebarExpanded$.pipe(take(1)).subscribe(
-      isSidebarExpanded => {
-        if (isSidebarExpanded) {
-          this.store.dispatch(collapseSidebar());
-        } else {
-          this.store.dispatch(expandSidebar());
-        }
-      }
-    );
-  }
-
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.onDestroy$.next(true);
     this.onDestroy$.complete();
   }
+
 }

@@ -1,3 +1,4 @@
+import { LetModule, PushModule } from '@rx-angular/template';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormalComponent } from './formal/formal.component';
@@ -5,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
 import { ButtonModule } from 'primeng/button';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [FormalComponent],
@@ -13,13 +15,15 @@ import { ButtonModule } from 'primeng/button';
     ReactiveFormsModule,
     ButtonModule,
     FormlyModule.forRoot(),
-    FormlyPrimeNGModule
+    FormlyPrimeNGModule,
+    LayoutModule
   ],
   exports: [
     FormalComponent,
     ReactiveFormsModule,
     FormlyModule,
-    FormlyPrimeNGModule
+    FormlyPrimeNGModule,
+    LayoutModule
   ]
 })
 export class UiModule { }
