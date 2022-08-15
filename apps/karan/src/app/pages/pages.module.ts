@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { SharedModule } from '../shared/shared.module';
 
 import { MainComponent } from './main/main.component';
 import { PagesRoutingModule } from './pages-routing.module';
 
 @NgModule({
   declarations: [MainComponent],
-  imports: [CommonModule, PagesRoutingModule],
+  imports: [CommonModule, PagesRoutingModule, SharedModule],
 })
 export class PagesModule { }

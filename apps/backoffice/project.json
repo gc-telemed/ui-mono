@@ -20,11 +20,7 @@
           "apps/backoffice/src/assets"
         ],
         "styles": [
-          "apps/backoffice/src/styles.scss",
-          "./node_modules/pnpm/@fullcalendar+common@5.11.2/node_modules/@fullcalendar/common/main.css",
-          "./node_modules/pnpm/@fullcalendar+daygrid@5.11.2/node_modules/@fullcalendar/daygrid/main.css",
-          "./node_modules/pnpm/@fullcalendar+timegrid@5.11.2/node_modules/@fullcalendar/timegrid/main.css",
-          "./node_modules/pnpm/@fullcalendar+list@5.11.2/node_modules/@fullcalendar/list/main.css"
+          "apps/backoffice/src/styles.scss"
         ],
         "allowedCommonJsDependencies": [
           "fast-deep-equal"

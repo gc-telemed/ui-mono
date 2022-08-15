@@ -1,9 +1,8 @@
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IndexComponent } from './index/index.component';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UiModule } from '@gita/ui';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { IndexComponent } from './index/index.component';
 
 
 const routes: Routes = [

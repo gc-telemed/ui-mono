@@ -11,7 +11,4 @@ import { faFacebook, faGithub, faGitlab, faMarkdown, faTwitter } from '@fortawes
 export class FooterComponent {
 
   icons: IconDefinition[] = [faGithub, faGitlab, faMarkdown, faTwitter, faFacebook];
-
-  protected year = new Date().getFullYear();
-
 }

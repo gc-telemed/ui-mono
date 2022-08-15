@@ -1,15 +1,13 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
 import { MenuItem } from 'primeng/api';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { map, Subject, takeUntil } from 'rxjs';
-
-import { collapseSidebar, expandSidebar } from '../store/layout/layout.actions';
-import { selectLayout } from '../store/layout/layout.selectors';
+import { selectLayout } from '../state/layout.selectors';
+import { Store } from '@ngrx/store';
+import { collapseSidebar, expandSidebar } from '../state/layout.actions';
 
 @Component({
   selector: 'gita-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 
@@ -21,7 +19,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   authPref = "RK";
 
-  prodPref = "OCT";
+  prodPref = "D";
 
   headerNavItems!: MenuItem[];
 
@@ -33,12 +31,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.headerNavItems = [
       {
-        label: 'Editor',
-        routerLink: '/editor',
+        label: 'Recent',
+        routerLink: '/recent',
       },
       {
-        label: 'Settings',
-        routerLink: '/settings',
+        label: 'All',
+        routerLink: '/all',
       }
     ]
   }

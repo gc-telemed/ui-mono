@@ -1,11 +1,10 @@
-import { LetModule, PushModule } from '@rx-angular/template';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormalComponent } from './formal/formal.component';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
 import { ButtonModule } from 'primeng/button';
+import { FormalComponent } from './formal/formal.component';
 import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
