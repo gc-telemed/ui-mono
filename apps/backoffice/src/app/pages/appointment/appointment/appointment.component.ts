@@ -1,4 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { CalendarOptions, defineFullCalendarElement, FullCalendarElement } from '@fullcalendar/web-component';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
+import listPlugin from '@fullcalendar/list';
+import timeGridPlugin from '@fullcalendar/timegrid';
+
+
+const plugins = [
+  dayGridPlugin,
+  timeGridPlugin,
+  interactionPlugin,
+  listPlugin
+];
+
+defineFullCalendarElement();
 
 @Component({
   selector: 'gita-appointment',
@@ -7,11 +22,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppointmentComponent implements OnInit {
 
-  options: any;
+  options!: CalendarOptions;
+
+  @ViewChild('calendar') calendar!: ElementRef<FullCalendarElement>;
+
+  // ngAfterViewInit() {
+  //   const calendarApi = this.calendar.nativeElement?.getApi();
+  //   console.log("api", calendarApi);
+  // }
 
   ngOnInit(): void {
     this.options = {
+      plugins,
       initialDate: '2022-08-01',
+      initialView: 'dayGridMonth',
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
@@ -41,6 +65,8 @@ export class AppointmentComponent implements OnInit {
       selectMirror: true,
       dayMaxEvents: true
     };
+
+    console.log("options", this.options);
   }
 
 }

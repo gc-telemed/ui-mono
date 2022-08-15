@@ -1,8 +1,8 @@
-import { LetModule, PushModule } from '@rx-angular/template';
-import { SidebarBasicComponent } from './sidebar-basic.component';
-import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { LetModule } from '@rx-angular/template';
+import { SidebarBasicComponent } from './sidebar-basic.component';
 
 
 
@@ -13,8 +13,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     RouterModule,
-    LetModule,
-    PushModule,
+    LetModule
   ],
   exports: [
     SidebarBasicComponent

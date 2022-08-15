@@ -1,10 +1,11 @@
 import { Observable, Subject, takeUntil, switchMap, interval, take, takeWhile, tap, noop } from 'rxjs';
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'gita-sidebar-basic',
-  templateUrl: './sidebar-basic.component.html'
+  templateUrl: './sidebar-basic.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidebarBasicComponent implements OnInit, OnDestroy {
 

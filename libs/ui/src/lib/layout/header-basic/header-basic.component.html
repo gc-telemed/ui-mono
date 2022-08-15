@@ -1,0 +1,38 @@
+<header id="head" class="h-8 mt-8 mb-2 flex items-center z-30 w-full">
+    <div class="container mx-auto px-6 flex items-center justify-between">
+        <span class="uppercase text-gray-800 dark:text-white font-black text-3xl flex flex-row">
+            <ng-container *rxLet="isSidebarShown$ as isSidebarShown">
+                <a (click)="toggleSidebar()">
+                    <i class="pi pt-1 mr-1 text-indigo-800 cursor-pointer"
+                        [ngClass]="!isSidebarShown ? 'pi-angle-double-right' : 'pi-angle-double-left'"
+                        style="font-size: 1.75rem"></i>
+                </a>
+            </ng-container>
+            <span>{{prodPref}}<span
+                    class="text-indigo-800 hover:underline hover:underline-offset-4 hover:decoration-4 hover:decoration-indigo-800 text-3xl"><a>O.Q</a></span>
+            </span>
+        </span>
+
+        <div class="flex items-center">
+            <nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
+                <a *ngFor="let navItem of headerNavItems" [routerLink]="navItem.routerLink"
+                    class="py-2 px-6 hover:underline hover:underline-offset-4 hover:decoration-4 hover:decoration-indigo-800 flex">
+                    {{navItem.label}}
+                </a>
+                <div class='avatar online placeholder'>
+                    <div class='bg-neutral-focus text-neutral-content rounded-full w-12 h-12'>
+                        <span class='text-xl'>{{authPref}}</span>
+                    </div>
+                </div>
+            </nav>
+            <button type="button" title="Menu" class="lg:hidden flex flex-col ml-4">
+                <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                </span>
+                <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                </span>
+                <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                </span>
+            </button>
+        </div>
+    </div>
+</header>

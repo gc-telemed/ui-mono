@@ -1,18 +1,13 @@
+import { HeaderBasicModule } from './header-basic/header-basic.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FooterBasicModule } from './footer-basic/footer-basic.module';
 import { SidebarBasicModule } from './sidebar-basic/sidebar-basic.module';
 
-const MODS = [
-  SidebarBasicModule
-]
+const MODS = [SidebarBasicModule, FooterBasicModule, HeaderBasicModule];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ...MODS
-  ],
-  exports: [
-    ...MODS
-  ]
+  imports: [CommonModule, ...MODS],
+  exports: [...MODS],
 })
 export class LayoutModule { }

@@ -1,0 +1,12 @@
+<footer class="py-5 sm:p-10 footer bg-base-200 text-base-content footer-center">
+    <div>
+        <div class="grid grid-flow-col text-3xl gap-4">
+            <a *ngFor="let icon of icons">
+                <fa-icon [icon]='icon'></fa-icon>
+            </a>
+        </div>
+    </div>
+    <div>
+        <p>Copyleft 🄯 {{year}} - No rights reserved</p>
+    </div>
+</footer>

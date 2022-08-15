@@ -1,6 +1,7 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Subject, take, takeUntil } from 'rxjs';
+import { MenuItem } from 'primeng/api';
+import { map, Subject, takeUntil } from 'rxjs';
 
 import { collapseSidebar, expandSidebar } from '../store/layout/layout.actions';
 import { selectLayout } from '../store/layout/layout.selectors';
@@ -10,24 +11,36 @@ import { selectLayout } from '../store/layout/layout.selectors';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnDestroy {
+export class HeaderComponent implements OnInit, OnDestroy {
 
   onDestroy$ = new Subject<true>();
 
   layout$ = this.store.select(selectLayout).pipe(takeUntil(this.onDestroy$));
 
+  isSidebarShown$ = this.layout$.pipe(map(layout => layout.sidebar === 'shown'));
+
+  authPref = "RK";
+
+  prodPref = "D";
+
+  headerNavItems!: MenuItem[];
+
+  protected collapser: () => void = () => this.store.dispatch(collapseSidebar());
+  protected expander: () => void = () => this.store.dispatch(expandSidebar());
+
   constructor(private store: Store) { }
 
-  toggleSidebar() {
-    this.layout$.pipe(take(1)).subscribe(
-      layout => {
-        if (layout.sidebar !== 'shown') {
-          this.store.dispatch(expandSidebar());
-        } else {
-          this.store.dispatch(collapseSidebar());
-        }
+  ngOnInit() {
+    this.headerNavItems = [
+      {
+        label: 'Editor',
+        routerLink: '/editor',
+      },
+      {
+        label: 'Settings',
+        routerLink: '/settings',
       }
-    );
+    ]
   }
 
   ngOnDestroy() {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 import { faFacebook, faGithub, faGitlab, faMarkdown, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
@@ -9,10 +10,8 @@ import { faFacebook, faGithub, faGitlab, faMarkdown, faTwitter } from '@fortawes
 })
 export class FooterComponent {
 
-  faGithub = faGithub;
-  faGitlab = faGitlab;
-  faMarkdown = faMarkdown;
-  faTwitter = faTwitter;
-  faFacebook = faFacebook;
+  icons: IconDefinition[] = [faGithub, faGitlab, faMarkdown, faTwitter, faFacebook];
+
+  protected year = new Date().getFullYear();
 
 }

@@ -3,6 +3,7 @@
 module.exports = {
   content: [
     "./apps/backoffice/src/**/*.{html,ts}",
+    "./libs/ui/src/lib/**/*.{html,ts}",
   ],
   theme: {
     extend: {},
