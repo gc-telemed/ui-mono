@@ -1,0 +1,18 @@
+<gita-header-basic [isSidebarShown$]="isSidebarShown$" [headerNavItems]="headerNavItems" [collapser]="collapser"
+    [expander]="expander" [authPref]="authPref" [prodPref]="prodPref">
+    <ng-template [gitaHeaderMenu]="headerNavItems">
+        <div class="pr-4 w-full">
+            <p-menubar [model]="headerNavItems">
+                <ng-template pTemplate="start">
+                    <div class="flex">
+                        <img src="assets/img/logo-1024.png" class="mr-2 h-10" alt="logo">
+                        <input type="text" pInputText placeholder="Search" class="h-10 w-full">
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="end">
+
+                </ng-template>
+            </p-menubar>
+        </div>
+    </ng-template>
+</gita-header-basic>

@@ -1,3 +1,6 @@
+import { InputTextModule } from 'primeng/inputtext';
+import { MenubarModule } from 'primeng/menubar';
+import { LetModule } from '@rx-angular/template';
 import { layoutReducer } from './state/layout.reducer';
 import { StoreModule } from '@ngrx/store';
 import { CommonModule } from '@angular/common';
@@ -16,6 +19,9 @@ const COMPS = [HeaderComponent, FooterComponent, SidebarComponent];
     CommonModule,
     FontAwesomeModule,
     UiModule,
+    LetModule,
+    MenubarModule,
+    InputTextModule,
     StoreModule.forFeature('layout', layoutReducer),
   ],
   exports: [...COMPS]

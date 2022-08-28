@@ -3,5 +3,8 @@
 @tailwind utilities;
 
 @import "~primeicons/primeicons.css";
-@import "~primeng/resources/themes/md-light-indigo/theme.css";
+@import "primeng/resources/themes/tailwind-light/theme.css";
 @import "~primeng/resources/primeng.min.css";
+
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';

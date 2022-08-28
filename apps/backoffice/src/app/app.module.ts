@@ -15,6 +15,7 @@ import { SharedModule } from './shared/shared.module';
 
 import { environment } from '../environments/environment';
 import { layoutReducer } from './shared/layout/store/layout/layout.reducer';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,7 +28,13 @@ import { layoutReducer } from './shared/layout/store/layout/layout.reducer';
     CoreModule,
     AppRoutingModule,
     StoreModule.forRoot({ layout: layoutReducer }, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],

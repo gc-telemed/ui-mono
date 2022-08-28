@@ -1,4 +1,4 @@
-<header id="head" class="h-8 mt-8 mb-2 flex items-center z-30 w-full">
+<header id="head" class="h-16 mt-8 mb-2 flex items-center z-30 w-full">
     <div class="container mx-auto px-6 flex items-center justify-between">
         <span class="uppercase text-gray-800 dark:text-white font-black text-3xl flex flex-row">
             <ng-container *rxLet="isSidebarShown$ as isSidebarShown">
@@ -13,12 +13,11 @@
             </span>
         </span>
 
-        <div class="flex items-center">
+        <div class="flex">
             <nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
-                <a *ngFor="let navItem of headerNavItems" [routerLink]="navItem.routerLink"
-                    class="py-2 px-6 hover:underline hover:underline-offset-4 hover:decoration-4 hover:decoration-indigo-800 flex">
-                    {{navItem.label}}
-                </a>
+                <ng-container
+                    *ngTemplateOutlet="headers || defaultHeaderTemplate; context: { $implicit: headerNavItems }">
+                </ng-container>
                 <div class='avatar online placeholder'>
                     <div class='bg-neutral-focus text-neutral-content rounded-full w-12 h-12'>
                         <span class='text-xl'>{{authPref}}</span>
@@ -36,3 +35,11 @@
         </div>
     </div>
 </header>
+
+<ng-template #defaultHeaderTemplate let-headerNavItems>
+    <a *ngFor="let navItem of headerNavItems; let last = last" [routerLink]="navItem.routerLink"
+        class="py-2 px-6 hover:underline hover:underline-offset-4 hover:decoration-4 hover:decoration-indigo-800 flex"
+        [ngClass]="{'pr-12': last}">
+        {{navItem.label}}
+    </a>
+</ng-template>

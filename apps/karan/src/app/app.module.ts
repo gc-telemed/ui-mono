@@ -1,12 +1,14 @@
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { PagesModule } from './pages/pages.module';
 import { StoreModule } from '@ngrx/store';
 import { environment } from '../environments/environment';
+import { AppComponent } from './app.component';
+import { PagesModule } from './pages/pages.module';
 
 const routes: Routes = [
   {
@@ -20,6 +22,8 @@ const routes: Routes = [
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes, { initialNavigation: 'enabledBlocking' }),
     PagesModule,
     StoreModule.forRoot({}, {}),

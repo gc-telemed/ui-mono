@@ -1,6 +1,7 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy, ContentChild, TemplateRef } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { Observable, take } from 'rxjs';
+import { HeaderMenuTypeDirective } from './header-menu-type.directive';
 
 @Component({
   selector: 'gita-header-basic',
@@ -11,6 +12,9 @@ export class HeaderBasicComponent {
 
   @Input() isSidebarShown$!: Observable<boolean>;
   @Input() headerNavItems!: MenuItem[];
+
+  @ContentChild(HeaderMenuTypeDirective, { read: TemplateRef })
+  headers?: TemplateRef<any>;
 
   @Input() collapser!: () => void;
   @Input() expander!: () => void;

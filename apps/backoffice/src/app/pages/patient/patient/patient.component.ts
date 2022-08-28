@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { PrimeNGConfig, SelectItem } from 'primeng/api';
-import { first } from 'rxjs';
+import { first, take } from 'rxjs';
 
 @Component({
   selector: 'gita-patient',
@@ -43,7 +43,7 @@ export class PatientComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.griddy.changes.pipe(first()).subscribe(() => {
+    this.griddy.changes.pipe(take(1)).subscribe(() => {
       this.contentRef = this.griddy.first.nativeElement.parentNode; // TODO: story 2: ng-template container styling
       this.contentRef?.classList.add('grid-container');
     });

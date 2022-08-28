@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { InventoryRoutingModule } from './inventory-routing.module';
+import { AgGridModule } from 'ag-grid-angular';
 
+import { InventoryRoutingModule } from './inventory-routing.module';
+import { InventoryComponent } from './inventory/inventory.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    InventoryRoutingModule
-  ]
+  declarations: [InventoryComponent],
+  imports: [CommonModule, InventoryRoutingModule, AgGridModule],
 })
 export class InventoryModule { }

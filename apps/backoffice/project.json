@@ -17,7 +17,8 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/backoffice/src/favicon.ico",
-          "apps/backoffice/src/assets"
+          "apps/backoffice/src/assets",
+          "apps/backoffice/src/manifest.webmanifest"
         ],
         "styles": [
           "apps/backoffice/src/styles.scss"
@@ -25,7 +26,9 @@
         "allowedCommonJsDependencies": [
           "fast-deep-equal"
         ],
-        "scripts": []
+        "scripts": [],
+        "serviceWorker": true,
+        "ngswConfigPath": "apps/backoffice/ngsw-config.json"
       },
       "configurations": {
         "production": {
