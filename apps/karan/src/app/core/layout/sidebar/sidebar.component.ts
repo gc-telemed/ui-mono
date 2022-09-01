@@ -1,13 +1,12 @@
-import { LayoutModel } from './../state/layout.model';
+import { SidebarVizService } from './../../services/sidebar-viz.service';
+import { LayoutModel } from '../store/layout.model';
 
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { MenuItem } from 'primeng/api';
 import { map, Observable, Subject, takeUntil } from 'rxjs';
 import { globalRouteItems } from '../../models/global-routes.model';
-import { selectLayout } from '../state/layout.selectors';
-import { BreakpointsService } from './../../services/breakpoints.service';
-import { collapseSidebar, expandSidebar, hideSidebar } from './../state/layout.actions';
+import { selectLayout } from '../store/layout.selectors';
 
 @Component({
   selector: 'gita-sidebar',
@@ -23,19 +22,14 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
   protected logoPath = '/assets/img/logo-1024.png'
 
-  protected collapser: () => void = () => this.store.dispatch(collapseSidebar());
-  protected expander: () => void = () => this.store.dispatch(expandSidebar());
+  protected collapser: () => void = this.sidebarViz.collapser;
+  protected expander: () => void = this.sidebarViz.expander;
 
-  constructor(private store: Store, private breakpoints: BreakpointsService) { }
+  constructor(private store: Store, private sidebarViz: SidebarVizService) { }
 
   ngOnInit() {
     this.items = globalRouteItems;
-    this.breakpoints.smallPortrait$().pipe(
-      takeUntil(this.onDestroy$)
-    ).subscribe(isSmallPortrait => isSmallPortrait
-      ? this.store.dispatch(hideSidebar())
-      : this.store.dispatch(collapseSidebar())
-    );
+    this.sidebarViz.sizeAwareCollapser();
   }
 
   ngOnDestroy(): void {

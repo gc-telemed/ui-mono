@@ -1,7 +1,7 @@
 import { InputTextModule } from 'primeng/inputtext';
 import { MenubarModule } from 'primeng/menubar';
 import { LetModule } from '@rx-angular/template';
-import { layoutReducer } from './state/layout.reducer';
+import { layoutReducer } from './store/layout.reducer';
 import { StoreModule } from '@ngrx/store';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';

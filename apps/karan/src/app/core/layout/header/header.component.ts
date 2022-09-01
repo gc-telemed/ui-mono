@@ -1,13 +1,23 @@
-import { MenuItem } from 'primeng/api';
+import { setViewDay, setViewWeek, setViewMonth, setViewList } from './../../../pages/appointments/store/calendar.actions';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { map, Subject, takeUntil } from 'rxjs';
-import { selectLayout } from '../state/layout.selectors';
 import { Store } from '@ngrx/store';
-import { collapseSidebar, expandSidebar } from '../state/layout.actions';
+import { MenuItem } from 'primeng/api';
+import { map, Subject, takeUntil } from 'rxjs';
+import { selectLayout } from '../store/layout.selectors';
+import { SidebarVizService } from './../../services/sidebar-viz.service';
 
 @Component({
   selector: 'gita-header',
   templateUrl: './header.component.html',
+  styles: [
+    `
+    :host ::ng-deep {  
+      .p-menubar {
+        @apply bg-white
+      }
+    }
+    `
+  ]
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 
@@ -23,10 +33,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   headerNavItems!: MenuItem[];
 
-  protected collapser: () => void = () => this.store.dispatch(collapseSidebar());
-  protected expander: () => void = () => this.store.dispatch(expandSidebar());
+  protected collapser: () => void = this.sidebarViz.collapser;
+  protected expander: () => void = this.sidebarViz.expander;
 
-  constructor(private store: Store) { }
+  constructor(private store: Store, private sidebarViz: SidebarVizService) { }
 
   ngOnInit() {
     this.headerNavItems = [
@@ -63,62 +73,30 @@ export class HeaderComponent implements OnInit, OnDestroy {
         ]
       },
       {
-        label: 'Edit',
-        icon: 'pi pi-fw pi-pencil',
+        label: 'View',
+        icon: 'pi pi-fw pi-sliders-h',
         items: [
           {
-            label: 'Left',
-            icon: 'pi pi-fw pi-align-left'
+            label: 'Day',
+            icon: 'pi pi-fw pi-align-left',
+            command: () => this.store.dispatch(setViewDay())
           },
           {
-            label: 'Right',
-            icon: 'pi pi-fw pi-align-right'
+            label: 'Week',
+            icon: 'pi pi-fw pi-align-right',
+            command: () => this.store.dispatch(setViewWeek())
           },
           {
-            label: 'Center',
-            icon: 'pi pi-fw pi-align-center'
+            label: 'Month',
+            icon: 'pi pi-fw pi-align-center',
+            command: () => this.store.dispatch(setViewMonth())
           },
           {
-            label: 'Justify',
-            icon: 'pi pi-fw pi-align-justify'
+            label: 'List',
+            icon: 'pi pi-fw pi-align-justify',
+            command: () => this.store.dispatch(setViewList())
           },
 
-        ]
-      },
-      {
-        label: 'Users',
-        icon: 'pi pi-fw pi-user',
-        items: [
-          {
-            label: 'New',
-            icon: 'pi pi-fw pi-user-plus',
-
-          },
-          {
-            label: 'Delete',
-            icon: 'pi pi-fw pi-user-minus',
-
-          },
-          {
-            label: 'Search',
-            icon: 'pi pi-fw pi-users',
-            items: [
-              {
-                label: 'Filter',
-                icon: 'pi pi-fw pi-filter',
-                items: [
-                  {
-                    label: 'Print',
-                    icon: 'pi pi-fw pi-print'
-                  }
-                ]
-              },
-              {
-                icon: 'pi pi-fw pi-bars',
-                label: 'List'
-              }
-            ]
-          }
         ]
       },
       {
