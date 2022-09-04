@@ -1,8 +1,12 @@
 <gita-sidebar></gita-sidebar>
 <gita-header></gita-header>
-<section class='bg-white dark:bg-gray-800 flex relative z-0 items-center'>
+<section class='bg-white dark:bg-gray-800 flex relative items-center'>
     <div class='container mx-auto px-6 w-full md:py-8'>
         <router-outlet></router-outlet>
+        <p-speedDial [model]="floatItems" [radius]="120" direction="up-left" type="quarter-circle"
+            class="fixed bottom-40 right-20 sm:bottom-24 sm:right-24 z-50 drop-shadow-2xl"
+            buttonClassName="bg-black hover:bg-black">
+        </p-speedDial>
     </div>
 </section>
 <gita-footer></gita-footer>

@@ -50,6 +50,7 @@ specifiers:
   '@rx-angular/template': 1.0.0-beta.33
   '@types/jest': 27.4.1
   '@types/node': 16.11.7
+  '@types/uuid': ^8.3.4
   '@typescript-eslint/eslint-plugin': ^5.33.1
   '@typescript-eslint/parser': ^5.33.1
   ag-grid-angular: ^28.1.0
@@ -74,6 +75,7 @@ specifiers:
   ts-node: ~10.8.2
   tslib: ^2.4.0
   typescript: ~4.7.4
+  uuid: ^8.3.2
   zone.js: ~0.11.8
 
 dependencies:
@@ -115,6 +117,7 @@ dependencies:
   primeng: 14.0.1_xk5yipch3dptfjnn7gw5a3oqfa
   rxjs: 7.4.0
   tslib: 2.4.0
+  uuid: 8.3.2
   zone.js: 0.11.8
 
 devDependencies:
@@ -136,6 +139,7 @@ devDependencies:
   '@nrwl/workspace': 14.4.3_p4mi2smrdlimk4bbxlu4b6wavm
   '@types/jest': 27.4.1
   '@types/node': 16.11.7
+  '@types/uuid': 8.3.4
   '@typescript-eslint/eslint-plugin': 5.33.1_m7xvcpf4u5pta577mmcxmrpwhu
   '@typescript-eslint/parser': 5.33.1_4hx5bygx4rxgd7xwyndf6ymwce
   autoprefixer: 10.4.8_postcss@8.4.16
@@ -4590,6 +4594,10 @@ packages:
 
   /@types/stack-utils/2.0.1:
     resolution: {integrity: sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==}
+    dev: true
+
+  /@types/uuid/8.3.4:
+    resolution: {integrity: sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==}
     dev: true
 
   /@types/ws/8.5.3:

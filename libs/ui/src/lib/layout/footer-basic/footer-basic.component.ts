@@ -1,5 +1,5 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'gita-footer-basic',
@@ -8,7 +8,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 })
 export class FooterBasicComponent {
 
-  @Input() icons!: IconDefinition[];
+  @Input() icons!: MenuItem[];
 
   protected year = new Date().getFullYear();
 

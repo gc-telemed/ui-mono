@@ -1,13 +1,20 @@
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faGithub, faGitlab, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { Component } from '@angular/core';
+import { BreakpointsService } from './../../services/breakpoints.service';
+import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
+import { globalRouteItems } from '../../models/global-routes.model';
 
 @Component({
   selector: 'gita-footer',
   templateUrl: './footer.component.html'
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
 
-  icons: IconDefinition[] = [faGithub, faGitlab, faTwitter, faFacebook];
+  items!: MenuItem[];
+
+  constructor(private breakpoints: BreakpointsService) { }
+
+  ngOnInit() {
+    this.items = globalRouteItems;
+  }
 
 }

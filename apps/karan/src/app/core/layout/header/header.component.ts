@@ -1,4 +1,4 @@
-import { setViewDay, setViewWeek, setViewMonth, setViewList } from './../../../pages/appointments/store/calendar.actions';
+import { setView } from './../../../pages/appointments/store/calendar.actions';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { MenuItem } from 'primeng/api';
@@ -79,22 +79,22 @@ export class HeaderComponent implements OnInit, OnDestroy {
           {
             label: 'Day',
             icon: 'pi pi-fw pi-align-left',
-            command: () => this.store.dispatch(setViewDay())
+            command: () => this.store.dispatch(setView({ option: 'day' }))
           },
           {
             label: 'Week',
             icon: 'pi pi-fw pi-align-right',
-            command: () => this.store.dispatch(setViewWeek())
+            command: () => this.store.dispatch(setView({ option: 'week' }))
           },
           {
             label: 'Month',
             icon: 'pi pi-fw pi-align-center',
-            command: () => this.store.dispatch(setViewMonth())
+            command: () => this.store.dispatch(setView({ option: 'month' }))
           },
           {
             label: 'List',
             icon: 'pi pi-fw pi-align-justify',
-            command: () => this.store.dispatch(setViewList())
+            command: () => this.store.dispatch(setView({ option: 'list' }))
           },
 
         ]

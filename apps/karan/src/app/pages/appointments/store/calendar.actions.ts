@@ -1,20 +1,13 @@
 
+import { EventInput } from '@fullcalendar/web-component';
 import { createAction, props } from '@ngrx/store';
 import { ViewOptionType } from './calendar.model';
 
-export const setViewDay = createAction('[Calendar] Set View Day');
-
-export const setViewWeek = createAction('[Calendar] Set View Week');
-
-export const setViewMonth = createAction('[Calendar] Set View Month');
-
-export const setViewList = createAction('[Calendar] Set View List');
+export const setView = createAction('[Calendar] Set View', props<{ option: ViewOptionType }>());
 
 export const viewChanged = createAction('[Calendar] View Changed', props<{ option: ViewOptionType }>());
 
-export const setView = {
-    day: setViewDay,
-    week: setViewWeek,
-    month: setViewMonth,
-    list: setViewList
-};
+export const eventSelected = createAction('[Calendar] Event Selected', props<{ option: EventInput }>());
+export const eventUnselected = createAction('[Calendar] Event Unselected', props<{ option: string | undefined }>());
+
+export const eventHydrated = createAction('[Calendar] Event Details Set', props<{ option: string | undefined }>());

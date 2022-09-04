@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
-import { faFacebook, faGithub, faGitlab, faMarkdown, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'gita-footer',
@@ -10,5 +8,5 @@ import { faFacebook, faGithub, faGitlab, faMarkdown, faTwitter } from '@fortawes
 })
 export class FooterComponent {
 
-  icons: IconDefinition[] = [faGithub, faGitlab, faMarkdown, faTwitter, faFacebook];
+  icons = [];
 }

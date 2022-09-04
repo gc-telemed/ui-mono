@@ -1,41 +1,40 @@
-import { ViewOptionProp } from './calendar.model';
+import { CalendarEventService } from './../services/calendar-event.service';
 
-import { CalendarViewService } from './../services/calendar-view.service';
 import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { setViewDay, setViewWeek, viewChanged, setViewMonth, setViewList } from './calendar.actions';
-import { mergeMap, map, tap } from 'rxjs';
+import { map, switchMap, tap } from 'rxjs';
+import { CalendarViewService } from './../services/calendar-view.service';
+import { eventHydrated, eventSelected, eventUnselected, setView, viewChanged } from './calendar.actions';
 
 @Injectable()
 export class CalendarEffects {
 
-    setViewDay$ = createEffect(() => this.actions$.pipe(
-        ofType(setViewDay),
-        tap(() => this.viewService.change('day')),
-        map(() => ({ type: viewChanged.type, option: 'day' }))
+    setView$ = createEffect(() => this.actions$.pipe(
+        ofType(setView),
+        tap((payload) => this.viewService.change(payload.option)),
+        map((payload) => ({ type: viewChanged.type, option: payload.option }))
     ));
 
-    setViewWeek$ = createEffect(() => this.actions$.pipe(
-        ofType(setViewWeek),
-        tap(() => this.viewService.change('week')),
-        map(() => ({ type: viewChanged.type, option: 'week' }))
+    selectEvent$ = createEffect(() => this.actions$.pipe(
+        ofType(eventSelected),
+        switchMap(payload => {
+            const selectedEvt$ = this.eventService.updateSelection(payload.option);
+            this.viewService.showEditor();
+            return selectedEvt$;
+        }),
+        map(selectedEvt => ({ type: eventHydrated.type, option: selectedEvt.id }))
     ));
 
-    setViewMonth$ = createEffect(() => this.actions$.pipe(
-        ofType(setViewMonth),
-        tap(() => this.viewService.change('month')),
-        map(() => ({ type: viewChanged.type, option: 'month' }))
-    ));
-
-    setViewList$ = createEffect(() => this.actions$.pipe(
-        ofType(setViewList),
-        tap(() => this.viewService.change('list')),
-        map(() => ({ type: viewChanged.type, option: 'list' }))
+    unselectEvent$ = createEffect(() => this.actions$.pipe(
+        ofType(eventUnselected),
+        tap(payload => this.viewService.removeBorder(payload.option)),
+        map((payload) => eventHydrated({ option: payload.option }))
     ));
 
     constructor(
         private actions$: Actions,
-        private viewService: CalendarViewService
+        private viewService: CalendarViewService,
+        private eventService: CalendarEventService
     ) { }
 
 }

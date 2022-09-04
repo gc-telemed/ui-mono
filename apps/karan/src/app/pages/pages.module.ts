@@ -1,3 +1,4 @@
+import { SpeedDialModule } from 'primeng/speeddial';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { CoreModule } from '../core/core.module';
@@ -7,6 +8,6 @@ import { PagesRoutingModule } from './pages-routing.module';
 
 @NgModule({
   declarations: [MainComponent],
-  imports: [CommonModule, PagesRoutingModule, CoreModule],
+  imports: [CommonModule, PagesRoutingModule, CoreModule, SpeedDialModule],
 })
 export class PagesModule { }

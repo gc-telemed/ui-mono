@@ -1,29 +1,43 @@
-import { CalendarEffects } from './store/calendar.effects';
-import { EffectsModule } from '@ngrx/effects';
-import { InputTextModule } from 'primeng/inputtext';
-import { RouterModule, Routes } from '@angular/router';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppointmentsComponent } from './appointments/appointments.component';
-import { MenubarModule } from 'primeng/menubar';
-import { SplitterModule } from 'primeng/splitter';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+import { LetModule } from '@rx-angular/template';
+
+
+import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
+import { ButtonModule } from 'primeng/button';
+import { CalendarModule } from 'primeng/calendar';
+import { ColorPickerModule } from 'primeng/colorpicker';
+import { DialogModule } from 'primeng/dialog';
+import { InputTextModule } from 'primeng/inputtext';
+import { MenubarModule } from 'primeng/menubar';
+import { ToggleButtonModule } from 'primeng/togglebutton';
+
+import { AppointmentsComponent } from './appointments/appointments.component';
+import { EventEditorComponent } from './event-editor/event-editor.component';
+import { CalendarEffects } from './store/calendar.effects';
 import { calendarReducer } from './store/calendar.reducer';
 
-const routes: Routes = [
-  { path: '', component: AppointmentsComponent }
-]
+const routes: Routes = [{ path: '', component: AppointmentsComponent }];
 
 @NgModule({
-  declarations: [AppointmentsComponent],
+  declarations: [AppointmentsComponent, EventEditorComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     MenubarModule,
     InputTextModule,
-    SplitterModule,
+    CalendarModule,
+    DialogModule,
+    ButtonModule,
+    LetModule,
+    ReactiveFormsModule,
+    ColorPickerModule,
+    ToggleButtonModule,
     StoreModule.forFeature('calendar', calendarReducer),
-    EffectsModule.forFeature([CalendarEffects])
+    EffectsModule.forFeature([CalendarEffects]),
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
