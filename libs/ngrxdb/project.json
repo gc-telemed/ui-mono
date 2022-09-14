@@ -1,0 +1,23 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ngrxdb/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ngrxdb/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ngrxdb"],
+      "options": {
+        "jestConfig": "libs/ngrxdb/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["ngrx", "rxdb", "rxjs", "indexeddb"]
+}

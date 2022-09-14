@@ -18,6 +18,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@cosys/ngrxdb": ["libs/ngrxdb/src/index.ts"],
+      "@cosyswork/gapl-med-client": ["libs/gapl-med-client/src/index.ts"],
       "@gita/ui": ["libs/ui/src/index.ts"]
     }
   },

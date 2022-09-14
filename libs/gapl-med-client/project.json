@@ -1,0 +1,23 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/gapl-med-client/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/gapl-med-client/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/gapl-med-client"],
+      "options": {
+        "jestConfig": "libs/gapl-med-client/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["rxjs", "api-client", "emr", "ehr"]
+}
