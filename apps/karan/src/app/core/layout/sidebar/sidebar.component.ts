@@ -1,3 +1,4 @@
+import { globalSettings } from './../../models/global-routes.model';
 import { SidebarVizService } from './../../services/sidebar-viz.service';
 import { LayoutModel } from '../store/layout.model';
 
@@ -18,6 +19,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   protected layout$: Observable<LayoutModel> = this.store.select(selectLayout).pipe(takeUntil(this.onDestroy$));
 
   protected items!: MenuItem[];
+  protected bottom!: MenuItem;
   protected isSidebarExpanded$ = this.layout$.pipe(map(l => l.sidebar === 'shown'));
 
   protected logoPath = '/assets/img/logo-1024.png'
@@ -29,6 +31,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.items = globalRouteItems;
+    this.bottom = globalSettings;
     this.sidebarViz.sizeAwareCollapser();
   }
 

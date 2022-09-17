@@ -21,6 +21,8 @@ export class SidebarBasicComponent implements OnInit, OnDestroy {
 
   @Input() autoCollapsing = true;
 
+  @Input() bottom?: MenuItem;
+
   private onDestroy$ = new Subject<true>();
   private pausedExpansion = false;
 

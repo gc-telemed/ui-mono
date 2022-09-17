@@ -23,12 +23,12 @@ export const globalRouteItems: MenuItem[] = [
     },
     {
         label: 'Inventory',
-        icon: 'pi-fw pi-qrcode',
+        icon: 'pi-fw pi-link',
         routerLink: ['inventory']
     },
     {
         label: 'Catalog',
-        icon: 'pi-fw pi-link',
+        icon: 'pi-fw pi-qrcode',
         routerLink: ['catalog']
     },
     {
@@ -37,3 +37,9 @@ export const globalRouteItems: MenuItem[] = [
         routerLink: ['statistics']
     }
 ];
+
+export const globalSettings: MenuItem = {
+    label: 'Settings',
+    icon: 'pi-fw pi-sliders-h',
+    routerLink: ['settings']
+}
