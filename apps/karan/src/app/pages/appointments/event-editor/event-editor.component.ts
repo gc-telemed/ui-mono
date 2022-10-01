@@ -1,9 +1,9 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
 import { DateInput } from '@fullcalendar/core';
 import { EventApi, EventInput } from '@fullcalendar/web-component';
 import { Store } from '@ngrx/store';
-import { Observable, tap, Subject, takeUntil } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { RGB } from '../../../core/models/rgb.model';
 import { eventUnselected } from '../store/calendar.actions';
 import { RGBObj } from './../../../core/models/rgb.model';

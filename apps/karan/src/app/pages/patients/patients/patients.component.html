@@ -27,3 +27,8 @@
         </ng-template>
     </p-dataView>
 </div>
+<p-speedDial [radius]="120" direction="up-left" type="quarter-circle" (onClick)="showEditor(true)"
+    class="fixed bottom-40 right-20 sm:bottom-24 sm:right-24 z-50 drop-shadow-2xl"
+    buttonClassName="bg-black hover:bg-black" showIcon="pi pi-user-plus" hideIcon="pi pi-times">
+</p-speedDial>
+<gita-patient-new-quick [displayEditor$]="this.patientEditorService.displayEditor$"></gita-patient-new-quick>

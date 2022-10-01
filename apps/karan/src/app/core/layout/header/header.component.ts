@@ -41,8 +41,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.headerNavItems = [
       {
-        label: 'File',
-        icon: 'pi pi-fw pi-file',
+        label: 'Patients',
+        icon: 'pi pi-fw pi-users',
         items: [
           {
             label: 'New',
@@ -73,8 +73,68 @@ export class HeaderComponent implements OnInit, OnDestroy {
         ]
       },
       {
-        label: 'View',
-        icon: 'pi pi-fw pi-sliders-h',
+        label: 'Appointments',
+        icon: 'pi pi-fw pi-calendar',
+        items: [
+          {
+            label: 'View',
+            icon: 'pi pi-fw pi-sliders-h',
+            items: [
+              {
+                label: 'Day',
+                icon: 'pi pi-fw pi-align-left',
+                command: () => this.store.dispatch(setView({ option: 'day' }))
+              },
+              {
+                label: 'Week',
+                icon: 'pi pi-fw pi-align-right',
+                command: () => this.store.dispatch(setView({ option: 'week' }))
+              },
+              {
+                label: 'Month',
+                icon: 'pi pi-fw pi-align-center',
+                command: () => this.store.dispatch(setView({ option: 'month' }))
+              },
+              {
+                label: 'List',
+                icon: 'pi pi-fw pi-align-justify',
+                command: () => this.store.dispatch(setView({ option: 'list' }))
+              },
+
+            ]
+          },
+          {
+            label: 'Edit',
+            icon: 'pi pi-fw pi-pencil',
+            items: [
+              {
+                label: 'Save',
+                icon: 'pi pi-fw pi-calendar-plus'
+              },
+              {
+                label: 'Delete',
+                icon: 'pi pi-fw pi-calendar-minus'
+              },
+
+
+            ]
+          },
+          {
+            label: 'Archive',
+            icon: 'pi pi-fw pi-calendar-times',
+            items: [
+              {
+                label: 'Remove',
+                icon: 'pi pi-fw pi-calendar-minus'
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        label: 'Payments',
+        icon: 'pi pi-fw pi-wallet',
         items: [
           {
             label: 'Day',
@@ -99,9 +159,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
         ]
       },
+
       {
-        label: 'Events',
-        icon: 'pi pi-fw pi-calendar',
+        label: 'Equipments',
+        icon: 'pi pi-fw pi-link',
         items: [
           {
             label: 'Edit',
@@ -119,7 +180,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
             ]
           },
           {
-            label: 'Archieve',
+            label: 'Archive',
             icon: 'pi pi-fw pi-calendar-times',
             items: [
               {
@@ -130,10 +191,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
           }
         ]
       },
-      {
-        label: 'Quit',
-        icon: 'pi pi-fw pi-power-off'
-      }
     ];
   }
 

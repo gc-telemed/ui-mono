@@ -13,13 +13,13 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@cosys/ngrxdb": ["libs/ngrxdb/src/index.ts"],
       "@cosyswork/gapl-med-client": ["libs/gapl-med-client/src/index.ts"],
+      "@cosyswork/ngrxdb": ["libs/ngrxdb/src/index.ts"],
       "@gita/ui": ["libs/ui/src/index.ts"]
     }
   },

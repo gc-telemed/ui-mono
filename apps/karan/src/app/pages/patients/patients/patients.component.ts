@@ -1,6 +1,7 @@
+import { PatientEditorService } from './../services/patient-editor.service';
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { SelectItem } from 'primeng/api';
-import { first, take } from 'rxjs';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'gita-patients',
@@ -20,6 +21,8 @@ export class PatientsComponent implements OnInit, AfterViewInit {
   @ViewChildren('griddy') griddy!: QueryList<ElementRef>;
 
   contentRef?: HTMLElement;
+
+  constructor(protected patientEditorService: PatientEditorService) { }
 
   ngOnInit() {
     setTimeout(() => this.products = Array(100).fill(0).map((_, i) => ({ id: i, name: `Patient ${i}` })), 0);
@@ -48,5 +51,9 @@ export class PatientsComponent implements OnInit, AfterViewInit {
       this.contentRef = this.griddy.first.nativeElement.parentNode; // TODO: story 2: ng-template container styling
       this.contentRef?.classList.add('grid-container');
     });
+  }
+
+  showEditor(show: boolean) {
+    this.patientEditorService.showEditor(show);
   }
 }

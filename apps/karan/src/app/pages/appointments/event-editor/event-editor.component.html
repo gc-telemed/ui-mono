@@ -12,7 +12,7 @@
                 <div class="flex flex-row justify-between w-full gap-14">
                     <div class="flex flex-col">
                         <label for="allDay" class="font-medium">All Day?</label>
-                        <p-toggleButton formControlName="allDay" onLabel="Yes" offLabel="No" onIcon="pi pi-check"
+                        <p-toggleButton formControlName="allDay" onLabel="Yes" offLabel="No" [onIcon]="'pi pi-check'"
                             offIcon="pi pi-times" #allDay></p-toggleButton>
 
                     </div>
@@ -23,20 +23,20 @@
                         </p-colorPicker>
                     </div>
                     <div class="flex flex-col">
-                        <label for="delete" class="font-medium">Delete</label>
-                        <button id="delete" pButton type="button" icon="pi pi-trash"
+                        <label for="deleter" class="font-medium">Delete</label>
+                        <button title="delete" id="deleter" pButton type="button" icon="pi pi-trash"
                             class="p-button bg-white text-indigo-800"></button>
                     </div>
                 </div>
             </div>
-            <div class="flex flex-row gap-8 mt-4" *ngIf="!allDay.checked">
+            <div class="flex flex-row gap-8 mt-4">
                 <div class="flex flex-col">
                     <label for="startDateTime" class="font-medium">Start</label>
                     <p-calendar id="startTime" formControlName="start" dateFormat="dd.mm.yy" [showTime]="true"
                         class="start" appendTo="body">
                     </p-calendar>
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col" *ngIf="!allDay.checked">
                     <label for="endTime" class="font-medium">End</label>
                     <p-calendar id="endTime" formControlName="end" dateFormat="dd.mm.yy" [showTime]="true" class="end"
                         appendTo="body">
