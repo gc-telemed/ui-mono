@@ -30,7 +30,6 @@ specifiers:
   '@fullcalendar/list': 6.0.0-beta.1
   '@fullcalendar/timegrid': 6.0.0-beta.1
   '@fullcalendar/web-component': 6.0.0-beta.1
-  '@ionic/angular': ^6.2.5
   '@ngrx/effects': ^14.3.0
   '@ngrx/eslint-plugin': ^14.2.0
   '@ngrx/schematics': ^14.3.0
@@ -101,7 +100,6 @@ dependencies:
   '@fullcalendar/list': 6.0.0-beta.1
   '@fullcalendar/timegrid': 6.0.0-beta.1
   '@fullcalendar/web-component': 6.0.0-beta.1
-  '@ionic/angular': 6.2.5_6okulioc4rpwvrfvcvtb5lf4dm
   '@ngrx/effects': 14.3.0_uu3jffqkucffqgldo5bbnyfuhe
   '@ngrx/schematics': 14.3.0
   '@ngrx/store': 14.3.0_7uoia775vmy7meyepmpfv3bdju
@@ -135,7 +133,7 @@ devDependencies:
   '@nrwl/eslint-plugin-nx': 14.4.3_xdqee4rvvv35pvkatoh7yhq54q
   '@nrwl/jest': 14.4.3_yi4yd3arhmqimh2vkjiighnlby
   '@nrwl/linter': 14.4.3_hjwsk7t4rtenhyzw3vpfwjmwy4
-  '@nrwl/nx-cloud': 14.6.0
+  '@nrwl/nx-cloud': 14.7.0
   '@nrwl/workspace': 14.4.3_p4mi2smrdlimk4bbxlu4b6wavm
   '@types/jest': 27.4.1
   '@types/node': 16.11.7
@@ -266,7 +264,7 @@ packages:
       typescript: 4.7.4
       webpack: 5.72.1_esbuild@0.14.38
       webpack-dev-middleware: 5.3.1_webpack@5.72.1
-      webpack-dev-server: 4.9.0_webpack@5.72.1
+      webpack-dev-server: 4.9.0_webpack@5.74.0
       webpack-merge: 5.8.0
       webpack-subresource-integrity: 5.1.0_webpack@5.72.1
     optionalDependencies:
@@ -297,7 +295,7 @@ packages:
       '@angular-devkit/architect': 0.1400.7
       rxjs: 6.6.7
       webpack: 5.72.1_esbuild@0.14.38
-      webpack-dev-server: 4.9.0_webpack@5.72.1
+      webpack-dev-server: 4.9.0_webpack@5.74.0
     transitivePeerDependencies:
       - chokidar
     dev: true
@@ -3159,33 +3157,6 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@ionic/angular/6.2.5_6okulioc4rpwvrfvcvtb5lf4dm:
-    resolution: {integrity: sha512-J0yjeDjux+Cff2DEH3JsYS8aooyVN2moS53RdpBI11Wq+37KR6AAmcmFLdP8gm4MWs/ZcfUt2calp4sXjUlaOg==}
-    peerDependencies:
-      '@angular/core': '>=12.0.0'
-      '@angular/forms': '>=12.0.0'
-      '@angular/router': '>=12.0.0'
-      rxjs: '>=6.6.0'
-      zone.js: '>=0.11.0'
-    dependencies:
-      '@angular/core': 14.0.7_rxjs@7.4.0+zone.js@0.11.8
-      '@angular/forms': 14.0.7_ehft2sxwdkiptv74fayni5hg7u
-      '@angular/router': 14.0.7_ehft2sxwdkiptv74fayni5hg7u
-      '@ionic/core': 6.2.5
-      jsonc-parser: 3.1.0
-      rxjs: 7.4.0
-      tslib: 2.4.0
-      zone.js: 0.11.8
-    dev: false
-
-  /@ionic/core/6.2.5:
-    resolution: {integrity: sha512-PLnG182RYydXB71cjkMk2TLxFVKabvEc9wjeK5SsvxI1/QE9+wPfxDnvKWag8UeXgaGUhby1bitWkV5pniDaXA==}
-    dependencies:
-      '@stencil/core': 2.17.4
-      ionicons: 6.0.3
-      tslib: 2.4.0
-    dev: false
-
   /@istanbuljs/load-nyc-config/1.1.0:
     resolution: {integrity: sha512-VjeHSlIzpv/NyD3N0YuHfXOPDIixcA1q2ZV98wsMqcYlPmv2n3Yb2lYP9XMElnaFVXg5A7YLTeLu6V84uQDjmQ==}
     engines: {node: '>=8'}
@@ -3876,13 +3847,14 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@nrwl/nx-cloud/14.6.0:
-    resolution: {integrity: sha512-TAL3MtuAPOYA+9Zk3q0qvOc67TW/L8gABFMMq5I9ywoPyK6qpUQn0SOGvC8nFCKdi/oC7L7xtDMXnjECNIL2ng==}
+  /@nrwl/nx-cloud/14.7.0:
+    resolution: {integrity: sha512-sEGK5Ire5DC2liIsT89qR6SzZa46uinmWEAMz8ocMuu7nIMnwV9m15qajxhmYKasYsq9vTeT+x7BlZ4fnxPrNg==}
     hasBin: true
     dependencies:
       axios: 0.21.4
       chalk: 4.1.0
       dotenv: 10.0.0
+      fs-extra: 10.1.0
       node-machine-id: 1.1.12
       strip-json-comments: 3.1.1
       tar: 6.1.11
@@ -4324,18 +4296,6 @@ packages:
     dependencies:
       '@sinonjs/commons': 1.8.3
     dev: true
-
-  /@stencil/core/2.16.1:
-    resolution: {integrity: sha512-s/UJp9qxExL3DyQPT70kiuWeb3AdjbUZM+5lEIXn30I2DLcLYPOPXfsoWJODieQywq+3vPiLZeIdkoqjf6jcSw==}
-    engines: {node: '>=12.10.0', npm: '>=6.0.0'}
-    hasBin: true
-    dev: false
-
-  /@stencil/core/2.17.4:
-    resolution: {integrity: sha512-SGRlHpjV1RyFvzw6jFMVKpLNox9Eds3VvpbpD2SW9CuxdLonHDSFtQks5zmT4zs1Rse9I6kFc2mFK/dHNTalkg==}
-    engines: {node: '>=12.10.0', npm: '>=6.0.0'}
-    hasBin: true
-    dev: false
 
   /@tootallnate/once/1.1.2:
     resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}
@@ -8494,12 +8454,6 @@ packages:
       strip-ansi: 6.0.1
       through: 2.3.8
       wrap-ansi: 7.0.0
-
-  /ionicons/6.0.3:
-    resolution: {integrity: sha512-kVOWER991EMqLiVShrCSWKMHkgHZP7XfVdyN6YPMuoO33W7pc5CPNVNfR8OMe/I8rYEbaunyBs6dXNYpR6gGZw==}
-    dependencies:
-      '@stencil/core': 2.16.1
-    dev: false
 
   /ip/2.0.0:
     resolution: {integrity: sha512-WKa+XuLG1A1R0UWhl2+1XQSi+fZWMsYKffMZTTYsiZaUD8k2yDAj5atimTUD2TZkyCkNEeYE5NhFZmupOGtjYQ==}
@@ -13278,6 +13232,20 @@ packages:
       webpack: 5.72.1_esbuild@0.14.38
     dev: true
 
+  /webpack-dev-middleware/5.3.1_webpack@5.74.0:
+    resolution: {integrity: sha512-81EujCKkyles2wphtdrnPg/QqegC/AtqNH//mQkBYSMqwFVCQrxM6ktB2O/SPlZy7LqeEfTbV3cZARGQz6umhg==}
+    engines: {node: '>= 12.13.0'}
+    peerDependencies:
+      webpack: ^4.0.0 || ^5.0.0
+    dependencies:
+      colorette: 2.0.19
+      memfs: 3.4.7
+      mime-types: 2.1.35
+      range-parser: 1.2.1
+      schema-utils: 4.0.0
+      webpack: 5.74.0
+    dev: true
+
   /webpack-dev-middleware/5.3.3_webpack@5.74.0:
     resolution: {integrity: sha512-hj5CYrY0bZLB+eTO+x/j67Pkrquiy7kWepMHmUMoPsmcUaeEnQJqFzHJOyxgWlq746/wUuA64p9ta34Kyb01pA==}
     engines: {node: '>= 12.13.0'}
@@ -13340,7 +13308,7 @@ packages:
       - utf-8-validate
     dev: true
 
-  /webpack-dev-server/4.9.0_webpack@5.72.1:
+  /webpack-dev-server/4.9.0_webpack@5.74.0:
     resolution: {integrity: sha512-+Nlb39iQSOSsFv0lWUuUTim3jDQO8nhK3E68f//J2r5rIcp4lULHXz2oZ0UVdEeWXEh5lSzYUlzarZhDAeAVQw==}
     engines: {node: '>= 12.13.0'}
     hasBin: true
@@ -13377,8 +13345,8 @@ packages:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack: 5.72.1_esbuild@0.14.38
-      webpack-dev-middleware: 5.3.1_webpack@5.72.1
+      webpack: 5.74.0
+      webpack-dev-middleware: 5.3.1_webpack@5.74.0
       ws: 8.8.1
     transitivePeerDependencies:
       - bufferutil

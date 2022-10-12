@@ -9,6 +9,7 @@ import { AccordionModule } from 'primeng/accordion';
 import { ButtonModule } from 'primeng/button';
 import { DataViewModule } from 'primeng/dataview';
 import { DropdownModule } from 'primeng/dropdown';
+import { AutoCompleteModule } from 'primeng/autocomplete';
 import { MenuModule } from 'primeng/menu';
 import { InputTextModule } from 'primeng/inputtext';
 import { PanelModule } from 'primeng/panel';
@@ -31,6 +32,9 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { PermanentTeethComponent } from './patient-dental-history/permanent-teeth/permanent-teeth.component';
 import { DeciduousTeethComponent } from './patient-dental-history/deciduous-teeth/deciduous-teeth.component';
 import { ToothFormComponent } from './patient-dental-history/tooth-form/tooth-form.component';
+import { CarouselModule } from 'primeng/carousel';
+import { ImageModule } from 'primeng/image';
+import { GalleriaModule } from 'primeng/galleria';
 
 const routes: Routes = [
   { path: '', component: PatientsComponent },
@@ -47,10 +51,10 @@ const routes: Routes = [
     PatientDentalHistoryComponent,
     PatientMedicalHistoryComponent,
     PatientIdPhotoComponent,
-    PatientClinicalPhotosComponent,
     PermanentTeethComponent,
     DeciduousTeethComponent,
     ToothFormComponent,
+    PatientClinicalPhotosComponent
   ],
   imports: [
     CommonModule,
@@ -73,7 +77,11 @@ const routes: Routes = [
     ChipsModule,
     ChipModule,
     ListboxModule,
+    AutoCompleteModule,
     ReactiveFormsModule,
+    CarouselModule,
+    ImageModule,
+    GalleriaModule,
   ],
 })
-export class PatientsModule {}
+export class PatientsModule { }

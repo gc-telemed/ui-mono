@@ -3,6 +3,10 @@ export interface IdVal<V> {
   value: V;
 }
 
+export interface IdValue {
+  key: number;
+  value: string;
+}
 
 export class SafeCrudArray<V> {
 

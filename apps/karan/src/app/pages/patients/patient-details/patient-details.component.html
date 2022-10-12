@@ -2,7 +2,7 @@
     <li *ngFor="let item of steps" [attr.data-content]="item.icon" class="step"
         [ngClass]="item.expanded ? 'step-primary' : 'step-neutral'">{{item.label}}</li>
 </ul>
-<p-accordion [multiple]="true" (onOpen)="onTabOpen($event)" (onClose)="onTabClose($event)">
+<p-accordion [multiple]="true" (onOpen)="onTabOpen($event)" (onClose)="onTabClose($event)" styleClass="mb-48">
     <p-accordionTab [selected]="true">
         <ng-template pTemplate="header">Patient ID</ng-template>
         <ng-template pTemplate="content">
@@ -16,13 +16,13 @@
         </ng-template>
     </p-accordionTab>
     <p-accordionTab>
-        <ng-template pTemplate="header">Dental History</ng-template>
+        <ng-template pTemplate="header">Dental Records</ng-template>
         <ng-template pTemplate="content">
             <gita-patient-dental-history></gita-patient-dental-history>
         </ng-template>
     </p-accordionTab>
     <p-accordionTab>
-        <ng-template pTemplate="header">Medical History</ng-template>
+        <ng-template pTemplate="header">Medical Records</ng-template>
         <ng-template pTemplate="content">
             <gita-patient-medical-history></gita-patient-medical-history>
         </ng-template>
@@ -40,4 +40,3 @@
         </ng-template>
     </p-accordionTab>
 </p-accordion>
-<div class="block py-32"></div>

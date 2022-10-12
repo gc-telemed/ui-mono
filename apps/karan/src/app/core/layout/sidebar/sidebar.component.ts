@@ -1,4 +1,4 @@
-import { globalSettings } from './../../models/global-routes.model';
+import { globalSettings, globalRouteItems } from '../../models/global-routes.data';
 import { SidebarVizService } from './../../services/sidebar-viz.service';
 import { LayoutModel } from '../store/layout.model';
 
@@ -6,7 +6,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { MenuItem } from 'primeng/api';
 import { map, Observable, Subject, takeUntil } from 'rxjs';
-import { globalRouteItems } from '../../models/global-routes.model';
 import { selectLayout } from '../store/layout.selectors';
 
 @Component({

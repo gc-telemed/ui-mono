@@ -8,6 +8,8 @@ import { Component, Input } from '@angular/core';
 export class WideCardComponent {
   @Input() patient!: number;
 
+  selected = false;
+
   fullName = "Test Karna";
   gender = "Male";
   age = "32";
@@ -25,4 +27,8 @@ export class WideCardComponent {
 
   prevDate = new Date().toString().replace(/GMT.*/, "");
   nextDate = new Date().toString().replace(/GMT.*/, "");
+
+  toggleSelection() {
+    this.selected = !this.selected;
+  }
 }

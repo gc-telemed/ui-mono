@@ -31,14 +31,14 @@ export const quadrantCodes = new ImmutableMap([
 // Tooth Codes
 // set by counting
 export const toothCodes = new ImmutableMap([
-    [1, "central incisors"],
-    [2, "lateral incisors"],
+    [1, "central incisor"],
+    [2, "lateral incisor"],
     [3, "canines"],
-    [4, "1st premolars/1st molar"], // permanent / deciduous 
-    [5, "2nd premolars/2nd molar"], // permanent / deciduous 
-    [6, "1st molars"],
-    [7, "2nd molars"],
-    [8, "3rd molars"],
+    [4, "1st premolar/1st molar"], // permanent / deciduous 
+    [5, "2nd premolar/2nd molar"], // permanent / deciduous 
+    [6, "1st molar"],
+    [7, "2nd molar"],
+    [8, "3rd molar"],
 ]);
 
 
@@ -46,9 +46,9 @@ export class ISO3950Notation {
     readonly quadrantCode: number;
     readonly toothCode: number;
 
-    constructor(quadrantCode: number, toothCode: number) {
-        this.quadrantCode = quadrantCode;
-        this.toothCode = toothCode;
+    constructor(iso: number) {
+        this.quadrantCode = Math.floor(iso / 10);
+        this.toothCode = iso % 10;
     }
 
     isPermanent() {
@@ -75,7 +75,7 @@ export class ISO3950Notation {
             toothCodes.get(this.toothCode);
         const descriptor = quadrantCodes.get(this.quadrantCode);
 
-        return descriptor && name ? descriptor + name : '';
+        return descriptor && name ? descriptor + ' ' + name : '';
     }
 }
 

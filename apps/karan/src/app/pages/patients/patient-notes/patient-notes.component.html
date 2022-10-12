@@ -9,7 +9,7 @@
                     <label class="block uppercase text-xs mb-2" for="labels">
                         Click Labels or Type Below
                     </label>
-                    <div class="flex gap-2 mb-4">
+                    <div class="flex flex-row gap-2 mb-4">
                         <p-chip *ngFor="let label of chips" [removable]="true" removeIcon="pi pi-check" [label]="label"
                             styleClass="hover:text-white hover:bg-emerald-600" (onRemove)="onChipSelect(label)"
                             (click)="onChipSelect(label)">
@@ -28,16 +28,16 @@
                         </p-chips>
                     </div>
                 </div>
-                <div class="w-full lg:w-11/12 px-4">
+                <div class="w-[95%] px-4">
                     <div class="relative w-full mb-3">
-                        <label class="block uppercase  text-xs font-bold mb-2" for="note">`
+                        <label class="block uppercase  text-xs font-bold mb-2" for="note">
                             {{currentNoteKey !== -1 ? 'Edit Note ' + (currentNoteKey + 1) + ":" : "New Note"}}
                         </label>
                         <textarea id="note" pInputTextArea #patientNote rows="3" formControlName="note"
-                            class="rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"></textarea>
+                            class="rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 h-[50px]"></textarea>
                     </div>
                 </div>
-                <div class="w-full lg:w-1/12 px-4">
+                <div class="w-[5%] pr-2">
                     <div class="relative w-full mb-3">
                         <label class="block uppercase  text-xs font-bold mb-2 -ml-1" for="notes">
                             {{currentNoteKey !== -1 ? 'Save Note' : 'Add Note'}}

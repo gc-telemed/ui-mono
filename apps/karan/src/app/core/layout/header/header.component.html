@@ -1,7 +1,7 @@
 <gita-header-basic [isSidebarShown$]="isSidebarShown$" [headerNavItems]="headerNavItems" [collapser]="collapser"
     [expander]="expander" [authPref]="authPref" [prodPref]="prodPref">
     <ng-template [gitaHeaderMenu]="headerNavItems">
-        <div class="flex pr-4 w-full">
+        <div class="flex pr-4 w-full z-20">
             <p-menubar [model]="headerNavItems">
                 <ng-template pTemplate="start">
                     <img src="assets/img/logo-1024.png" class="h-10" alt="logo">

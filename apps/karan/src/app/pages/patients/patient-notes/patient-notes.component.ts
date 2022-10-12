@@ -1,11 +1,9 @@
+import { IdValue } from './../../../core/utils/crud';
 import { SafeCrudArray } from '../../../core/utils/crud';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
-interface IdVal {
-  key: number;
-  value: string;
-}
+
 
 @Component({
   selector: 'gita-patient-notes',
@@ -15,7 +13,7 @@ interface IdVal {
 export class PatientNotesComponent implements OnInit {
 
   defaultLabels: Set<string> = new Set(['VIP', 'Friend', 'Colleague', 'Referred', 'Poor',
-    'Friendly', 'Religious', 'Rude', 'Hesitant', 'Introvert', 'Uneducated']);
+    'Friendly', 'Religious', 'Rude', 'Hesitant', 'Introvert', 'Illiterate']);
 
   chips: Set<string> = new Set(this.defaultLabels);
 
@@ -60,7 +58,7 @@ export class PatientNotesComponent implements OnInit {
     this.currentNoteKey = -1;
   }
 
-  onNoteSelect(event: { value: IdVal }) {
+  onNoteSelect(event: { value: IdValue }) {
     this.currentNoteKey = event.value.key;
     this.notesForm.controls['note'].setValue(this.notes.valueAt(event.value.key) ?? "");
   }

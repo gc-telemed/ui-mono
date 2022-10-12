@@ -1,7 +1,7 @@
 import { BreakpointsService } from './../../services/breakpoints.service';
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { globalRouteItems } from '../../models/global-routes.model';
+import { globalRouteItems } from '../../models/global-routes.data';
 
 @Component({
   selector: 'gita-footer',

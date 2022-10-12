@@ -1,4 +1,5 @@
-<div class="stats shadow border-indigo-700 rounded-none w-full flex flex-row border-b-2">
+<div class="stats shadow border-indigo-700 rounded-none w-full flex flex-row border-b-2"
+    [ngClass]="{'bg-slate-300': selected}" (click)="toggleSelection()">
 
     <div class="stat max-w-1/3 min-w-1/3">
         <div class="stat-figure text-secondary">

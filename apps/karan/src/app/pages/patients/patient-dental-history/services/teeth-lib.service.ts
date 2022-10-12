@@ -8,8 +8,8 @@ export class TeethLibService {
 
   teethHistory: ToothHistory[] = EMPTY_TEETH_HISTORY;
 
-  currentPermanentTooth!: number;
-  currentDeciduousTooth!: number;
+  currentPermanentTooth = 0;
+  currentDeciduousTooth = 0;
 
   shouldBeStroked(index: number) {
     if (index > this.teethHistory.length) return false;
@@ -31,9 +31,9 @@ export class TeethLibService {
 
   selectedToothIso(index: number) {
     if (index <= 48) {
-      this.currentPermanentTooth = index;
+      this.currentPermanentTooth = this.currentPermanentTooth !== index ? index : 0;
     } else {
-      this.currentDeciduousTooth = index;
+      this.currentDeciduousTooth = this.currentDeciduousTooth !== index ? index : 0;
     }
   }
 }

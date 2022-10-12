@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { Menu } from 'primeng/menu';
 
 @Component({
   selector: 'gita-patient-details',
