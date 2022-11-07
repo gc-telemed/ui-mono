@@ -47,11 +47,11 @@ export class CalendarViewService {
       plugins,
       initialDate: new Date(),
       initialView: 'timeGridWeek',
-      // headerToolbar: {
-      //   left: 'prev,next today',
-      //   center: 'title',
-      //   right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
-      // },
+      headerToolbar: {
+        left: 'dayGridMonth,timeGridWeek,timeGridDay',
+        center: 'title',
+        right: 'listWeek prev,today,next',
+      },
       buttonText: {
         today: 'Today',
         month: 'Month',

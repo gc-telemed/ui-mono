@@ -1,3 +1,4 @@
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RippleModule } from 'primeng/ripple';
 import { DialogModule } from 'primeng/dialog';
@@ -82,6 +83,7 @@ const routes: Routes = [
     CarouselModule,
     ImageModule,
     GalleriaModule,
+    FontAwesomeModule
   ],
 })
 export class PatientsModule { }

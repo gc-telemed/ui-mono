@@ -1,3 +1,4 @@
+import { SpeedDialModule } from 'primeng/speeddial';
 import { AgGridModule } from 'ag-grid-angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -18,6 +19,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     FontAwesomeModule,
     AgGridModule,
+    SpeedDialModule,
     RouterModule.forChild(routes)
   ],
 })

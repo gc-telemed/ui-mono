@@ -4,7 +4,8 @@
             <ng-container *rxLet="isSidebarShown$ as isSidebarShown">
                 <a (click)="toggleSidebar()">
                     <i class="pi mt-[5px] mr-2 text-indigo-800 cursor-pointer"
-                        [ngClass]="!isSidebarShown ? 'pi-bars' : 'pi-angle-double-left'" style="font-size: 1.75rem"></i>
+                        [ngClass]="!isSidebarShown ? 'pi-angle-double-right' : 'pi-angle-double-left'"
+                        style="font-size: 1.75rem"></i>
                 </a>
             </ng-container>
             <span

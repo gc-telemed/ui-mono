@@ -1,3 +1,4 @@
+import { SpeedDialModule } from 'primeng/speeddial';
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -36,6 +37,7 @@ const routes: Routes = [{ path: '', component: AppointmentsComponent }];
     ReactiveFormsModule,
     ColorPickerModule,
     ToggleButtonModule,
+    SpeedDialModule,
     StoreModule.forFeature('calendar', calendarReducer),
     EffectsModule.forFeature([CalendarEffects]),
   ],

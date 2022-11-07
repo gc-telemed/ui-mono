@@ -1,7 +1,14 @@
+@import '../../../../pages';
+
 :host ::ng-deep {
+
+    .fc-header-toolbar {
+        @extend .sub-header;
+    }
+
     @media screen and (max-width:767px) {
             .fc-toolbar.fc-header-toolbar {
-                font-size: 65%
+                font-size: 65%;
             }
         }
 }

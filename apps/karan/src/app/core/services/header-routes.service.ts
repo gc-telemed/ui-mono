@@ -13,57 +13,59 @@ export class HeaderRoutesService {
     headerNavItems: MenuItem[] = [
         {
             label: 'Patients',
-            icon: 'pi pi-fw pi-users',
+            icon: 'pi pi-users',
+            iconClass: 'bg-indigo-700',
+            styleClass: 'text-indigo-800',
             items: [
                 {
                     label: 'New',
-                    icon: 'pi pi-fw pi-plus',
+                    icon: 'pi  pi-plus',
                     items: [
                         {
                             label: 'Quick',
-                            icon: 'pi pi-fw pi-align-left',
+                            icon: 'pi  pi-align-left',
                             command: () => this.store.dispatch(setView({ option: 'day' }))
                         },
                         {
                             label: 'Detailed',
-                            icon: 'pi pi-fw pi-align-right',
+                            icon: 'pi  pi-align-right',
                             command: () => this.store.dispatch(setView({ option: 'week' }))
                         },
                     ]
                 },
                 {
                     label: 'View',
-                    icon: 'pi pi-fw pi-sliders-h',
+                    icon: 'pi  pi-sliders-h',
                     items: [
                         {
                             label: 'Day',
-                            icon: 'pi pi-fw pi-align-left',
+                            icon: 'pi  pi-align-left',
                             command: () => this.store.dispatch(setView({ option: 'day' }))
                         },
                         {
                             label: 'Week',
-                            icon: 'pi pi-fw pi-align-right',
+                            icon: 'pi  pi-align-right',
                             command: () => this.store.dispatch(setView({ option: 'week' }))
                         },
                     ]
                 },
                 {
                     label: 'Sort By',
-                    icon: 'pi pi-fw pi-sliders-h',
+                    icon: 'pi  pi-sliders-h',
                     items: [
                         {
                             label: 'Appointment',
-                            icon: 'pi pi-fw pi-align-left',
+                            icon: 'pi  pi-align-left',
                             command: () => this.store.dispatch(setView({ option: 'day' }))
                         },
                         {
                             label: 'Name',
-                            icon: 'pi pi-fw pi-align-right',
+                            icon: 'pi  pi-align-right',
                             command: () => this.store.dispatch(setView({ option: 'week' }))
                         },
                         {
                             label: 'Payment',
-                            icon: 'pi pi-fw pi-align-right',
+                            icon: 'pi  pi-align-right',
                             command: () => this.store.dispatch(setView({ option: 'week' }))
                         },
                     ]
@@ -73,36 +75,36 @@ export class HeaderRoutesService {
                 },
                 {
                     label: 'Export',
-                    icon: 'pi pi-fw pi-external-link'
+                    icon: 'pi  pi-external-link'
                 }
             ]
         },
         {
             label: 'Appointments',
-            icon: 'pi pi-fw pi-calendar',
+            icon: 'pi pi-calendar',
             items: [
                 {
                     label: 'View',
-                    icon: 'pi pi-fw pi-sliders-h',
+                    icon: 'pi  pi-sliders-h',
                     items: [
                         {
                             label: 'Day',
-                            icon: 'pi pi-fw pi-align-left',
+                            icon: 'pi  pi-align-left',
                             command: () => this.store.dispatch(setView({ option: 'day' }))
                         },
                         {
                             label: 'Week',
-                            icon: 'pi pi-fw pi-align-right',
+                            icon: 'pi  pi-align-right',
                             command: () => this.store.dispatch(setView({ option: 'week' }))
                         },
                         {
                             label: 'Month',
-                            icon: 'pi pi-fw pi-align-center',
+                            icon: 'pi  pi-align-center',
                             command: () => this.store.dispatch(setView({ option: 'month' }))
                         },
                         {
                             label: 'List',
-                            icon: 'pi pi-fw pi-align-justify',
+                            icon: 'pi  pi-align-justify',
                             command: () => this.store.dispatch(setView({ option: 'list' }))
                         },
 
@@ -110,15 +112,15 @@ export class HeaderRoutesService {
                 },
                 {
                     label: 'Edit',
-                    icon: 'pi pi-fw pi-pencil',
+                    icon: 'pi  pi-pencil',
                     items: [
                         {
                             label: 'Save',
-                            icon: 'pi pi-fw pi-calendar-plus'
+                            icon: 'pi  pi-calendar-plus'
                         },
                         {
                             label: 'Delete',
-                            icon: 'pi pi-fw pi-calendar-minus'
+                            icon: 'pi  pi-calendar-minus'
                         },
 
 
@@ -126,11 +128,11 @@ export class HeaderRoutesService {
                 },
                 {
                     label: 'Archive',
-                    icon: 'pi pi-fw pi-calendar-times',
+                    icon: 'pi  pi-calendar-times',
                     items: [
                         {
                             label: 'Remove',
-                            icon: 'pi pi-fw pi-calendar-minus'
+                            icon: 'pi  pi-calendar-minus'
                         }
                     ]
                 }
@@ -138,26 +140,26 @@ export class HeaderRoutesService {
         },
         {
             label: 'Payments',
-            icon: 'pi pi-fw pi-wallet',
+            icon: 'pi  pi-wallet',
             items: [
                 {
                     label: 'Day',
-                    icon: 'pi pi-fw pi-align-left',
+                    icon: 'pi  pi-align-left',
                     command: () => this.store.dispatch(setView({ option: 'day' }))
                 },
                 {
                     label: 'Week',
-                    icon: 'pi pi-fw pi-align-right',
+                    icon: 'pi  pi-align-right',
                     command: () => this.store.dispatch(setView({ option: 'week' }))
                 },
                 {
                     label: 'Month',
-                    icon: 'pi pi-fw pi-align-center',
+                    icon: 'pi  pi-align-center',
                     command: () => this.store.dispatch(setView({ option: 'month' }))
                 },
                 {
                     label: 'List',
-                    icon: 'pi pi-fw pi-align-justify',
+                    icon: 'pi  pi-align-justify',
                     command: () => this.store.dispatch(setView({ option: 'list' }))
                 },
 
@@ -165,30 +167,30 @@ export class HeaderRoutesService {
         },
         {
             label: 'Equipments',
-            icon: 'pi pi-fw pi-link',
+            icon: 'pi  pi-link',
             items: [
                 {
                     label: 'Edit',
-                    icon: 'pi pi-fw pi-pencil',
+                    icon: 'pi  pi-pencil',
                     items: [
                         {
                             label: 'Save',
-                            icon: 'pi pi-fw pi-calendar-plus'
+                            icon: 'pi  pi-calendar-plus'
                         },
                         {
                             label: 'Delete',
-                            icon: 'pi pi-fw pi-calendar-minus'
+                            icon: 'pi  pi-calendar-minus'
                         },
 
                     ]
                 },
                 {
                     label: 'Archive',
-                    icon: 'pi pi-fw pi-calendar-times',
+                    icon: 'pi  pi-calendar-times',
                     items: [
                         {
                             label: 'Remove',
-                            icon: 'pi pi-fw pi-calendar-minus'
+                            icon: 'pi  pi-calendar-minus'
                         }
                     ]
                 }
@@ -196,30 +198,30 @@ export class HeaderRoutesService {
         },
         {
             label: 'Treatments',
-            icon: 'pi pi-fw pi-bookmark',
+            icon: 'pi  pi-bookmark',
             items: [
                 {
                     label: 'Edit',
-                    icon: 'pi pi-fw pi-pencil',
+                    icon: 'pi  pi-pencil',
                     items: [
                         {
                             label: 'Save',
-                            icon: 'pi pi-fw pi-calendar-plus'
+                            icon: 'pi  pi-calendar-plus'
                         },
                         {
                             label: 'Delete',
-                            icon: 'pi pi-fw pi-calendar-minus'
+                            icon: 'pi  pi-calendar-minus'
                         },
 
                     ]
                 },
                 {
                     label: 'Archive',
-                    icon: 'pi pi-fw pi-calendar-times',
+                    icon: 'pi  pi-calendar-times',
                     items: [
                         {
                             label: 'Remove',
-                            icon: 'pi pi-fw pi-calendar-minus'
+                            icon: 'pi  pi-calendar-minus'
                         }
                     ]
                 }

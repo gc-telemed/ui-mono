@@ -2,6 +2,7 @@ import { PatientEditorService } from './../services/patient-editor.service';
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { SelectItem } from 'primeng/api';
 import { take } from 'rxjs';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'gita-patients',
@@ -21,6 +22,8 @@ export class PatientsComponent implements OnInit, AfterViewInit {
   @ViewChildren('griddy') griddy!: QueryList<ElementRef>;
 
   contentRef?: HTMLElement;
+
+  faPlus = faPlus;
 
   constructor(protected patientEditorService: PatientEditorService) { }
 

@@ -1,3 +1,4 @@
+import { SpeedDialModule } from 'primeng/speeddial';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -13,7 +14,8 @@ import { InventoryComponent } from './inventory/inventory.component';
     CommonModule,
     InventoryRoutingModule,
     AgGridModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SpeedDialModule
   ],
 })
 export class InventoryModule { }

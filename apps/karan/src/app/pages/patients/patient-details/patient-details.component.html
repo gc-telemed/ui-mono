@@ -1,7 +1,12 @@
-<ul class="steps w-full mb-4 -mt-4">
-    <li *ngFor="let item of steps" [attr.data-content]="item.icon" class="step"
-        [ngClass]="item.expanded ? 'step-primary' : 'step-neutral'">{{item.label}}</li>
-</ul>
+<div class="flex">
+    <span class="tooltip tooltip-up tooltip-primary" data-tip="All Patients" routerLink="/patients">
+        <i class="pi pi-arrow-left text-indigo-800 hover:text-indigo-600 cursor-pointer"></i>
+    </span>
+    <ul class="steps w-full mb-4 -mt-4">
+        <li *ngFor="let item of steps" [attr.data-content]="item.icon" class="step"
+            [ngClass]="item.expanded ? 'step-primary' : 'step-neutral'">{{item.label}}</li>
+    </ul>
+</div>
 <p-accordion [multiple]="true" (onOpen)="onTabOpen($event)" (onClose)="onTabClose($event)" styleClass="mb-48">
     <p-accordionTab [selected]="true">
         <ng-template pTemplate="header">Patient ID</ng-template>
