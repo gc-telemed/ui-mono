@@ -14,13 +14,13 @@
                     class="relative items-center px-5 mr-4 text-gray-50 transition-colors duration-150 bg-fuchsia-500 h-10 text-sm font-semibold rounded-lg shadow-md focus:shadow-outline hover:bg-indigo-800"
                     *ngIf="selectedOrRowId" (click)="deleteRowSelected()">
                     <fa-icon [icon]="faTrash"></fa-icon>
-                    <span> Delete Item</span>
+                    <span> Delete Treatment</span>
                 </button>
                 <button type="button"
                     class="relative items-center px-5 text-gray-50 transition-colors duration-150 bg-fuchsia-500 h-10 text-sm font-semibold rounded-lg shadow-md focus:shadow-outline hover:bg-indigo-800"
                     [routerLink]="['/crm/leads/new']">
                     <fa-icon [icon]="faPlus"></fa-icon>
-                    <span> New Item</span>
+                    <span> New Treatment</span>
                 </button>
             </div>
         </form>

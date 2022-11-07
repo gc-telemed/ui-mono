@@ -4,10 +4,14 @@
         <div class="flex pr-4 w-full z-20">
             <p-menubar [model]="headerNavItems">
                 <ng-template pTemplate="start">
-                    <img src="assets/img/logo-1024.png" class="h-10" alt="logo">
+                    <span class="tooltip tooltip-left tooltip-primary" data-tip="Home">
+                        <img src="assets/img/logo-1024.png" class="h-10" alt="logo">
+                    </span>
                 </ng-template>
                 <ng-template pTemplate="end">
-                    <input type="text" pInputText placeholder="Search" class="h-10 w-full">
+                    <span class="tooltip tooltip-right tooltip-primary" data-tip="Statistics"><i
+                            class="pi text-indigo-800 mx-1 pi-chart-line"></i>
+                    </span>
                 </ng-template>
             </p-menubar>
         </div>

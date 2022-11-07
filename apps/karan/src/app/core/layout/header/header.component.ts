@@ -13,7 +13,11 @@ import { SidebarVizService } from './../../services/sidebar-viz.service';
     `
     :host ::ng-deep {  
       .p-menubar {
-        @apply bg-white
+        @apply bg-white;
+        height: 62px;
+      }
+      .p-menuitem {
+        @apply text-emerald-600;
       }
     }
     `

@@ -4,23 +4,18 @@ import { faCopy, faPlusCircle, faSearch, faTrash } from '@fortawesome/free-solid
 import { AgGridAngular } from 'ag-grid-angular';
 import { CellClickedEvent, ColDef, GridReadyEvent, RowSelectedEvent } from 'ag-grid-community';
 import { Observable } from 'rxjs';
-import { localeDateFormat } from '../../../core/utils/date';
 
 @Component({
-  selector: 'gita-inventory',
-  templateUrl: './inventory.component.html',
-  styleUrls: ['./inventory.component.scss'],
+  selector: 'gita-treatment',
+  templateUrl: './treatment.component.html',
+  styleUrls: ['./treatment.component.scss'],
 })
-export class InventoryComponent {
-
+export class TreatmentComponent {
   readonly columnDefs: ColDef[] = [
     { field: "id", headerName: "ID", headerTooltip: "Unique ID for the given equipment", flex: 1.8, sort: 'desc' },
-    { field: "name", flex: 2.5 },
-    { field: "code", flex: 2, },
-    { field: "currentAmount", flex: 2 },
-    { field: "neededAmount", flex: 2 },
-    { field: "cost", flex: 2 },
-    { field: "lastPurchase", valueFormatter: localeDateFormat, headerTooltip: "Date when last purchase was made", filter: "date", flex: 3 },
+    { field: "commonName", headerName: "Name", flex: 2.5 },
+    { field: "type", flex: 2, },
+    { field: "expense", headerName: "Price", flex: 2 },
   ];
 
 

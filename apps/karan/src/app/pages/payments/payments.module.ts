@@ -1,3 +1,6 @@
+import { AgGridModule } from 'ag-grid-angular';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -10,6 +13,12 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [PaymentsComponent, PaymentDetailsComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    FontAwesomeModule,
+    AgGridModule,
+    RouterModule.forChild(routes)
+  ],
 })
 export class PaymentsModule { }

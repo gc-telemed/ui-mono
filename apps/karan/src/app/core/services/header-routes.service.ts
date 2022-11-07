@@ -136,7 +136,6 @@ export class HeaderRoutesService {
                 }
             ]
         },
-
         {
             label: 'Payments',
             icon: 'pi pi-fw pi-wallet',
@@ -164,10 +163,40 @@ export class HeaderRoutesService {
 
             ]
         },
-
         {
             label: 'Equipments',
             icon: 'pi pi-fw pi-link',
+            items: [
+                {
+                    label: 'Edit',
+                    icon: 'pi pi-fw pi-pencil',
+                    items: [
+                        {
+                            label: 'Save',
+                            icon: 'pi pi-fw pi-calendar-plus'
+                        },
+                        {
+                            label: 'Delete',
+                            icon: 'pi pi-fw pi-calendar-minus'
+                        },
+
+                    ]
+                },
+                {
+                    label: 'Archive',
+                    icon: 'pi pi-fw pi-calendar-times',
+                    items: [
+                        {
+                            label: 'Remove',
+                            icon: 'pi pi-fw pi-calendar-minus'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            label: 'Treatments',
+            icon: 'pi pi-fw pi-bookmark',
             items: [
                 {
                     label: 'Edit',
