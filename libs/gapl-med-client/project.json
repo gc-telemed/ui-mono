@@ -1,4 +1,5 @@
 {
+  "name": "gapl-med-client",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/gapl-med-client/src",
   "projectType": "library",
@@ -12,7 +13,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/gapl-med-client"],
+      "outputs": ["{workspaceRoot}/coverage/libs/gapl-med-client"],
       "options": {
         "jestConfig": "libs/gapl-med-client/jest.config.ts",
         "passWithNoTests": true

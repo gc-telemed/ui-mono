@@ -1,13 +1,12 @@
 {
+  "name": "backoffice",
   "projectType": "application",
   "sourceRoot": "apps/backoffice/src",
   "prefix": "gita",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/backoffice",
         "index": "apps/backoffice/src/index.html",
@@ -20,12 +19,8 @@
           "apps/backoffice/src/assets",
           "apps/backoffice/src/manifest.webmanifest"
         ],
-        "styles": [
-          "apps/backoffice/src/styles.scss"
-        ],
-        "allowedCommonJsDependencies": [
-          "fast-deep-equal"
-        ],
+        "styles": ["apps/backoffice/src/styles.scss"],
+        "allowedCommonJsDependencies": ["fast-deep-equal"],
         "scripts": [],
         "serviceWorker": true,
         "ngswConfigPath": "apps/backoffice/ngsw-config.json"
@@ -92,9 +87,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/backoffice"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/apps/backoffice"],
       "options": {
         "jestConfig": "apps/backoffice/jest.config.ts",
         "passWithNoTests": true
