@@ -1,10 +1,12 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, ViewChild } from '@angular/core';
 import { faCopy, faPlusCircle, faSearch, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { AgGridAngular } from 'ag-grid-angular';
 import { CellClickedEvent, ColDef, GridReadyEvent, RowSelectedEvent } from 'ag-grid-community';
 import { Observable } from 'rxjs';
 import { localeDateFormat } from '../../../core/utils/date';
+import { InventoryUpdate } from '../model/inventory.model';
+import { InventoryApiService } from './../services/inventory-api.service';
+import { InventoryEditorService } from './../services/inventory-editor.service';
 
 @Component({
   selector: 'gita-inventory',
@@ -31,32 +33,29 @@ export class InventoryComponent {
   faTrash = faTrash;
   faSearch = faSearch;
 
-  // DefaultColDef sets props common to all Columns
+
   public defaultColDef: ColDef = {
     sortable: true,
     filter: true,
   };
 
-  // Data that gets displayed in the grid
-  public rowData$!: Observable<any[]>;
+  public rowData$!: Observable<InventoryUpdate[]>;
 
-  // For accessing the Grid's API
   @ViewChild(AgGridAngular) agGrid!: AgGridAngular;
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    protected editorService: InventoryEditorService,
+    private apiService: InventoryApiService
+  ) { }
 
-  // Example load data from sever
   onGridReady(params: GridReadyEvent) {
-    this.rowData$ = this.http
-      .get<any[]>('https://www.ag-grid.com/example-assets/row-data.json');
+    this.rowData$ = this.apiService.getPaged();
   }
 
-  // Example of consuming Grid Event
   onCellClicked(e: CellClickedEvent): void {
     console.log('cellClicked', e);
   }
 
-  // Example using Grid's API
   clearSelection(): void {
     this.agGrid.api.deselectAll();
   }
@@ -70,5 +69,9 @@ export class InventoryComponent {
     //TODO delete row
     this.selectedOrRowId = false;
     this.agGrid.api.deselectAll();
+  }
+
+  showEditor(show: boolean) {
+    this.editorService.showEditor(show);
   }
 }

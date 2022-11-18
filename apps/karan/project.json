@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/karan",
         "index": "apps/karan/src/index.html",
@@ -14,8 +16,13 @@
         "polyfills": "apps/karan/src/polyfills.ts",
         "tsConfig": "apps/karan/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/karan/src/favicon.ico", "apps/karan/src/assets"],
-        "styles": ["apps/karan/src/styles.scss"],
+        "assets": [
+          "apps/karan/src/favicon.ico",
+          "apps/karan/src/assets"
+        ],
+        "styles": [
+          "apps/karan/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -63,7 +70,8 @@
       },
       "defaultConfiguration": "development",
       "options": {
-        "port": 4242
+        "port": 4242,
+        "proxyConfig": "apps/karan/proxy.conf.json"
       }
     },
     "extract-i18n": {
@@ -75,17 +83,24 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/karan/**/*.ts", "apps/karan/**/*.html"]
+        "lintFilePatterns": [
+          "apps/karan/**/*.ts",
+          "apps/karan/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/apps/karan"],
+      "outputs": [
+        "{workspaceRoot}/coverage/apps/karan"
+      ],
       "options": {
         "jestConfig": "apps/karan/jest.config.ts",
         "passWithNoTests": true
       }
     }
   },
-  "tags": ["clinical"]
+  "tags": [
+    "clinical"
+  ]
 }

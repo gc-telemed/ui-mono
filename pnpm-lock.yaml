@@ -48,8 +48,8 @@ specifiers:
   '@nrwl/react': 15.1.1
   '@nrwl/web': 15.1.1
   '@nrwl/workspace': 15.1.1
-  '@rx-angular/cdk': 1.0.0-beta.3
-  '@rx-angular/template': 1.0.0-beta.33
+  '@rx-angular/cdk': 1.0.0-rc.3
+  '@rx-angular/template': 1.0.0-rc.4
   '@schematics/angular': 14.2.9
   '@testing-library/react': 13.4.0
   '@types/jest': 28.1.1
@@ -128,8 +128,8 @@ dependencies:
   '@ngrx/store-devtools': 14.3.2_s4eemevjanth4ljcy2p6xoqaq4
   '@ngx-formly/core': 5.12.7_n64jhn2qhb45wg6hudm42xvove
   '@ngx-formly/primeng': 5.12.7_x3v5dudtms74bvjiyjspd3pmce
-  '@rx-angular/cdk': 1.0.0-beta.3_eyiq4s6ddj6ti3ln7kqzxpg6ae
-  '@rx-angular/template': 1.0.0-beta.33_pkrd3kfpjyo27xd3qyfkw6ffza
+  '@rx-angular/cdk': 1.0.0-rc.3_eyiq4s6ddj6ti3ln7kqzxpg6ae
+  '@rx-angular/template': 1.0.0-rc.4_4gjiwfb4ms4wn7roseqx7a6pkq
   '@schematics/angular': 14.2.9
   ag-grid-angular: 28.2.1_iloqkvpgm7ff6r7eydsca43ega
   ag-grid-community: 28.2.1
@@ -4781,8 +4781,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@rx-angular/cdk/1.0.0-beta.3_eyiq4s6ddj6ti3ln7kqzxpg6ae:
-    resolution: {integrity: sha512-Rq54r28NdRMidvCJFFoXT0j2rfltshsndntt6UoIRDYjD9GIhXbmqgCVGmsdUeuSADYJrp3sfwsRbceaEEmPtA==}
+  /@rx-angular/cdk/1.0.0-rc.3_eyiq4s6ddj6ti3ln7kqzxpg6ae:
+    resolution: {integrity: sha512-1jUryB+IQIIoCymrHrHQ59LBkTr4Pfpg7cNF9bJZoenR4xIAxqhcsv6pTHN7CjKydGINI7sylz5U+TFPQGpLkA==}
     engines: {node: '>=10.12.0', npm: '>=5.3.0', yarn: '>=1.9.2'}
     peerDependencies:
       '@angular/core': '>=12.0.0'
@@ -4797,8 +4797,8 @@ packages:
       - '@angular-devkit/schematics'
     dev: false
 
-  /@rx-angular/template/1.0.0-beta.33_pkrd3kfpjyo27xd3qyfkw6ffza:
-    resolution: {integrity: sha512-c2R6f590JePGd+Bx7BTj8BsE87OU0273xoXE8IWBYYMzudtD3jaULnmaCAmgWqfEZctUtL6cJo6BWoCoOtHihw==}
+  /@rx-angular/template/1.0.0-rc.4_4gjiwfb4ms4wn7roseqx7a6pkq:
+    resolution: {integrity: sha512-88dWW5X+M00ufOeCkcODGnRfi+Z/AGGyyrf9KatOI4Mj5ZMSvg38xQle8MlyOYHkjyxlzaxFNsVDIopjoZnA7g==}
     engines: {node: '>=10.12.0', npm: '>=5.3.0', yarn: '>=1.9.2'}
     peerDependencies:
       '@angular/core': '>=12.0.0'
@@ -4808,7 +4808,7 @@ packages:
     dependencies:
       '@angular/core': 14.2.11_rxjs@7.5.7+zone.js@0.11.8
       '@angular/platform-browser': 14.2.11_zez6djhwlji3bikka7td3ytvty
-      '@rx-angular/cdk': 1.0.0-beta.3_eyiq4s6ddj6ti3ln7kqzxpg6ae
+      '@rx-angular/cdk': 1.0.0-rc.3_eyiq4s6ddj6ti3ln7kqzxpg6ae
       ng-morph: 2.1.1_msnfvo2o5gq5gwbamb5tby6bda
       rxjs: 7.5.7
       tslib: 2.4.1
