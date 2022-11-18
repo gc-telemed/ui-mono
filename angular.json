@@ -4,6 +4,8 @@
   "projects": {
     "backoffice": "apps/backoffice",
     "backoffice-e2e": "apps/backoffice-e2e",
+    "doq": "apps/doq",
+    "doq-e2e": "apps/doq-e2e",
     "gapl-med-client": "libs/gapl-med-client",
     "karan": "apps/karan",
     "karan-e2e": "apps/karan-e2e",
