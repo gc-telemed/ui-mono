@@ -6,9 +6,20 @@ import { CommonModule } from '@angular/common';
 
 import { CatalogRoutingModule } from './catalog-routing.module';
 import { TreatmentComponent } from './treatment/treatment.component';
+import { TreatmentNewQuickComponent } from './treatment-new-quick/treatment-new-quick.component';
+import { DialogModule } from 'primeng/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [TreatmentComponent],
-  imports: [CommonModule, CatalogRoutingModule, FontAwesomeModule, AgGridModule, SpeedDialModule],
+  declarations: [TreatmentComponent, TreatmentNewQuickComponent],
+  imports: [
+    CommonModule,
+    CatalogRoutingModule,
+    FontAwesomeModule,
+    AgGridModule,
+    SpeedDialModule,
+    DialogModule,
+    ReactiveFormsModule
+  ],
 })
 export class CatalogModule { }
