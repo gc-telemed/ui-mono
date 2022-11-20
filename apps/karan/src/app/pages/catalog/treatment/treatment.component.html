@@ -24,8 +24,9 @@
             </div>
         </form>
         <!-- AG Grid Angular Component -->
-        <ag-grid-angular class="ag-theme-material w-full h-[75vh]" [columnDefs]="columnDefs"
-            [defaultColDef]="defaultColDef" [pagination]="true" [paginationAutoPageSize]="true"
+        <ag-grid-angular class="ag-theme-material w-full h-[77vh]" [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef" [pagination]="true" [paginationAutoPageSize]="false"
+            [paginationPageSize]="(pageSize | async) ?? 13" (paginationChanged)="onPageChange($event)"
             [rowData]="rowData$ | async" rowSelection="single" (rowSelected)="onRowSelected($event)"
             [animateRows]="true" (gridReady)="onGridReady($event)">
         </ag-grid-angular>

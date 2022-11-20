@@ -1,3 +1,7 @@
+import { TreatmentListEffects } from './store/treatmenet-list/treatment-list.effects';
+import { EffectsModule } from '@ngrx/effects';
+import { treatmentListFeature } from './store/treatmenet-list/treatment-list.reducer';
+import { StoreModule } from '@ngrx/store';
 import { SpeedDialModule } from 'primeng/speeddial';
 import { AgGridModule } from 'ag-grid-angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -19,7 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AgGridModule,
     SpeedDialModule,
     DialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forFeature(treatmentListFeature),
+    EffectsModule.forFeature([TreatmentListEffects])
   ],
 })
 export class CatalogModule { }

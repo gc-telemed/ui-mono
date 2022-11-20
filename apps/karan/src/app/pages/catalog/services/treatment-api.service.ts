@@ -1,24 +1,39 @@
-import { TreatmentCreate, TreatmentUpdate } from './../model/treatment.model';
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'apps/karan/src/environments/environment';
 import { Observable } from 'rxjs';
+import { ApiService } from '../../../core/api/api.service';
+import { TreatmentEntity, TreatmentPayload } from './../model/treatment.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TreatmentApiService {
 
-  readonly API_URL = `${environment.apiUrl}/treatments`;
-  readonly API_PAGINATED_URL = (index: number, size: number) => this.API_URL + `/list/${index}/${size}`;
+  readonly API_URL = `/treatments`;
 
-  constructor(private http: HttpClient) { }
+  constructor(private apiService: ApiService) { }
 
-  create(payload: TreatmentCreate): Observable<number> {
-    return this.http.post<number>(this.API_URL, payload);
+  create(payload: TreatmentPayload): Observable<number> {
+    return this.apiService.post<TreatmentPayload>(this.API_URL, payload);
   }
 
-  getPaged(index: number = 0, size: number = 50): Observable<TreatmentUpdate[]> {
-    return this.http.get<TreatmentUpdate[]>(this.API_PAGINATED_URL(index, size));
+  getPaged(index: number = 0, size: number = 50): Observable<TreatmentEntity[]> {
+    return this.apiService.get<TreatmentEntity[]>(this.API_URL + `/list/${index}/${size}`);
   }
+
+  updateFull(treatment: TreatmentEntity): Observable<boolean> {
+    return this.apiService.put<TreatmentEntity>(this.API_URL, treatment)
+  }
+
+  updatePartial(id: number, changed: Partial<TreatmentEntity>): Observable<boolean> {
+    return this.apiService.patch<TreatmentEntity>(`${this.API_URL}/${id}`, changed);
+  }
+
+  delete(id: number): Observable<boolean> {
+    return this.apiService.delete(`${this.API_URL}/${id}`);
+  }
+
+  getPagedFromStats(stats: { count: number, currentPage: number, pageSize: number }) {
+    return this.getPaged(stats.currentPage, stats.pageSize);
+  }
+
 }

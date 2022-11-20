@@ -15,7 +15,7 @@ export class TreatmentNewQuickComponent {
 
   treatmentForm = this.fb.group({
     commonName: this.fb.nonNullable.control("", Validators.required),
-    type: [""],
+    treatmentType: [""],
     visits: this.fb.nonNullable.control(1, Validators.required),
     expense: new FormControl<number | null>(null, Validators.required)
   });

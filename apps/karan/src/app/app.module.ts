@@ -10,6 +10,7 @@ import { StoreModule } from '@ngrx/store';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
+import { API_URL } from './core/api/api.config';
 
 const routes: Routes = [
   {
@@ -31,7 +32,9 @@ const routes: Routes = [
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
-  providers: [],
+  providers: [
+    { provide: API_URL, useValue: environment.apiUrl },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

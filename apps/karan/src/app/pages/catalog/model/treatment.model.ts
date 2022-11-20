@@ -1,10 +1,10 @@
 import { IdEntity } from "../../../core/models/entity.model";
 
-export interface TreatmentCreate {
+export interface TreatmentPayload {
     commonName: string;
-    type: string | null;
+    treatmentType: string | null;
     visits: number;
     expense: number | null;
 }
 
-export type TreatmentUpdate = IdEntity & TreatmentCreate;
+export type TreatmentEntity = IdEntity & TreatmentPayload;
