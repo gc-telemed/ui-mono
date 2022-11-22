@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, shareReplay } from 'rxjs';
 import { ApiService } from '../../../core/api/api.service';
 import { TreatmentEntity, TreatmentPayload } from './../model/treatment.model';
 
@@ -9,6 +9,8 @@ import { TreatmentEntity, TreatmentPayload } from './../model/treatment.model';
 export class TreatmentApiService {
 
   readonly API_URL = `/treatments`;
+
+  getStream$ = this.getStream().pipe(shareReplay(1, 10 * 60 * 1000));
 
   constructor(private apiService: ApiService) { }
 
@@ -32,8 +34,8 @@ export class TreatmentApiService {
     return this.apiService.delete(`${this.API_URL}/${id}`);
   }
 
-  getPagedFromStats(stats: { count: number, currentPage: number, pageSize: number }) {
-    return this.getPaged(stats.currentPage, stats.pageSize);
+  private getStream() {
+    return this.apiService.getStream<TreatmentEntity[]>(`${this.API_URL}/stream`);
   }
 
 }

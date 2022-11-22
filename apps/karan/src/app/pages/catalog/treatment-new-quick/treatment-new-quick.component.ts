@@ -1,8 +1,9 @@
-import { TreatmentApiService } from './../services/treatment-api.service';
-import { TreatmentEditorService } from './../services/treatment-editor.service';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Component, Input, OnInit } from '@angular/core';
+import { treatmentActions } from '../store/treatment/treatment.actions';
+import { TreatmentApiService } from './../services/treatment-api.service';
 
 @Component({
   selector: 'gita-treatment-new-quick',
@@ -21,14 +22,16 @@ export class TreatmentNewQuickComponent {
   });
 
   constructor(
-    private editorService: TreatmentEditorService,
+    private store: Store,
     private fb: FormBuilder,
     private apiService: TreatmentApiService
   ) { }
 
 
   setDialogVisibility(show: boolean) {
-    this.editorService.showEditor(show);
+    if (!show) {
+      this.store.dispatch(treatmentActions.hideModalForm());
+    }
   }
 
   submitForm() {

@@ -1,31 +1,78 @@
-import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
-import { faCopy, faPlusCircle, faSearch, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { faPlusCircle, faSave, faSearch, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Store } from '@ngrx/store';
 import { AgGridAngular } from 'ag-grid-angular';
-import { CellClickedEvent, ColDef, GridReadyEvent, RowSelectedEvent } from 'ag-grid-community';
-import { filter, merge, Observable, Subscription, tap, fromEvent } from 'rxjs';
-import { TreatmentEditorService } from '../services/treatment-editor.service';
-import { treatmentListSelectors } from '../store/treatmenet-list/treatment-list.selectors';
+import { CellClickedEvent, CellEditingStartedEvent, CellEditingStoppedEvent, CellEditRequestEvent, ColDef, GridReadyEvent, RowSelectedEvent } from 'ag-grid-community';
+import { Observable } from 'rxjs';
+import { TreatmentsGridApiService } from '../services/treatments-grid-api.service';
+import { GridHelperService } from './../../../core/grid/grid-helper.service';
 import { TreatmentEntity } from './../model/treatment.model';
-import { treatmentListActions } from './../store/treatmenet-list/treatment-list.actions';
+import { treatmentListActions } from './../store/treatment-list/treatment-list.actions';
+import { treatmentEditSelectors, treatmentListSelectors } from './../store/treatment-list/treatment-list.selectors';
+import { treatmentActions } from './../store/treatment/treatment.actions';
+import { ActionCellComponent } from './action-cell/action-cell.component';
+import { NumericCellComponent } from './numeric-cell/numeric-cell.component';
+
+const invalid = "Invalid Number";
 
 @Component({
   selector: 'gita-treatment',
   templateUrl: './treatment.component.html',
   styleUrls: ['./treatment.component.scss'],
 })
-export class TreatmentComponent implements OnInit, OnDestroy {
-  readonly columnDefs: ColDef[] = [
-    { field: "id", headerName: "ID", headerTooltip: "Unique ID for the given equipment", flex: 1.8, sort: 'desc' },
-    { field: "commonName", headerName: "Name", flex: 2.5 },
-    { field: "treatmentType", flex: 2, },
-    { field: "expense", headerName: "Price", flex: 2 },
+export class TreatmentComponent implements OnInit {
+
+  columnDefs: ColDef[] = [
+    {
+      field: "id",
+      headerName: "ID",
+      headerTooltip: "Unique ID for the given equipment",
+      flex: 1.8,
+      editable: false,
+      suppressNavigable: true,
+      sort: 'asc'
+    },
+    { field: "commonName", headerName: "Name", flex: 2, editable: true },
+    { field: "treatmentType", headerName: "Type", flex: 2, editable: true },
+    {
+      field: "expense",
+      headerName: "Price",
+      flex: 1.5,
+      editable: true,
+      cellEditor: NumericCellComponent,
+      valueParser: params => {
+        const newNum = Number(params.newValue);
+        return isNaN(newNum) || newNum < 0 ? invalid : newNum;
+      },
+      cellClassRules: {
+        'border-red-600': params => params.value === invalid
+      },
+    },
+    {
+      field: "visits",
+      headerName: "Min Visits",
+      flex: 1.5,
+      editable: true,
+      cellEditor: NumericCellComponent,
+      valueParser: params => {
+        const newNum = Number(params.newValue);
+        return isNaN(newNum) || newNum < 0 ? invalid : newNum;
+      },
+      cellClassRules: {
+        'border-red-600': params => params.value === invalid
+      },
+    },
+    {
+      headerName: "Actions",
+      flex: 1,
+      cellRenderer: ActionCellComponent,
+      editable: false
+    }
   ];
 
+  selectedId = -1;
 
-  selectedOrRowId: false | number = false;
-
-  faClone = faCopy;
+  faSave = faSave;
   faPlus = faPlusCircle;
   faTrash = faTrash;
   faSearch = faSearch;
@@ -36,79 +83,85 @@ export class TreatmentComponent implements OnInit, OnDestroy {
     filter: true,
   };
 
-  private customPaginationSub!: Subscription;
 
-  // Data that gets displayed in the grid
-  public rowData$!: Observable<TreatmentEntity[]>;
-  pageSize = this.store.select(treatmentListSelectors.selectTreatmentPageSize);
+  protected rowData$!: Observable<TreatmentEntity[]>;
+  protected displayModal$!: Observable<boolean>;
+  protected hasUnsaved$!: Observable<boolean>;
 
-  // For accessing the Grid's API
+  protected entityName = "treatments";
+
+
   @ViewChild(AgGridAngular) agGrid!: AgGridAngular;
 
   constructor(
-    protected editorService: TreatmentEditorService,
-    private store: Store) { }
+    private store: Store,
+    protected tableProps: GridHelperService,
+    private gridApi: TreatmentsGridApiService) { }
 
   ngOnInit() {
-    this.store.dispatch(treatmentListActions.loadTreatments())
+    this.store.dispatch(treatmentListActions.loadTreatments());
+    this.displayModal$ = this.store.select(treatmentEditSelectors.selectModalTrigger);
+    this.hasUnsaved$ = this.store.select(treatmentEditSelectors.selectHasUnsaved);
   }
 
-  // Example load data from sever
   onGridReady(params: GridReadyEvent) {
+    this.gridApi.init(this.agGrid);
     this.rowData$ = this.store.select(treatmentListSelectors.selectTreatmentEntities);
-    this.initiateCustomPagination();
   }
 
-  initiateCustomPagination() {
-    const nextPageButton = document.querySelector('[aria-label="Next Page"]') as HTMLElement;
-    const lastPageButton = document.querySelector('[aria-label="Last Page"]') as HTMLElement;
 
-    const nextClick$ = fromEvent(nextPageButton, 'click');
-    const lastClick$ = fromEvent(lastPageButton, 'click');
-    this.customPaginationSub = merge(nextClick$, lastClick$)
-      .pipe(
-        filter(() =>
-          this.agGrid.api.paginationGetCurrentPage() + 1
-          === this.agGrid.api.paginationGetTotalPages()
-        ),
-        tap(() => console.log("click event pass")),
-        tap(() => this.store.dispatch(treatmentListActions.loadTreatments()))
-      )
-      .subscribe();
-  }
-
-  ngOnDestroy(): void {
-    this.customPaginationSub.unsubscribe();
-  }
-
-  // Example of consuming Grid Event
   onCellClicked(e: CellClickedEvent): void {
     console.log('cellClicked', e);
   }
 
-  // Example using Grid's API
+
   clearSelection(): void {
     this.agGrid.api.deselectAll();
   }
 
   onRowSelected(event: RowSelectedEvent) {
-    this.selectedOrRowId = event.node.isSelected() ? event.node.data.id : false;
+    if (event.node.isSelected()) {
+      const id = event.node.data.id;
+      this.store.dispatch(treatmentActions.selectTreatment({ id }));
+    }
   }
 
   deleteRowSelected() {
-    if (this.selectedOrRowId === false) return;
-    //TODO delete row
-    this.selectedOrRowId = false;
+    if (this.selectedId === -1) return;
+    //TODO: delete row
+    this.selectedId = -1;
     this.agGrid.api.deselectAll();
   }
 
+  inlineEditStarted(event: CellEditingStartedEvent) {
+    if (event.rowIndex) {
+      this.agGrid.api.getRowNode('' + event.rowIndex)?.setSelected(true);
+    }
+  }
 
+  cellEditRequest(event: CellEditRequestEvent) {
+    this.store.dispatch(treatmentActions.displayInlineForm());
+    const data = event.data;
+    const field = event.colDef.field;
+    const newItem = { ...data };
+    if (field) {
+      newItem[field] = event.newValue;
+      this.store.dispatch(treatmentListActions.changeById({ newItem }))
+    }
+  }
 
-  onPageChange(event: any) {
-    console.log("Page change", event);
+  inlineEditStopped(event: CellEditingStoppedEvent) {
+    this.store.dispatch(treatmentActions.hideInlineForm());
   }
 
   showEditor(show: boolean) {
-    this.editorService.showEditor(show);
+    if (show) {
+      this.store.dispatch(treatmentActions.displayModalForm({ id: -1 }));
+    }
+  }
+
+  resolveUpdates() {
+    // TODO: save all changes using array of unsaved treatment entities
+    console.log("batch updating unsaved changes");
   }
 }

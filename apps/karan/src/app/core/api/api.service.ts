@@ -1,4 +1,4 @@
-import { Observable, map } from 'rxjs';
+import { Observable, map, of, flatMap, mergeMap } from 'rxjs';
 import { API_URL } from './api.config';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Inject, Injectable } from "@angular/core";
@@ -31,5 +31,9 @@ export class ApiService {
     delete(url: string): Observable<boolean> {
         return this.http.delete<boolean>(`${this.apiUrl}${url}`, { observe: 'response' })
             .pipe(map(resp => resp.status === 200));
+    }
+
+    getStream<T>(url: string, params: HttpParams = new HttpParams()): Observable<T> {
+        return this.http.get<T>(`${this.apiUrl}${url}`, { params }); //.pipe(mergeMap(data => of(data)))
     }
 }

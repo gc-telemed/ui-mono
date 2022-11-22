@@ -1,15 +1,12 @@
 import { TreatmentEntity } from './../../model/treatment.model';
 
-export interface TreatmentListConfig {
-    pageSize: number;
-}
-
 export interface TreatmentListMeta {
     entities: TreatmentEntity[];
+    unupdated: TreatmentEntity[];
+    undoables: TreatmentEntity[];
     count: number;
     loaded: boolean;
     loading: boolean;
-    currentPage: number;
 }
 
 export interface TreatmentMeta {
@@ -19,7 +16,6 @@ export interface TreatmentMeta {
 }
 
 export interface TreatmentListState {
-    config: TreatmentListConfig;
     treatments: TreatmentListMeta;
     selection: TreatmentMeta;
 }
@@ -27,13 +23,11 @@ export interface TreatmentListState {
 export const treatmentListInitialState: TreatmentListState = {
     treatments: {
         entities: [],
+        unupdated: [],
+        undoables: [],
         count: 0,
-        currentPage: 0,
         loaded: false,
         loading: false
-    },
-    config: {
-        pageSize: 13,
     },
     selection: {
         selected: -1,

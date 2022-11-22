@@ -10,7 +10,10 @@ export const treatmentListActions = createActionGroup({
         'Load Treatments Success': props<{ entities: TreatmentEntity[] }>(),
 
         'Change Page Number': props<{ currentPage: number }>(),
-        'Change Pagination Config': props<{ pageSize: number }>()
+        'Change Pagination Config': props<{ pageSize: number }>(),
+
+        'Change By Id': props<{ newItem: TreatmentEntity }>(),
+        'Undo By Id': props<{ id: number }>(),
     }
 });
 

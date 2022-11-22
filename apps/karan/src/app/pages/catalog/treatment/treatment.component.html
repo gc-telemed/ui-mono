@@ -10,11 +10,10 @@
                     class="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 relative bg-white text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10 mb-2" />
             </div>
             <div>
-                <button type="button"
-                    class="relative items-center px-5 mr-4 text-gray-50 transition-colors duration-150 bg-fuchsia-500 h-10 text-sm font-semibold rounded-lg shadow-md focus:shadow-outline hover:bg-indigo-800"
-                    *ngIf="selectedOrRowId" (click)="deleteRowSelected()">
-                    <fa-icon [icon]="faTrash"></fa-icon>
-                    <span> Delete Treatment</span>
+                <button type="button" (click)="resolveUpdates()" *ngIf="hasUnsaved$ | async"
+                    class="relative items-center px-5 mr-4 text-gray-50 transition-colors duration-150 bg-emerald-600 h-10 text-sm font-semibold rounded-lg shadow-md focus:shadow-outline hover:bg-indigo-800">
+                    <fa-icon [icon]="faSave"></fa-icon>
+                    <span> Save All Changes</span>
                 </button>
                 <button type="button" (click)="showEditor(true)"
                     class="relative items-center px-5 text-gray-50 transition-colors duration-150 bg-indigo-700 h-10 text-sm font-semibold rounded-lg shadow-md focus:shadow-outline hover:bg-indigo-800">
@@ -24,11 +23,15 @@
             </div>
         </form>
         <!-- AG Grid Angular Component -->
-        <ag-grid-angular class="ag-theme-material w-full h-[77vh]" [columnDefs]="columnDefs"
-            [defaultColDef]="defaultColDef" [pagination]="true" [paginationAutoPageSize]="false"
-            [paginationPageSize]="(pageSize | async) ?? 13" (paginationChanged)="onPageChange($event)"
+        <ag-grid-angular class="ag-theme-material w-full h-[76vh]" [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef" [pagination]="true" [paginationAutoPageSize]="true"
             [rowData]="rowData$ | async" rowSelection="single" (rowSelected)="onRowSelected($event)"
-            [animateRows]="true" (gridReady)="onGridReady($event)">
+            [animateRows]="true" (gridReady)="onGridReady($event)" [readOnlyEdit]="true"
+            (cellEditingStarted)="inlineEditStarted($event)" (cellEditingStopped)="inlineEditStopped($event)"
+            (cellEditRequest)="cellEditRequest($event)" [loadingOverlayComponent]="tableProps.loadingOverlayComponent"
+            [loadingOverlayComponentParams]="tableProps.loadingOverlayComponentParams(entityName)"
+            [noRowsOverlayComponent]="tableProps.noRowsOverlayComponent"
+            [noRowsOverlayComponentParams]="tableProps.noRowsOverlayComponentParams(entityName)">
         </ag-grid-angular>
     </div>
 </div>
@@ -36,4 +39,4 @@
     class="fixed bottom-40 right-20 sm:bottom-24 sm:right-24 z-50 drop-shadow-2xl"
     buttonClassName="bg-indigo-700 hover:bg-black" showIcon="pi pi-user-plus" hideIcon="pi pi-times">
 </p-speedDial>
-<gita-treatment-new-quick [displayEditor$]="this.editorService.displayEditor$"></gita-treatment-new-quick>
+<gita-treatment-new-quick [displayEditor$]="displayModal$"></gita-treatment-new-quick>
