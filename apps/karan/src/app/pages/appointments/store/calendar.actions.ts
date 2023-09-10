@@ -1,7 +1,7 @@
 
-import { EventInput } from '@fullcalendar/web-component';
 import { createAction, props } from '@ngrx/store';
 import { ViewOptionType } from './calendar.model';
+import { EventInput } from '@fullcalendar/core';
 
 export const setView = createAction('[Calendar] Set View', props<{ option: ViewOptionType }>());
 

@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
 import { DateInput } from '@fullcalendar/core';
-import { EventApi, EventInput } from '@fullcalendar/web-component';
+import { EventApi, EventInput } from '@fullcalendar/core';
 import { Store } from '@ngrx/store';
 import { Observable, tap } from 'rxjs';
 import { RGB } from '../../../core/models/rgb.model';

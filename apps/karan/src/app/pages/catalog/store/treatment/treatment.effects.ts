@@ -15,7 +15,7 @@ export class TreatmentEffects {
     updateTreatments = createEffect(() =>
         this.actions$.pipe(
             ofType(
-                treatmentActions.updateTreatmentInline
+                treatmentActions.updateTreatmentInLine
             ),
             switchMap(({ treatment }) =>
                 this.treatmentApiService.updateFull(treatment).pipe(

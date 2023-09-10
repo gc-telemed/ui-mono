@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
-import { CalendarOptions, defineFullCalendarElement, FullCalendarElement } from '@fullcalendar/web-component';
+import {
+  FullCalendarElement
+} from '@fullcalendar/web-component';
 import { MenuItem } from 'primeng/api';
 
 import { CalendarViewService } from './../services/calendar-view.service';
-
-defineFullCalendarElement();
+import { CalendarOptions } from '@fullcalendar/core';
 
 @Component({
   selector: 'gita-appointments',

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { LetModule } from '@rx-angular/template';
+import { RxLet } from '@rx-angular/template/let';
 
 
 import { EffectsModule } from '@ngrx/effects';
@@ -33,7 +33,7 @@ const routes: Routes = [{ path: '', component: AppointmentsComponent }];
     CalendarModule,
     DialogModule,
     ButtonModule,
-    LetModule,
+    RxLet,
     ReactiveFormsModule,
     ColorPickerModule,
     ToggleButtonModule,

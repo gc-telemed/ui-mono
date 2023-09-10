@@ -40,7 +40,7 @@ export class ActionCellComponent implements ICellRendererAngularComp {
   saveEdit() {
     this.gridApi.api.stopEditing();
     if (this.rowData) {
-      this.store.dispatch(treatmentActions.updateTreatmentInline({ treatment: this.rowData }))
+      this.store.dispatch(treatmentActions.updateTreatmentInLine({ treatment: this.rowData }))
     }
     this.gridApi.api.stopEditing(true);
   }

@@ -3,13 +3,13 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin, { DateClickArg } from '@fullcalendar/interaction';
 import listPlugin from '@fullcalendar/list';
 import timeGridPlugin from '@fullcalendar/timegrid';
-import { CalendarApi, CalendarOptions, DateSelectArg, EventAddArg, EventApi, EventClickArg, EventDropArg, EventInput } from '@fullcalendar/web-component';
 import { Store } from '@ngrx/store';
 import { BehaviorSubject } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
 import { ViewOptionType, ViewType } from '../store/calendar.model';
 import { ColorsService } from './../../../core/services/colors.service';
 import { eventSelected } from './../store/calendar.actions';
+import { CalendarApi, CalendarOptions, DateSelectArg, EventAddArg, EventApi, EventClickArg, EventDropArg, EventInput } from '@fullcalendar/core';
 
 type ViewMap = {
   [key in ViewOptionType]: ViewType;
@@ -74,11 +74,11 @@ export class CalendarViewService {
       forceEventDuration: true,
       defaultTimedEventDuration: { minutes: 30 },
 
-      eventAdd: e => this.onEventAdd(e),
-      eventClick: e => this.onEventClick(e),
-      eventDrop: e => this.onEventDrop(e),
-      dateClick: e => this.onDateClick(e),
-      select: e => this.onSelect(e),
+      eventAdd: (e: any )=> this.onEventAdd(e),
+      eventClick: (e: any )=> this.onEventClick(e),
+      eventDrop: (e: any )=> this.onEventDrop(e),
+      dateClick: (e: any )=> this.onDateClick(e),
+      select: (e: any )=> this.onSelect(e),
     };
   }
 
@@ -96,7 +96,7 @@ export class CalendarViewService {
 
   private refreshEvents() {
     if (!this.calendarApi) return;
-    this.opts.events = [...this.calendarApi.getEvents().map(e => this.createEvtObjFromEventApi(e))];
+    this.opts.events = [...this.calendarApi.getEvents().map((e: any) => this.createEvtObjFromEventApi(e))];
   }
 
   showEditor(show?: boolean) {

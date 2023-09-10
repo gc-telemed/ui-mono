@@ -1,6 +1,6 @@
 import { InputTextModule } from 'primeng/inputtext';
 import { MenubarModule } from 'primeng/menubar';
-import { LetModule } from '@rx-angular/template';
+import { RxLet } from '@rx-angular/template/let';
 import { layoutReducer } from './store/layout.reducer';
 import { StoreModule } from '@ngrx/store';
 import { CommonModule } from '@angular/common';
@@ -19,7 +19,7 @@ const COMPS = [HeaderComponent, FooterComponent, SidebarComponent];
     CommonModule,
     FontAwesomeModule,
     UiModule,
-    LetModule,
+    RxLet,
     MenubarModule,
     InputTextModule,
     StoreModule.forFeature('layout', layoutReducer),
