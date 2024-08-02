@@ -20,6 +20,7 @@ import { AppointmentsComponent } from './appointments/appointments.component';
 import { EventEditorComponent } from './event-editor/event-editor.component';
 import { CalendarEffects } from './store/calendar.effects';
 import { calendarReducer } from './store/calendar.reducer';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 const routes: Routes = [{ path: '', component: AppointmentsComponent }];
 
@@ -34,6 +35,7 @@ const routes: Routes = [{ path: '', component: AppointmentsComponent }];
     DialogModule,
     ButtonModule,
     RxLet,
+    FullCalendarModule,
     ReactiveFormsModule,
     ColorPickerModule,
     ToggleButtonModule,

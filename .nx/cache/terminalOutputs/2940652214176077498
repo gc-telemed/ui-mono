@@ -1,0 +1,89 @@
+[33mBrowserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme[39m
+[36m⠋[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...
+[35m🌼 daisyUI components 2.41.0[0m [0m https://github.com/saadeghi/daisyui
+  [32m✔︎ Including:[0m [0m base, components, themes[29], utilities
+  
+
+[35m🌼 daisyUI components 2.41.0[0m [0m https://github.com/saadeghi/daisyui
+  [32m✔︎ Including:[0m [0m base, components, themes[29], utilities
+  
+[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: sealing)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: emitting)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[37m[39m
+[37m[0m[1mInitial Chunk Files[22m                                                                                    [2m | [22m[1mNames[22m                           [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mvendor.js[39m[37m                                                                                              [2m | [22mvendor                          [2m | [22m  [96m3.94 MB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mstyles.css, styles.js[39m[37m                                                                                  [2m | [22mstyles                          [2m | [22m[96m720.68 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mpolyfills.js[39m[37m                                                                                           [2m | [22mpolyfills                       [2m | [22m[96m339.46 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mmain.js[39m[37m                                                                                                [2m | [22mmain                            [2m | [22m[96m109.54 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mruntime.js[39m[37m                                                                                             [2m | [22mruntime                         [2m | [22m [96m12.62 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1m [22m                                                                                                      [2m | [22m[1mInitial Total[22m                   [2m | [22m  [1m5.09 MB[22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1mLazy Chunk Files[22m                                                                                       [2m | [22m[1mNames[22m                           [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mdefault-node_modules_pnpm_ag-grid-angular_28_2_1__angular_common_16_2_4__angular_core_16_2_4_-2b5af7.js[39m[37m[2m | [22mpayments-payments-module        [2m | [22m  [96m2.33 MB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mdefault-node_modules_pnpm_fortawesome_free-solid-svg-icons_6_4_2_node_modules_fortawesome_fre-d50ef2.js[3[39m[37m9m[2m | [22mpatients-patients-module        [2m | [22m  [96m1.09 MB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mapps_karan_src_app_pages_patients_patients_module_ts.js[39m[37m                                                [2m | [22mpatients-patients-module        [2m | [22m[96m962.75 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mapps_karan_src_app_pages_appointments_appointments_module_ts.js[39m[37m                                        [2m | [22mappointments-appointments-module[2m | [22m[96m740.31 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mdefault-node_modules_pnpm_primeng_14_2_2__angular_common_16_2_4__angular_core_16_2_4__angular-ad6ab7.js[39m[37m[2m | [22mappointments-appointments-module[2m | [22m[96m186.50 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mapps_karan_src_app_pages_catalog_catalog_module_ts.js[39m[37m                                                  [2m | [22mcatalog-catalog-module          [2m | [22m [96m84.16 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mdefault-node_modules_pnpm_primeng_14_2_2__angular_common_16_2_4__angular_core_16_2_4__angular-aff318.js[39m[37m[2m | [22mappointments-appointments-module[2m | [22m [96m60.02 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mapps_karan_src_app_pages_inventory_inventory_module_ts.js[39m[37m                                              [2m | [22minventory-inventory-module      [2m | [22m [96m38.14 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mapps_karan_src_app_pages_settings_settings_module_ts.js[39m[37m                                                [2m | [22msettings-settings-module        [2m | [22m [96m30.98 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mapps_karan_src_app_pages_payments_payments_module_ts.js[39m[37m                                                [2m | [22mpayments-payments-module        [2m | [22m [96m16.18 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mapps_karan_src_app_pages_statistics_statistics_module_ts.js[39m[37m                                            [2m | [22mstatistics-statistics-module    [2m | [22m  [96m6.49 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mapps_karan_src_a[39m[37mpp_pages_home_home_module_ts.js[39m[37m                                                        [2m | [22mhome-home-module                [2m | [22m  [96m4.56 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mcommon.js[39m[37m                                                                                              [2m | [22mcommon                          [2m | [22m[96m712 bytes[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2024-08-02T12:46:05.208Z[39m[37m[22m - Hash: [1m[37m3a452f2d06d1c2e5[39m[37m[22m - Time: [1m[37m13901[39m[37m[22mms[0m[39m
+[37m[39m
+[37m** Angular Live Development Server is listening on localhost:4242, open your browser on http://localhost:4242/ **[39m
+[37m[39m
+[37m[39m
+[37m[92m✔[39m[37m Compiled successfully.[39m
+[36m⠋[39m Generating browser application bundles...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: sealing)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: emitting)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[37m[39m
+[37m[0m18 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2024-08-02T12:46:06.378Z[39m[37m[22m - Hash: [1m[37m3a452f2d06d1c2e5[39m[37m[22m - Time: [1m[37m964[39m[37m[22mms[0m[39m
+[37m[39m
+[37m[92m✔[39m[37m Compiled successfully.[39m
+[36m⠋[39m Generating browser application bundles...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: sealing)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: emitting)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[37m[39m
+[37m[0m[1mInitial Chunk Files[22m                                            [2m | [22m[1mNames[22m                           [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mruntime.js[39m[37m                                                     [2m | [22mruntime                         [2m | [22m [96m12.62 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1mLazy Chunk Files[22m                                               [2m | [22m[1mNames[22m                           [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mapps_karan_src_app_pages_appointments_appointments_module_ts.js[39m[37m[2m | [22mappointments-appointments-module[2m | [22m[96m740.35 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m16 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2024-08-02T12:52:49.466Z[39m[37m[22m - Hash: [1m[37m7d29089713da0534[39m[37m[22m - Time: [1m[37m1438[39m[37m[22mms[0m[39m
+[37m[39m
+[37m[92m✔[39m[37m Compiled successfully.[39m
+[36m⠋[39m Generating browser application bundles...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: sealing)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: emitting)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[37m[39m
+[37m[0m[1mInitial Chunk Files[22m                                            [2m | [22m[1mNames[22m                           [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mruntime.js[39m[37m                                                     [2m | [22mruntime                         [2m | [22m [96m12.62 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1mLazy Chunk Files[22m                                               [2m | [22m[1mNames[22m                           [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mapps_karan_src_app_pages_appointments_appointments_module_ts.js[39m[37m[2m | [22mappointments-appointments-module[2m | [22m[96m740.35 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m16 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2024-08-02T12:52:50.256Z[39m[37m[22m - Hash: [1m[37mc69e4ffe55db978b[39m[37m[22m - Time: [1m[37m673[39m[37m[22mms[0m[39m
+[37m[39m
+[37m[92m✔[39m[37m Compiled successfully.[39m
+[36m⠋[39m Generating browser application bundles...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: emitting)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[37m[39m
+[37m[0m[1mInitial Chunk Files[22m                                            [2m | [22m[1mNames[22m                           [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mruntime.js[39m[37m                                                     [2m | [22mruntime                         [2m | [22m [96m12.62 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1mLazy Chunk Files[22m                                               [2m | [22m[1mNames[22m                           [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mapps_karan_src_app_pages_appointments_appointments_module_ts.js[39m[37m[2m | [22mappointments-appointments-module[2m | [22m[96m740.35 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m16 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2024-08-02T12:55:46.237Z[39m[37m[22m - Hash: [1m[37md4661a3e738a3477[39m[37m[22m - Time: [1m[37m673[39m[37m[22mms[0m[39m
+[37m[39m
+[37m[92m✔[39m[37m Compiled successfully.[39m

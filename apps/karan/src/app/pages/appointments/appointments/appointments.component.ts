@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import {
-  FullCalendarElement
-} from '@fullcalendar/web-component';
+  FullCalendarComponent
+} from '@fullcalendar/angular';
 import { MenuItem } from 'primeng/api';
 
 import { CalendarViewService } from './../services/calendar-view.service';
@@ -19,7 +19,7 @@ export class AppointmentsComponent implements OnInit, AfterViewInit {
 
   displayEditor$ = this.viewService.displayEditor$;
 
-  @ViewChild('calendar', { static: true }) calendar!: ElementRef<FullCalendarElement>;
+  @ViewChild('calendar', { static: true }) calendar!: FullCalendarComponent;
 
   constructor(private viewService: CalendarViewService, private cd: ChangeDetectorRef) { }
 
@@ -28,7 +28,8 @@ export class AppointmentsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.viewService.api = this.calendar.nativeElement.getApi();
+    setTimeout(() => this.viewService.api = this.calendar?.getApi(), 1000);
+    // this.viewService.api = this.calendar.getApi();
   }
 
 }
