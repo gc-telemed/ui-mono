@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { faPlusCircle, faSave, faSearch, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Store } from '@ngrx/store';
-import { AgGridAngular } from 'ag-grid-angular';
+import { AgGridAngular, AgGridModule } from 'ag-grid-angular';
 import { CellClickedEvent, CellEditingStartedEvent, CellEditingStoppedEvent, CellEditRequestEvent, ColDef, GridReadyEvent, RowSelectedEvent } from 'ag-grid-community';
 import { Observable } from 'rxjs';
 import { TreatmentsGridApiService } from '../services/treatments-grid-api.service';
@@ -12,13 +12,29 @@ import { treatmentEditSelectors, treatmentListSelectors } from './../store/treat
 import { treatmentActions } from './../store/treatment/treatment.actions';
 import { ActionCellComponent } from './action-cell/action-cell.component';
 import { NumericCellComponent } from './numeric-cell/numeric-cell.component';
+import { TreatmentNewQuickComponent } from '../treatment-new-quick/treatment-new-quick.component';
+import { SpeedDialModule } from 'primeng/speeddial';
+import { NgIf, AsyncPipe } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const invalid = "Invalid Number";
 
 @Component({
-  selector: 'gita-treatment',
-  templateUrl: './treatment.component.html',
-  styleUrls: ['./treatment.component.scss'],
+    selector: 'gita-treatment',
+    templateUrl: './treatment.component.html',
+    styleUrls: ['./treatment.component.scss'],
+    standalone: true,
+    imports: [
+        ReactiveFormsModule,
+        FormsModule,
+        FontAwesomeModule,
+        NgIf,
+        AgGridModule,
+        SpeedDialModule,
+        TreatmentNewQuickComponent,
+        AsyncPipe,
+    ],
 })
 export class TreatmentComponent implements OnInit {
 

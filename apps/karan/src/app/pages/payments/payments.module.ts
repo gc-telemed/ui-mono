@@ -13,14 +13,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [PaymentsComponent, PaymentDetailsComponent],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    FontAwesomeModule,
-    AgGridModule,
-    SpeedDialModule,
-    RouterModule.forChild(routes)
-  ],
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        FontAwesomeModule,
+        AgGridModule,
+        SpeedDialModule,
+        RouterModule.forChild(routes),
+        PaymentsComponent, PaymentDetailsComponent
+    ],
 })
 export class PaymentsModule { }

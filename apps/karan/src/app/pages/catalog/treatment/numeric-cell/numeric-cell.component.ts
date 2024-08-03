@@ -1,11 +1,14 @@
 import { AfterViewInit, Component, ViewChild, ViewContainerRef } from '@angular/core';
 import { ICellEditorAngularComp } from 'ag-grid-angular';
 import { ICellEditorParams } from 'ag-grid-community';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'gita-numeric-cell',
-  templateUrl: './numeric-cell.component.html',
-  styleUrls: ['./numeric-cell.component.scss'],
+    selector: 'gita-numeric-cell',
+    templateUrl: './numeric-cell.component.html',
+    styleUrls: ['./numeric-cell.component.scss'],
+    standalone: true,
+    imports: [ReactiveFormsModule, FormsModule],
 })
 export class NumericCellComponent implements ICellEditorAngularComp, AfterViewInit {
 

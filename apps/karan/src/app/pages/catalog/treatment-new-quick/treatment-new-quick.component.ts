@@ -1,14 +1,27 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { treatmentActions } from '../store/treatment/treatment.actions';
 import { TreatmentApiService } from './../services/treatment-api.service';
+import { ButtonModule } from 'primeng/button';
+import { NgIf, AsyncPipe } from '@angular/common';
+import { SharedModule } from 'primeng/api';
+import { DialogModule } from 'primeng/dialog';
 
 @Component({
-  selector: 'gita-treatment-new-quick',
-  templateUrl: './treatment-new-quick.component.html',
-  styleUrls: ['./treatment-new-quick.component.scss'],
+    selector: 'gita-treatment-new-quick',
+    templateUrl: './treatment-new-quick.component.html',
+    styleUrls: ['./treatment-new-quick.component.scss'],
+    standalone: true,
+    imports: [
+        DialogModule,
+        SharedModule,
+        NgIf,
+        ReactiveFormsModule,
+        ButtonModule,
+        AsyncPipe,
+    ],
 })
 export class TreatmentNewQuickComponent {
   @Input() displayEditor$!: Observable<boolean>;

@@ -1,13 +1,34 @@
 import { TeethLibService } from './../services/teeth-lib.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { defaultToothConditions, ISO3950Notation } from './../../../../core/models/teeth.model';
 import { IdValue, SafeCrudArray } from './../../../../core/utils/crud';
+import { SharedModule } from 'primeng/api';
+import { ListboxModule } from 'primeng/listbox';
+import { RippleModule } from 'primeng/ripple';
+import { ButtonModule } from 'primeng/button';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { CalendarModule } from 'primeng/calendar';
+import { DropdownModule } from 'primeng/dropdown';
+import { NgIf, TitleCasePipe } from '@angular/common';
 
 @Component({
-  selector: 'gita-tooth-form',
-  templateUrl: './tooth-form.component.html',
-  styleUrls: ['./tooth-form.component.scss'],
+    selector: 'gita-tooth-form',
+    templateUrl: './tooth-form.component.html',
+    styleUrls: ['./tooth-form.component.scss'],
+    standalone: true,
+    imports: [
+        ReactiveFormsModule,
+        NgIf,
+        DropdownModule,
+        CalendarModule,
+        InputTextareaModule,
+        ButtonModule,
+        RippleModule,
+        ListboxModule,
+        SharedModule,
+        TitleCasePipe,
+    ],
 })
 export class ToothFormComponent implements OnInit {
 

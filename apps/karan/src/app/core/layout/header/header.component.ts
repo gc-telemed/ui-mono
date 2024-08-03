@@ -1,16 +1,19 @@
 import { HeaderRoutesService } from './../../services/header-routes.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, SharedModule } from 'primeng/api';
 import { map, Subject, takeUntil } from 'rxjs';
 import { selectLayout } from '../store/layout.selectors';
 import { SidebarVizService } from './../../services/sidebar-viz.service';
+import { RouterLink } from '@angular/router';
+import { MenubarModule } from 'primeng/menubar';
+import { HeaderBasicModule } from '../../../../../../../libs/ui/src/lib/layout/header-basic/header-basic.module';
 
 @Component({
-  selector: 'gita-header',
-  templateUrl: './header.component.html',
-  styles: [
-    `
+    selector: 'gita-header',
+    templateUrl: './header.component.html',
+    styles: [
+        `
     :host ::ng-deep {  
       .p-menubar {
         @apply bg-white;
@@ -21,7 +24,9 @@ import { SidebarVizService } from './../../services/sidebar-viz.service';
       }
     }
     `
-  ]
+    ],
+    standalone: true,
+    imports: [HeaderBasicModule, MenubarModule, SharedModule, RouterLink]
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 

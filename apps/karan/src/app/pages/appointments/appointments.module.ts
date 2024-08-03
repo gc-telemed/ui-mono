@@ -25,24 +25,24 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 const routes: Routes = [{ path: '', component: AppointmentsComponent }];
 
 @NgModule({
-  declarations: [AppointmentsComponent, EventEditorComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    MenubarModule,
-    InputTextModule,
-    CalendarModule,
-    DialogModule,
-    ButtonModule,
-    RxLet,
-    FullCalendarModule,
-    ReactiveFormsModule,
-    ColorPickerModule,
-    ToggleButtonModule,
-    SpeedDialModule,
-    StoreModule.forFeature('calendar', calendarReducer),
-    EffectsModule.forFeature([CalendarEffects]),
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    imports: [
+        CommonModule,
+        RouterModule.forChild(routes),
+        MenubarModule,
+        InputTextModule,
+        CalendarModule,
+        DialogModule,
+        ButtonModule,
+        RxLet,
+        FullCalendarModule,
+        ReactiveFormsModule,
+        ColorPickerModule,
+        ToggleButtonModule,
+        SpeedDialModule,
+        StoreModule.forFeature('calendar', calendarReducer),
+        EffectsModule.forFeature([CalendarEffects]),
+        AppointmentsComponent, EventEditorComponent,
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppointmentsModule { }

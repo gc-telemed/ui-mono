@@ -1,9 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'gita-wide-card',
-  templateUrl: './wide-card.component.html',
-  styleUrls: ['./wide-card.component.scss'],
+    selector: 'gita-wide-card',
+    templateUrl: './wide-card.component.html',
+    styleUrls: ['./wide-card.component.scss'],
+    standalone: true,
+    imports: [NgClass],
 })
 export class WideCardComponent {
   @Input() patient!: number;

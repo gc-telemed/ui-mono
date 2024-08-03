@@ -1,10 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, SharedModule } from 'primeng/api';
+import { PatientClinicalPhotosComponent } from '../patient-clinical-photos/patient-clinical-photos.component';
+import { PatientIdPhotoComponent } from '../patient-id-photo/patient-id-photo.component';
+import { PatientMedicalHistoryComponent } from '../patient-medical-history/patient-medical-history.component';
+import { PatientDentalHistoryComponent } from '../patient-dental-history/patient-dental-history.component';
+import { PatientNotesComponent } from '../patient-notes/patient-notes.component';
+import { PatientIdComponent } from '../patient-id/patient-id.component';
+import { AccordionModule } from 'primeng/accordion';
+import { NgFor, NgClass } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'gita-patient-details',
-  templateUrl: './patient-details.component.html',
-  styleUrls: ['./patient-details.component.scss'],
+    selector: 'gita-patient-details',
+    templateUrl: './patient-details.component.html',
+    styleUrls: ['./patient-details.component.scss'],
+    standalone: true,
+    imports: [
+        RouterLink,
+        NgFor,
+        NgClass,
+        AccordionModule,
+        SharedModule,
+        PatientIdComponent,
+        PatientNotesComponent,
+        PatientDentalHistoryComponent,
+        PatientMedicalHistoryComponent,
+        PatientIdPhotoComponent,
+        PatientClinicalPhotosComponent,
+    ],
 })
 export class PatientDetailsComponent implements OnInit {
 

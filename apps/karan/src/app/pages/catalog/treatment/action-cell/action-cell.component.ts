@@ -8,11 +8,19 @@ import { TreatmentEntity } from './../../model/treatment.model';
 import { TreatmentsGridApiService } from './../../services/treatments-grid-api.service';
 import { treatmentEditSelectors } from './../../store/treatment-list/treatment-list.selectors';
 import { treatmentActions } from './../../store/treatment/treatment.actions';
+import { ButtonModule } from 'primeng/button';
+import { NgIf, AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'gita-action-cell',
-  templateUrl: './action-cell.component.html',
-  styleUrls: ['./action-cell.component.scss'],
+    selector: 'gita-action-cell',
+    templateUrl: './action-cell.component.html',
+    styleUrls: ['./action-cell.component.scss'],
+    standalone: true,
+    imports: [
+        NgIf,
+        ButtonModule,
+        AsyncPipe,
+    ],
 })
 export class ActionCellComponent implements ICellRendererAngularComp {
 

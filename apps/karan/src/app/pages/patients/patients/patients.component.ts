@@ -1,13 +1,35 @@
 import { PatientEditorService } from './../services/patient-editor.service';
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { SelectItem } from 'primeng/api';
+import { SelectItem, SharedModule } from 'primeng/api';
 import { take } from 'rxjs';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { PatientNewQuickComponent } from '../patient-new-quick/patient-new-quick.component';
+import { SpeedDialModule } from 'primeng/speeddial';
+import { GridCardComponent } from '../../../features/patient/grid-card/grid-card.component';
+import { WideCardComponent } from '../../../features/patient/wide-card/wide-card.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RouterLink } from '@angular/router';
+import { InputTextModule } from 'primeng/inputtext';
+import { DropdownModule } from 'primeng/dropdown';
+import { DataViewModule } from 'primeng/dataview';
 
 @Component({
-  selector: 'gita-patients',
-  templateUrl: './patients.component.html',
-  styleUrls: ['./patients.component.scss'],
+    selector: 'gita-patients',
+    templateUrl: './patients.component.html',
+    styleUrls: ['./patients.component.scss'],
+    standalone: true,
+    imports: [
+        DataViewModule,
+        SharedModule,
+        DropdownModule,
+        InputTextModule,
+        RouterLink,
+        FontAwesomeModule,
+        WideCardComponent,
+        GridCardComponent,
+        SpeedDialModule,
+        PatientNewQuickComponent,
+    ],
 })
 export class PatientsComponent implements OnInit, AfterViewInit {
 

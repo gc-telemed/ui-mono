@@ -7,10 +7,15 @@ import { Store } from '@ngrx/store';
 import { MenuItem } from 'primeng/api';
 import { map, Observable, Subject, takeUntil } from 'rxjs';
 import { selectLayout } from '../store/layout.selectors';
+import { SidebarBasicModule } from '../../../../../../../libs/ui/src/lib/layout/sidebar-basic/sidebar-basic.module';
+import { NgIf } from '@angular/common';
+import { RxLet } from '@rx-angular/template/let';
 
 @Component({
-  selector: 'gita-sidebar',
-  templateUrl: './sidebar.component.html'
+    selector: 'gita-sidebar',
+    templateUrl: './sidebar.component.html',
+    standalone: true,
+    imports: [RxLet, NgIf, SidebarBasicModule]
 })
 export class SidebarComponent implements OnInit, OnDestroy {
 

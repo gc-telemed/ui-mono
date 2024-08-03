@@ -137,1822 +137,6 @@
   },
   "nxJsonPlugins": [],
   "projectFileMap": {
-    "ui": [
-      {
-        "file": "libs/ui/.eslintrc.json",
-        "hash": "6545078182691800970"
-      },
-      {
-        "file": "libs/ui/README.md",
-        "hash": "3098996868279451883"
-      },
-      {
-        "file": "libs/ui/jest.config.ts",
-        "hash": "17276083826551503943"
-      },
-      {
-        "file": "libs/ui/project.json",
-        "hash": "15977258479146570692"
-      },
-      {
-        "file": "libs/ui/src/index.ts",
-        "hash": "17384152782077877822"
-      },
-      {
-        "file": "libs/ui/src/lib/formal/formal.component.html",
-        "hash": "11519820322725639736"
-      },
-      {
-        "file": "libs/ui/src/lib/formal/formal.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "libs/ui/src/lib/formal/formal.component.spec.ts",
-        "hash": "14726477003971301399",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "libs/ui/src/lib/formal/formal.component.ts",
-        "hash": "14412576920791798734",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/forms",
-          "npm:@ngx-formly/core"
-        ]
-      },
-      {
-        "file": "libs/ui/src/lib/formal/test.ts",
-        "hash": "14864560658751293673"
-      },
-      {
-        "file": "libs/ui/src/lib/layout/footer-basic/footer-basic.component.html",
-        "hash": "16319447960098762849"
-      },
-      {
-        "file": "libs/ui/src/lib/layout/footer-basic/footer-basic.component.spec.ts",
-        "hash": "10261718960586244559",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "libs/ui/src/lib/layout/footer-basic/footer-basic.component.ts",
-        "hash": "2117160932226662082",
-        "deps": [
-          "npm:@angular/core",
-          "npm:primeng/api"
-        ]
-      },
-      {
-        "file": "libs/ui/src/lib/layout/footer-basic/footer-basic.module.ts",
-        "hash": "5558144708063217466",
-        "deps": [
-          "npm:@angular/router",
-          "npm:@fortawesome/angular-fontawesome",
-          "npm:@angular/core",
-          "npm:@angular/common",
-          "npm:primeng/tooltip"
-        ]
-      },
-      {
-        "file": "libs/ui/src/lib/layout/header-basic/header-basic.component.html",
-        "hash": "4181642436584509735"
-      },
-      {
-        "file": "libs/ui/src/lib/layout/header-basic/header-basic.component.spec.ts",
-        "hash": "349639104381474161",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "libs/ui/src/lib/layout/header-basic/header-basic.component.ts",
-        "hash": "15017228569311961501",
-        "deps": [
-          "npm:@angular/core",
-          "npm:primeng/api",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "libs/ui/src/lib/layout/header-basic/header-basic.module.ts",
-        "hash": "313927853868567825",
-        "deps": [
-          "npm:@rx-angular/template/let",
-          "npm:@angular/router",
-          "npm:@angular/core",
-          "npm:@angular/common"
-        ]
-      },
-      {
-        "file": "libs/ui/src/lib/layout/header-basic/header-menu-type.directive.ts",
-        "hash": "7169615106788730651",
-        "deps": [
-          "npm:@angular/core",
-          "npm:primeng/api"
-        ]
-      },
-      {
-        "file": "libs/ui/src/lib/layout/layout.module.ts",
-        "hash": "16374556022379776502",
-        "deps": [
-          "npm:@fortawesome/angular-fontawesome",
-          "npm:@angular/common",
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "libs/ui/src/lib/layout/sidebar-basic/sidebar-basic.component.html",
-        "hash": "17685302043142792020"
-      },
-      {
-        "file": "libs/ui/src/lib/layout/sidebar-basic/sidebar-basic.component.spec.ts",
-        "hash": "11959124346690430114",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "libs/ui/src/lib/layout/sidebar-basic/sidebar-basic.component.ts",
-        "hash": "217349595455627829",
-        "deps": [
-          "npm:rxjs",
-          "npm:@angular/core",
-          "npm:primeng/api"
-        ]
-      },
-      {
-        "file": "libs/ui/src/lib/layout/sidebar-basic/sidebar-basic.module.ts",
-        "hash": "16588232390667501730",
-        "deps": [
-          "npm:@angular/common",
-          "npm:@angular/core",
-          "npm:@angular/router",
-          "npm:@rx-angular/template/let"
-        ]
-      },
-      {
-        "file": "libs/ui/src/lib/ui.module.ts",
-        "hash": "12490080967948025520",
-        "deps": [
-          "npm:@angular/common",
-          "npm:@angular/core",
-          "npm:@angular/forms",
-          "npm:@ngx-formly/core",
-          "npm:@ngx-formly/primeng",
-          "npm:primeng/button"
-        ]
-      },
-      {
-        "file": "libs/ui/src/test-setup.ts",
-        "hash": "17711435995618823417",
-        "deps": [
-          "npm:jest-preset-angular/setup-jest"
-        ]
-      },
-      {
-        "file": "libs/ui/tsconfig.json",
-        "hash": "12234268620382124197"
-      },
-      {
-        "file": "libs/ui/tsconfig.lib.json",
-        "hash": "14999110739244744162"
-      },
-      {
-        "file": "libs/ui/tsconfig.spec.json",
-        "hash": "6658172359945877284"
-      }
-    ],
-    "karan-e2e": [
-      {
-        "file": "apps/karan-e2e/.eslintrc.json",
-        "hash": "14060216369337943343"
-      },
-      {
-        "file": "apps/karan-e2e/cypress.json",
-        "hash": "3196639194025924426"
-      },
-      {
-        "file": "apps/karan-e2e/project.json",
-        "hash": "1827823748266250265"
-      },
-      {
-        "file": "apps/karan-e2e/src/fixtures/example.json",
-        "hash": "11614668686582597233"
-      },
-      {
-        "file": "apps/karan-e2e/src/integration/app.spec.ts",
-        "hash": "3860958445721626253"
-      },
-      {
-        "file": "apps/karan-e2e/src/support/app.po.ts",
-        "hash": "11157016311132186162"
-      },
-      {
-        "file": "apps/karan-e2e/src/support/commands.ts",
-        "hash": "7314691991044890572"
-      },
-      {
-        "file": "apps/karan-e2e/src/support/index.ts",
-        "hash": "3666078656922506009"
-      },
-      {
-        "file": "apps/karan-e2e/tsconfig.json",
-        "hash": "17327834683392158647"
-      }
-    ],
-    "ngrxdb": [
-      {
-        "file": "libs/ngrxdb/.babelrc",
-        "hash": "4734508471883268701"
-      },
-      {
-        "file": "libs/ngrxdb/.eslintrc.json",
-        "hash": "13800677001662881425"
-      },
-      {
-        "file": "libs/ngrxdb/README.md",
-        "hash": "931213454022000888"
-      },
-      {
-        "file": "libs/ngrxdb/jest.config.ts",
-        "hash": "5862443539104502594"
-      },
-      {
-        "file": "libs/ngrxdb/project.json",
-        "hash": "15869734248720760733"
-      },
-      {
-        "file": "libs/ngrxdb/src/index.ts",
-        "hash": "3131825276193631844"
-      },
-      {
-        "file": "libs/ngrxdb/src/lib/ngrxdb.spec.ts",
-        "hash": "4089030574305306213"
-      },
-      {
-        "file": "libs/ngrxdb/src/lib/ngrxdb.ts",
-        "hash": "461114317734280040"
-      },
-      {
-        "file": "libs/ngrxdb/tsconfig.json",
-        "hash": "17079550796797979564"
-      },
-      {
-        "file": "libs/ngrxdb/tsconfig.lib.json",
-        "hash": "13034901906147047048"
-      },
-      {
-        "file": "libs/ngrxdb/tsconfig.spec.json",
-        "hash": "2406015174838385060"
-      }
-    ],
-    "gapl-med-client": [
-      {
-        "file": "libs/gapl-med-client/.babelrc",
-        "hash": "4734508471883268701"
-      },
-      {
-        "file": "libs/gapl-med-client/.eslintrc.json",
-        "hash": "13800677001662881425"
-      },
-      {
-        "file": "libs/gapl-med-client/README.md",
-        "hash": "12273905443178249020"
-      },
-      {
-        "file": "libs/gapl-med-client/jest.config.ts",
-        "hash": "6396107815733652382"
-      },
-      {
-        "file": "libs/gapl-med-client/project.json",
-        "hash": "12067738908246972839"
-      },
-      {
-        "file": "libs/gapl-med-client/src/index.ts",
-        "hash": "15281887561366008087"
-      },
-      {
-        "file": "libs/gapl-med-client/src/lib/gapl-med-client.spec.ts",
-        "hash": "472299341554604841"
-      },
-      {
-        "file": "libs/gapl-med-client/src/lib/gapl-med-client.ts",
-        "hash": "7227294999840016875"
-      },
-      {
-        "file": "libs/gapl-med-client/tsconfig.json",
-        "hash": "17079550796797979564"
-      },
-      {
-        "file": "libs/gapl-med-client/tsconfig.lib.json",
-        "hash": "13034901906147047048"
-      },
-      {
-        "file": "libs/gapl-med-client/tsconfig.spec.json",
-        "hash": "2406015174838385060"
-      }
-    ],
-    "karan": [
-      {
-        "file": "apps/karan/.eslintrc.json",
-        "hash": "6545078182691800970"
-      },
-      {
-        "file": "apps/karan/docker/wp.sh",
-        "hash": "13887436700342331321"
-      },
-      {
-        "file": "apps/karan/jest.config.ts",
-        "hash": "782713786211355020"
-      },
-      {
-        "file": "apps/karan/project.json",
-        "hash": "1206652175422404799"
-      },
-      {
-        "file": "apps/karan/proxy.conf.json",
-        "hash": "4762845345111434508"
-      },
-      {
-        "file": "apps/karan/src/_pages.scss",
-        "hash": "3021827620247463963"
-      },
-      {
-        "file": "apps/karan/src/app/app.component.html",
-        "hash": "16498897523005705592"
-      },
-      {
-        "file": "apps/karan/src/app/app.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/app.component.spec.ts",
-        "hash": "3540943580585667643",
-        "deps": [
-          "npm:@angular/core/testing",
-          "npm:@angular/router/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/app.component.ts",
-        "hash": "9748237721711498366",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/app.module.ts",
-        "hash": "15761053208935105005",
-        "deps": [
-          "npm:@angular/common/http",
-          "npm:@angular/core",
-          "npm:@angular/platform-browser",
-          "npm:@angular/platform-browser/animations",
-          "npm:@ngrx/store-devtools",
-          "npm:@ngrx/effects",
-          "npm:@angular/router",
-          "npm:@ngrx/store"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/api/api.config.ts",
-        "hash": "16008779154520631148",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/api/api.service.ts",
-        "hash": "10225368240068385281",
-        "deps": [
-          "npm:rxjs",
-          "npm:@angular/common/http",
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/core.module.ts",
-        "hash": "10789485590849491374",
-        "deps": [
-          "npm:@angular/common",
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/grid/grid-helper.service.spec.ts",
-        "hash": "5251900461815811199",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/grid/grid-helper.service.ts",
-        "hash": "7585889697688843069",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/footer/footer.component.html",
-        "hash": "5944389749571191250"
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/footer/footer.component.spec.ts",
-        "hash": "5999637913167128263",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/footer/footer.component.ts",
-        "hash": "3885338432916246571",
-        "deps": [
-          "npm:@angular/core",
-          "npm:primeng/api"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/header/header.component.html",
-        "hash": "12108188346809874612"
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/header/header.component.spec.ts",
-        "hash": "6153927307393670060",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/header/header.component.ts",
-        "hash": "141002037263439257",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@ngrx/store",
-          "npm:primeng/api",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/layout.module.ts",
-        "hash": "13277153431568341388",
-        "deps": [
-          "npm:primeng/inputtext",
-          "npm:primeng/menubar",
-          "npm:@rx-angular/template/let",
-          "npm:@ngrx/store",
-          "npm:@angular/common",
-          "npm:@angular/core",
-          "npm:@fortawesome/angular-fontawesome",
-          "ui"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/sidebar/sidebar.component.html",
-        "hash": "5165373417951072322"
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/sidebar/sidebar.component.spec.ts",
-        "hash": "2172665205593773014",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/sidebar/sidebar.component.ts",
-        "hash": "16149168741894291821",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@ngrx/store",
-          "npm:primeng/api",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/store/layout.actions.ts",
-        "hash": "14649298906924625653",
-        "deps": [
-          "npm:@ngrx/store"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/store/layout.model.ts",
-        "hash": "16670274511153891572"
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/store/layout.reducer.ts",
-        "hash": "1136382895344420247",
-        "deps": [
-          "npm:@ngrx/store"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/layout/store/layout.selectors.ts",
-        "hash": "11671444445969788304",
-        "deps": [
-          "npm:@ngrx/store"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/models/entity.model.ts",
-        "hash": "17271772818060877988"
-      },
-      {
-        "file": "apps/karan/src/app/core/models/global-routes.data.ts",
-        "hash": "2538065612031309671",
-        "deps": [
-          "npm:primeng/api"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/models/medical-conditions.data.ts",
-        "hash": "4240310271519598255"
-      },
-      {
-        "file": "apps/karan/src/app/core/models/patient.model.ts",
-        "hash": "9962826379346596494"
-      },
-      {
-        "file": "apps/karan/src/app/core/models/rgb.model.ts",
-        "hash": "1216129999056787579"
-      },
-      {
-        "file": "apps/karan/src/app/core/models/teeth.model.ts",
-        "hash": "8224922777440695692"
-      },
-      {
-        "file": "apps/karan/src/app/core/services/breakpoints.service.spec.ts",
-        "hash": "909746273282521700",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/services/breakpoints.service.ts",
-        "hash": "8617356778812357424",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/cdk/layout",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/services/colors.service.spec.ts",
-        "hash": "1473409049354045012",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/services/colors.service.ts",
-        "hash": "2483047413225080105",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/services/header-routes.service.ts",
-        "hash": "14021648707226309567",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@ngrx/store",
-          "npm:primeng/api"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/services/sidebar-viz.service.spec.ts",
-        "hash": "11968407313853127763",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/services/sidebar-viz.service.ts",
-        "hash": "12692820867924349530",
-        "deps": [
-          "npm:@ngrx/store",
-          "npm:@angular/core",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/utils/crud.ts",
-        "hash": "18415512172643209158"
-      },
-      {
-        "file": "apps/karan/src/app/core/utils/date.ts",
-        "hash": "5468032043180179503",
-        "deps": [
-          "npm:ag-grid-community"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/core/utils/flat.ts",
-        "hash": "1402055957588640959"
-      },
-      {
-        "file": "apps/karan/src/app/core/utils/immutable.ts",
-        "hash": "5914431175620595684"
-      },
-      {
-        "file": "apps/karan/src/app/features/features.module.ts",
-        "hash": "15712206056237048371",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/common"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/features/patient/grid-card/grid-card.component.html",
-        "hash": "6201621750714282565"
-      },
-      {
-        "file": "apps/karan/src/app/features/patient/grid-card/grid-card.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/features/patient/grid-card/grid-card.component.spec.ts",
-        "hash": "11901088115691330593",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/features/patient/grid-card/grid-card.component.ts",
-        "hash": "5727795980208420222",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/features/patient/patient.module.ts",
-        "hash": "1353469228398044988",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/common"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/features/patient/wide-card/wide-card.component.html",
-        "hash": "14274392782403599417"
-      },
-      {
-        "file": "apps/karan/src/app/features/patient/wide-card/wide-card.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/features/patient/wide-card/wide-card.component.spec.ts",
-        "hash": "1631994290914527743",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/features/patient/wide-card/wide-card.component.ts",
-        "hash": "648271932554998548",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/appointments.module.ts",
-        "hash": "15233561811387368873",
-        "deps": [
-          "npm:primeng/speeddial",
-          "npm:@angular/common",
-          "npm:@angular/core",
-          "npm:@angular/forms",
-          "npm:@angular/router",
-          "npm:@rx-angular/template/let",
-          "npm:@ngrx/effects",
-          "npm:@ngrx/store",
-          "npm:primeng/button",
-          "npm:primeng/calendar",
-          "npm:primeng/colorpicker",
-          "npm:primeng/dialog",
-          "npm:primeng/inputtext",
-          "npm:primeng/menubar",
-          "npm:primeng/togglebutton",
-          "npm:@fullcalendar/angular"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/appointments/appointments.component.html",
-        "hash": "14157162789788563331"
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/appointments/appointments.component.scss",
-        "hash": "14749336554736501252"
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/appointments/appointments.component.spec.ts",
-        "hash": "17057404683979060935",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/appointments/appointments.component.ts",
-        "hash": "2916718435021379802",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@fullcalendar/angular",
-          "npm:primeng/api",
-          "npm:@fullcalendar/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/event-editor/event-editor.component.html",
-        "hash": "9937585399975223033"
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/event-editor/event-editor.component.scss",
-        "hash": "14680892641733460018"
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/event-editor/event-editor.component.spec.ts",
-        "hash": "10518556690590458342",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/event-editor/event-editor.component.ts",
-        "hash": "604728381712157192",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/forms",
-          "npm:@fullcalendar/core",
-          "npm:@ngrx/store",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/services/calendar-event.service.spec.ts",
-        "hash": "7972337994885453563",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/services/calendar-event.service.ts",
-        "hash": "6888116335067607804",
-        "deps": [
-          "npm:rxjs",
-          "npm:@angular/core",
-          "npm:@fullcalendar/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/services/calendar-view.service.spec.ts",
-        "hash": "12051852002981066657",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/services/calendar-view.service.ts",
-        "hash": "3299268151031268641",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@fullcalendar/daygrid",
-          "npm:@fullcalendar/interaction",
-          "npm:@fullcalendar/list",
-          "npm:@fullcalendar/timegrid",
-          "npm:@ngrx/store",
-          "npm:rxjs",
-          "npm:uuid",
-          "npm:@fullcalendar/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/store/calendar.actions.ts",
-        "hash": "6718279957156329868",
-        "deps": [
-          "npm:@ngrx/store",
-          "npm:@fullcalendar/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/store/calendar.effects.ts",
-        "hash": "5816249684772128908",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@ngrx/effects",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/store/calendar.model.ts",
-        "hash": "5383471121193337132",
-        "deps": [
-          "npm:@fullcalendar/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/store/calendar.reducer.ts",
-        "hash": "2168207824346313225",
-        "deps": [
-          "npm:@ngrx/store"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/appointments/store/calendar.selectors.ts",
-        "hash": "13128693094802756225",
-        "deps": [
-          "npm:@ngrx/store"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/catalog-routing.module.ts",
-        "hash": "5257600201477852272",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/router"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/catalog.module.ts",
-        "hash": "15297366174443705277",
-        "deps": [
-          "npm:primeng/button",
-          "npm:@ngrx/effects",
-          "npm:@ngrx/store",
-          "npm:primeng/speeddial",
-          "npm:ag-grid-angular",
-          "npm:@fortawesome/angular-fontawesome",
-          "npm:@angular/core",
-          "npm:@angular/common",
-          "npm:primeng/dialog",
-          "npm:@angular/forms"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/model/treatment.model.ts",
-        "hash": "5311592087182600328"
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/services/treatment-api.service.spec.ts",
-        "hash": "9487847216291906187",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/services/treatment-api.service.ts",
-        "hash": "2249092866538428497",
-        "deps": [
-          "npm:@angular/core",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/services/treatments-grid-api.service.spec.ts",
-        "hash": "5306842176038253649",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/services/treatments-grid-api.service.ts",
-        "hash": "5056782957012045211",
-        "deps": [
-          "npm:@angular/core",
-          "npm:ag-grid-angular"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/store/treatment-list/treatment-list.actions.ts",
-        "hash": "9765213510334100047",
-        "deps": [
-          "npm:@ngrx/store"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/store/treatment-list/treatment-list.effects.ts",
-        "hash": "11825004721274858257",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@ngrx/effects",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/store/treatment-list/treatment-list.reducer.ts",
-        "hash": "12492808880775465668",
-        "deps": [
-          "npm:@ngrx/store"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/store/treatment-list/treatment-list.selectors.ts",
-        "hash": "10235707752508058204",
-        "deps": [
-          "npm:@ngrx/store"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/store/treatment-list/treatment-list.state.ts",
-        "hash": "17642122753415026264"
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/store/treatment/treatment.actions.ts",
-        "hash": "8277545700369998337",
-        "deps": [
-          "npm:@ngrx/store"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/store/treatment/treatment.effects.ts",
-        "hash": "2771221873717409970",
-        "deps": [
-          "npm:rxjs",
-          "npm:@ngrx/effects",
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/store/treatment/treatment.reducers.ts",
-        "hash": "16200003821122831484",
-        "deps": [
-          "npm:@ngrx/store"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/store/treatment/treatment.selectors.ts",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment-new-quick/treatment-new-quick.component.html",
-        "hash": "11602333476154966201"
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment-new-quick/treatment-new-quick.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment-new-quick/treatment-new-quick.component.spec.ts",
-        "hash": "5573935465113230740",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment-new-quick/treatment-new-quick.component.ts",
-        "hash": "4299851885717121529",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/forms",
-          "npm:@ngrx/store",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment/action-cell/action-cell.component.html",
-        "hash": "17193027790642908125"
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment/action-cell/action-cell.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment/action-cell/action-cell.component.spec.ts",
-        "hash": "11989814905200818437",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment/action-cell/action-cell.component.ts",
-        "hash": "3071181021104715146",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@ngrx/store",
-          "npm:ag-grid-angular",
-          "npm:ag-grid-community",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment/numeric-cell/numeric-cell.component.html",
-        "hash": "11668792866446897643"
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment/numeric-cell/numeric-cell.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment/numeric-cell/numeric-cell.component.spec.ts",
-        "hash": "2555451824008277655",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment/numeric-cell/numeric-cell.component.ts",
-        "hash": "7512356194041774825",
-        "deps": [
-          "npm:@angular/core",
-          "npm:ag-grid-angular",
-          "npm:ag-grid-community"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment/treatment.component.html",
-        "hash": "434333161888340031"
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment/treatment.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment/treatment.component.spec.ts",
-        "hash": "17323236974762397163",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/catalog/treatment/treatment.component.ts",
-        "hash": "5367543316549695071",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@fortawesome/free-solid-svg-icons",
-          "npm:@ngrx/store",
-          "npm:ag-grid-angular",
-          "npm:ag-grid-community",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/home/home.module.ts",
-        "hash": "10580359918913005779",
-        "deps": [
-          "npm:@angular/router",
-          "npm:@angular/core",
-          "npm:@angular/common",
-          "npm:primeng/speeddial"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/home/index/index.component.html",
-        "hash": "12318668158430038674"
-      },
-      {
-        "file": "apps/karan/src/app/pages/home/index/index.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/home/index/index.component.spec.ts",
-        "hash": "14981426930374586363",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/home/index/index.component.ts",
-        "hash": "1221161191219360753",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/inventory-new-quick/inventory-new-quick.component.html",
-        "hash": "14790524863178867658"
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/inventory-new-quick/inventory-new-quick.component.scss",
-        "hash": "18140924446652275182"
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/inventory-new-quick/inventory-new-quick.component.spec.ts",
-        "hash": "7182711979936122353",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/inventory-new-quick/inventory-new-quick.component.ts",
-        "hash": "5360099200969312200",
-        "deps": [
-          "npm:@angular/forms",
-          "npm:@angular/core",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/inventory-routing.module.ts",
-        "hash": "12589939775651592656",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/router"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/inventory.module.ts",
-        "hash": "10771920752843936074",
-        "deps": [
-          "npm:@angular/forms",
-          "npm:@angular/common",
-          "npm:@angular/core",
-          "npm:@fortawesome/angular-fontawesome",
-          "npm:primeng/dialog",
-          "npm:primeng/speeddial",
-          "npm:ag-grid-angular",
-          "npm:primeng/calendar"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/inventory/inventory.component.html",
-        "hash": "8612230784376226468"
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/inventory/inventory.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/inventory/inventory.component.spec.ts",
-        "hash": "14126909779050093190",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/inventory/inventory.component.ts",
-        "hash": "15543271934087138083",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@fortawesome/free-solid-svg-icons",
-          "npm:ag-grid-angular",
-          "npm:ag-grid-community",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/model/inventory.model.ts",
-        "hash": "1104329927346392208"
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/services/inventory-api.service.spec.ts",
-        "hash": "1785661608705073699",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/services/inventory-api.service.ts",
-        "hash": "17354974683616602584",
-        "deps": [
-          "npm:rxjs",
-          "npm:@angular/common/http",
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/services/inventory-editor.service.spec.ts",
-        "hash": "1215738285039057388",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/inventory/services/inventory-editor.service.ts",
-        "hash": "1449486350537330502",
-        "deps": [
-          "npm:rxjs",
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/main/main.component.html",
-        "hash": "9083396826650736427"
-      },
-      {
-        "file": "apps/karan/src/app/pages/main/main.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/main/main.component.spec.ts",
-        "hash": "10370364629513049989",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/main/main.component.ts",
-        "hash": "13280981917425936091",
-        "deps": [
-          "npm:primeng/api",
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/pages-routing.module.ts",
-        "hash": "6168207217963911130",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/router"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/pages.module.ts",
-        "hash": "3801573910449616526",
-        "deps": [
-          "npm:primeng/speeddial",
-          "npm:@angular/common",
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-clinical-photos/clinical-image-detail.model.ts",
-        "hash": "1320319227707284976"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-clinical-photos/patient-clinical-photos.component.html",
-        "hash": "5356639387118725473"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-clinical-photos/patient-clinical-photos.component.scss",
-        "hash": "18183601753462237163"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-clinical-photos/patient-clinical-photos.component.spec.ts",
-        "hash": "3609672220251610247",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-clinical-photos/patient-clinical-photos.component.ts",
-        "hash": "14476047566311394271",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/forms"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/deciduous-teeth/deciduous-teeth.component.html",
-        "hash": "14484698244692945531"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/deciduous-teeth/deciduous-teeth.component.scss",
-        "hash": "7752929879788515075"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/deciduous-teeth/deciduous-teeth.component.spec.ts",
-        "hash": "612172300766869791",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/deciduous-teeth/deciduous-teeth.component.ts",
-        "hash": "10579879492108514941",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/patient-dental-history.component.html",
-        "hash": "10085608742962133003"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/patient-dental-history.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/patient-dental-history.component.spec.ts",
-        "hash": "5090151313224965491",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/patient-dental-history.component.ts",
-        "hash": "1274585133263723601",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/permanent-teeth/permanent-teeth.component.html",
-        "hash": "3544550663317177566"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/permanent-teeth/permanent-teeth.component.scss",
-        "hash": "17884815049604303911"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/permanent-teeth/permanent-teeth.component.spec.ts",
-        "hash": "11098283498955433220",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/permanent-teeth/permanent-teeth.component.ts",
-        "hash": "16641493754002236441",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/services/teeth-lib.service.spec.ts",
-        "hash": "7530348273290184235",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/services/teeth-lib.service.ts",
-        "hash": "2695094106775012750",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/tooth-form/tooth-form.component.html",
-        "hash": "15809647552459984680"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/tooth-form/tooth-form.component.scss",
-        "hash": "18140924446652275182"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/tooth-form/tooth-form.component.spec.ts",
-        "hash": "4704240417217425267",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-dental-history/tooth-form/tooth-form.component.ts",
-        "hash": "2656137840001892789",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/forms"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-details/patient-details.component.html",
-        "hash": "11052494590916123180"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-details/patient-details.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-details/patient-details.component.spec.ts",
-        "hash": "13142595168522127282",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-details/patient-details.component.ts",
-        "hash": "4879350242178458268",
-        "deps": [
-          "npm:@angular/core",
-          "npm:primeng/api"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-id-photo/patient-id-photo.component.html",
-        "hash": "9475360021558705600"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-id-photo/patient-id-photo.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-id-photo/patient-id-photo.component.spec.ts",
-        "hash": "2137918990170582452",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-id-photo/patient-id-photo.component.ts",
-        "hash": "464778423212617999",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/forms"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-id/patient-id.component.html",
-        "hash": "12136474286777195524"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-id/patient-id.component.scss",
-        "hash": "18140924446652275182"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-id/patient-id.component.spec.ts",
-        "hash": "701403815834828406",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-id/patient-id.component.ts",
-        "hash": "6070065716484963703",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-medical-history/patient-medical-history.component.html",
-        "hash": "852784547572285004"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-medical-history/patient-medical-history.component.scss",
-        "hash": "6851822596566051752"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-medical-history/patient-medical-history.component.spec.ts",
-        "hash": "5403654055965562213",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-medical-history/patient-medical-history.component.ts",
-        "hash": "9043217498611906005",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/forms",
-          "npm:primeng/api"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-new-quick/patient-new-quick.component.html",
-        "hash": "7382835363593946078"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-new-quick/patient-new-quick.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-new-quick/patient-new-quick.component.spec.ts",
-        "hash": "2365572325926673799",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-new-quick/patient-new-quick.component.ts",
-        "hash": "14970822812713047674",
-        "deps": [
-          "npm:@angular/core",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-notes/patient-notes.component.html",
-        "hash": "13990734801466214808"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-notes/patient-notes.component.scss",
-        "hash": "2353350024339877174"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-notes/patient-notes.component.spec.ts",
-        "hash": "4467611905428990912",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patient-notes/patient-notes.component.ts",
-        "hash": "9787960418380004536",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/forms"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patients.module.ts",
-        "hash": "13923879205445166698",
-        "deps": [
-          "npm:@fortawesome/angular-fontawesome",
-          "npm:@angular/forms",
-          "npm:primeng/ripple",
-          "npm:primeng/dialog",
-          "npm:primeng/speeddial",
-          "npm:@angular/common",
-          "npm:@angular/core",
-          "npm:@angular/router",
-          "npm:primeng/accordion",
-          "npm:primeng/button",
-          "npm:primeng/dataview",
-          "npm:primeng/dropdown",
-          "npm:primeng/autocomplete",
-          "npm:primeng/menu",
-          "npm:primeng/inputtext",
-          "npm:primeng/panel",
-          "npm:primeng/steps",
-          "npm:primeng/chips",
-          "npm:primeng/chip",
-          "npm:primeng/listbox",
-          "npm:primeng/calendar",
-          "npm:primeng/inputtextarea",
-          "npm:primeng/carousel",
-          "npm:primeng/image",
-          "npm:primeng/galleria"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patients/patients.component.html",
-        "hash": "9048713597728039617"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patients/patients.component.scss",
-        "hash": "11888179026703399631"
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patients/patients.component.spec.ts",
-        "hash": "6809288562675105869",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/patients/patients.component.ts",
-        "hash": "9032725180964586579",
-        "deps": [
-          "npm:@angular/core",
-          "npm:primeng/api",
-          "npm:rxjs",
-          "npm:@fortawesome/free-solid-svg-icons"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/services/patient-editor.service.spec.ts",
-        "hash": "11292790525037773825",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/patients/services/patient-editor.service.ts",
-        "hash": "6286709565104376918",
-        "deps": [
-          "npm:rxjs",
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/payments/payment-details/payment-details.component.html",
-        "hash": "7349986478235471680"
-      },
-      {
-        "file": "apps/karan/src/app/pages/payments/payment-details/payment-details.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/payments/payment-details/payment-details.component.spec.ts",
-        "hash": "7854609190919318662",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/payments/payment-details/payment-details.component.ts",
-        "hash": "12687942841295254869",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/payments/payments.module.ts",
-        "hash": "327745179343098244",
-        "deps": [
-          "npm:primeng/speeddial",
-          "npm:ag-grid-angular",
-          "npm:@fortawesome/angular-fontawesome",
-          "npm:@angular/forms",
-          "npm:@angular/router",
-          "npm:@angular/core",
-          "npm:@angular/common"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/payments/payments/payments.component.html",
-        "hash": "18061509693860258296"
-      },
-      {
-        "file": "apps/karan/src/app/pages/payments/payments/payments.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/payments/payments/payments.component.spec.ts",
-        "hash": "11572578731817285132",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/payments/payments/payments.component.ts",
-        "hash": "577776871394524978",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@fortawesome/free-solid-svg-icons",
-          "npm:ag-grid-community",
-          "npm:rxjs"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/settings/doctors/doctors.component.html",
-        "hash": "10580518607369010622"
-      },
-      {
-        "file": "apps/karan/src/app/pages/settings/doctors/doctors.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/settings/doctors/doctors.component.spec.ts",
-        "hash": "1944903753843087613",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/settings/doctors/doctors.component.ts",
-        "hash": "17137266848955232563",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/settings/settings.module.ts",
-        "hash": "8862862909361849963",
-        "deps": [
-          "npm:@angular/common",
-          "npm:@angular/core",
-          "npm:@angular/router",
-          "npm:primeng/fieldset"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/settings/settings/settings.component.html",
-        "hash": "8445909777200371991"
-      },
-      {
-        "file": "apps/karan/src/app/pages/settings/settings/settings.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/settings/settings/settings.component.spec.ts",
-        "hash": "1076764593116187676",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/settings/settings/settings.component.ts",
-        "hash": "6359166560446326644",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/statistics/statistics-routing.module.ts",
-        "hash": "11332941206335327784",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/router"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/statistics/statistics.module.ts",
-        "hash": "9344497432330075930",
-        "deps": [
-          "npm:primeng/speeddial",
-          "npm:@angular/core",
-          "npm:@angular/common"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/statistics/stats/stats.component.html",
-        "hash": "1692391776680836542"
-      },
-      {
-        "file": "apps/karan/src/app/pages/statistics/stats/stats.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/app/pages/statistics/stats/stats.component.spec.ts",
-        "hash": "12956269218448053382",
-        "deps": [
-          "npm:@angular/core/testing"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/pages/statistics/stats/stats.component.ts",
-        "hash": "11627515619893789556",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/shared/loading-rows.component.ts",
-        "hash": "9709396580509557669",
-        "deps": [
-          "npm:@angular/core",
-          "npm:ag-grid-angular",
-          "npm:ag-grid-community"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/shared/no-rows.component.ts",
-        "hash": "15718984645162743031",
-        "deps": [
-          "npm:ag-grid-angular",
-          "npm:ag-grid-community",
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/app/shared/shared.module.ts",
-        "hash": "13141693668417140156",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "apps/karan/src/assets/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/karan/src/assets/img/logo-1024.png",
-        "hash": "4289973368043716624"
-      },
-      {
-        "file": "apps/karan/src/assets/img/profile-placeholder.png",
-        "hash": "15456935050677116181"
-      },
-      {
-        "file": "apps/karan/src/environments/environment.prod.ts",
-        "hash": "7965245570916970805"
-      },
-      {
-        "file": "apps/karan/src/environments/environment.ts",
-        "hash": "12755784568794106452"
-      },
-      {
-        "file": "apps/karan/src/favicon.ico",
-        "hash": "9303420814833116677"
-      },
-      {
-        "file": "apps/karan/src/index.html",
-        "hash": "4001674454987439738"
-      },
-      {
-        "file": "apps/karan/src/main.ts",
-        "hash": "14896519517424602606",
-        "deps": [
-          "npm:@angular/core",
-          "npm:@angular/platform-browser-dynamic"
-        ]
-      },
-      {
-        "file": "apps/karan/src/polyfills.ts",
-        "hash": "13952578668946952738",
-        "deps": [
-          "npm:zone.js"
-        ]
-      },
-      {
-        "file": "apps/karan/src/styles.scss",
-        "hash": "5568461398566057925"
-      },
-      {
-        "file": "apps/karan/src/test-setup.ts",
-        "hash": "17711435995618823417",
-        "deps": [
-          "npm:jest-preset-angular/setup-jest"
-        ]
-      },
-      {
-        "file": "apps/karan/tsconfig.app.json",
-        "hash": "15989261137096458116"
-      },
-      {
-        "file": "apps/karan/tsconfig.editor.json",
-        "hash": "6367495026318685054"
-      },
-      {
-        "file": "apps/karan/tsconfig.json",
-        "hash": "17981161305287108769"
-      },
-      {
-        "file": "apps/karan/tsconfig.spec.json",
-        "hash": "6658172359945877284"
-      }
-    ],
     "backoffice": [
       {
         "file": "apps/backoffice/.eslintrc.json",
@@ -2649,6 +833,1776 @@
         "hash": "6658172359945877284"
       }
     ],
+    "karan": [
+      {
+        "file": "apps/karan/.eslintrc.json",
+        "hash": "6545078182691800970"
+      },
+      {
+        "file": "apps/karan/docker/wp.sh",
+        "hash": "13887436700342331321"
+      },
+      {
+        "file": "apps/karan/jest.config.ts",
+        "hash": "782713786211355020"
+      },
+      {
+        "file": "apps/karan/project.json",
+        "hash": "1206652175422404799"
+      },
+      {
+        "file": "apps/karan/proxy.conf.json",
+        "hash": "4762845345111434508"
+      },
+      {
+        "file": "apps/karan/src/_pages.scss",
+        "hash": "3021827620247463963"
+      },
+      {
+        "file": "apps/karan/src/app/app.component.html",
+        "hash": "16498897523005705592"
+      },
+      {
+        "file": "apps/karan/src/app/app.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/app.component.spec.ts",
+        "hash": "3540943580585667643",
+        "deps": [
+          "npm:@angular/core/testing",
+          "npm:@angular/router/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/app.component.ts",
+        "hash": "14152538241773790864",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/router"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/api/api.config.ts",
+        "hash": "16008779154520631148",
+        "deps": [
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/api/api.service.ts",
+        "hash": "10225368240068385281",
+        "deps": [
+          "npm:rxjs",
+          "npm:@angular/common/http",
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/core.module.ts",
+        "hash": "10789485590849491374",
+        "deps": [
+          "npm:@angular/common",
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/grid/grid-helper.service.spec.ts",
+        "hash": "5251900461815811199",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/grid/grid-helper.service.ts",
+        "hash": "7585889697688843069",
+        "deps": [
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/footer/footer.component.html",
+        "hash": "5944389749571191250"
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/footer/footer.component.spec.ts",
+        "hash": "5999637913167128263",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/footer/footer.component.ts",
+        "hash": "10539524030713595387",
+        "deps": [
+          "npm:@angular/core",
+          "npm:primeng/api",
+          "ui"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/header/header.component.html",
+        "hash": "12108188346809874612"
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/header/header.component.spec.ts",
+        "hash": "6153927307393670060",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/header/header.component.ts",
+        "hash": "8105972182389465778",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@ngrx/store",
+          "npm:primeng/api",
+          "npm:rxjs",
+          "npm:@angular/router",
+          "npm:primeng/menubar",
+          "ui"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/layout.module.ts",
+        "hash": "17077533258110526372",
+        "deps": [
+          "npm:primeng/inputtext",
+          "npm:primeng/menubar",
+          "npm:@rx-angular/template/let",
+          "npm:@ngrx/store",
+          "npm:@angular/common",
+          "npm:@angular/core",
+          "npm:@fortawesome/angular-fontawesome",
+          "ui"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/sidebar/sidebar.component.html",
+        "hash": "5165373417951072322"
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/sidebar/sidebar.component.spec.ts",
+        "hash": "2172665205593773014",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/sidebar/sidebar.component.ts",
+        "hash": "3558682321069180038",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@ngrx/store",
+          "npm:primeng/api",
+          "npm:rxjs",
+          "ui",
+          "npm:@angular/common",
+          "npm:@rx-angular/template/let"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/store/layout.actions.ts",
+        "hash": "14649298906924625653",
+        "deps": [
+          "npm:@ngrx/store"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/store/layout.model.ts",
+        "hash": "16670274511153891572"
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/store/layout.reducer.ts",
+        "hash": "1136382895344420247",
+        "deps": [
+          "npm:@ngrx/store"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/layout/store/layout.selectors.ts",
+        "hash": "11671444445969788304",
+        "deps": [
+          "npm:@ngrx/store"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/models/entity.model.ts",
+        "hash": "17271772818060877988"
+      },
+      {
+        "file": "apps/karan/src/app/core/models/global-routes.data.ts",
+        "hash": "2538065612031309671",
+        "deps": [
+          "npm:primeng/api"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/models/medical-conditions.data.ts",
+        "hash": "4240310271519598255"
+      },
+      {
+        "file": "apps/karan/src/app/core/models/patient.model.ts",
+        "hash": "9962826379346596494"
+      },
+      {
+        "file": "apps/karan/src/app/core/models/rgb.model.ts",
+        "hash": "1216129999056787579"
+      },
+      {
+        "file": "apps/karan/src/app/core/models/teeth.model.ts",
+        "hash": "8224922777440695692"
+      },
+      {
+        "file": "apps/karan/src/app/core/services/breakpoints.service.spec.ts",
+        "hash": "909746273282521700",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/services/breakpoints.service.ts",
+        "hash": "8617356778812357424",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/cdk/layout",
+          "npm:rxjs"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/services/colors.service.spec.ts",
+        "hash": "1473409049354045012",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/services/colors.service.ts",
+        "hash": "2483047413225080105",
+        "deps": [
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/services/header-routes.service.ts",
+        "hash": "14021648707226309567",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@ngrx/store",
+          "npm:primeng/api"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/services/sidebar-viz.service.spec.ts",
+        "hash": "11968407313853127763",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/services/sidebar-viz.service.ts",
+        "hash": "12692820867924349530",
+        "deps": [
+          "npm:@ngrx/store",
+          "npm:@angular/core",
+          "npm:rxjs"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/utils/crud.ts",
+        "hash": "18415512172643209158"
+      },
+      {
+        "file": "apps/karan/src/app/core/utils/date.ts",
+        "hash": "5468032043180179503",
+        "deps": [
+          "npm:ag-grid-community"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/core/utils/flat.ts",
+        "hash": "1402055957588640959"
+      },
+      {
+        "file": "apps/karan/src/app/core/utils/immutable.ts",
+        "hash": "5914431175620595684"
+      },
+      {
+        "file": "apps/karan/src/app/features/features.module.ts",
+        "hash": "15712206056237048371",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/common"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/features/patient/grid-card/grid-card.component.html",
+        "hash": "6201621750714282565"
+      },
+      {
+        "file": "apps/karan/src/app/features/patient/grid-card/grid-card.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/features/patient/grid-card/grid-card.component.spec.ts",
+        "hash": "11901088115691330593",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/features/patient/grid-card/grid-card.component.ts",
+        "hash": "8640245195686680656",
+        "deps": [
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/features/patient/patient.module.ts",
+        "hash": "860692419063197697",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/common"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/features/patient/wide-card/wide-card.component.html",
+        "hash": "14274392782403599417"
+      },
+      {
+        "file": "apps/karan/src/app/features/patient/wide-card/wide-card.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/features/patient/wide-card/wide-card.component.spec.ts",
+        "hash": "1631994290914527743",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/features/patient/wide-card/wide-card.component.ts",
+        "hash": "15714339633761961253",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/common"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/appointments.module.ts",
+        "hash": "12933358019724657808",
+        "deps": [
+          "npm:primeng/speeddial",
+          "npm:@angular/common",
+          "npm:@angular/core",
+          "npm:@angular/forms",
+          "npm:@angular/router",
+          "npm:@rx-angular/template/let",
+          "npm:@ngrx/effects",
+          "npm:@ngrx/store",
+          "npm:primeng/button",
+          "npm:primeng/calendar",
+          "npm:primeng/colorpicker",
+          "npm:primeng/dialog",
+          "npm:primeng/inputtext",
+          "npm:primeng/menubar",
+          "npm:primeng/togglebutton",
+          "npm:@fullcalendar/angular"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/appointments/appointments.component.html",
+        "hash": "14157162789788563331"
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/appointments/appointments.component.scss",
+        "hash": "14749336554736501252"
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/appointments/appointments.component.spec.ts",
+        "hash": "17057404683979060935",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/appointments/appointments.component.ts",
+        "hash": "2022365141510375113",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@fullcalendar/angular",
+          "npm:primeng/api",
+          "npm:@fullcalendar/core",
+          "npm:primeng/speeddial"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/event-editor/event-editor.component.html",
+        "hash": "9937585399975223033"
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/event-editor/event-editor.component.scss",
+        "hash": "14680892641733460018"
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/event-editor/event-editor.component.spec.ts",
+        "hash": "10518556690590458342",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/event-editor/event-editor.component.ts",
+        "hash": "2457784894754173333",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/forms",
+          "npm:@fullcalendar/core",
+          "npm:@ngrx/store",
+          "npm:rxjs",
+          "npm:@angular/common",
+          "npm:primeng/calendar",
+          "npm:primeng/button",
+          "npm:primeng/colorpicker",
+          "npm:primeng/togglebutton",
+          "npm:primeng/inputtext",
+          "npm:primeng/dialog"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/services/calendar-event.service.spec.ts",
+        "hash": "7972337994885453563",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/services/calendar-event.service.ts",
+        "hash": "6888116335067607804",
+        "deps": [
+          "npm:rxjs",
+          "npm:@angular/core",
+          "npm:@fullcalendar/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/services/calendar-view.service.spec.ts",
+        "hash": "12051852002981066657",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/services/calendar-view.service.ts",
+        "hash": "3299268151031268641",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@fullcalendar/daygrid",
+          "npm:@fullcalendar/interaction",
+          "npm:@fullcalendar/list",
+          "npm:@fullcalendar/timegrid",
+          "npm:@ngrx/store",
+          "npm:rxjs",
+          "npm:uuid",
+          "npm:@fullcalendar/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/store/calendar.actions.ts",
+        "hash": "6718279957156329868",
+        "deps": [
+          "npm:@ngrx/store",
+          "npm:@fullcalendar/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/store/calendar.effects.ts",
+        "hash": "5816249684772128908",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@ngrx/effects",
+          "npm:rxjs"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/store/calendar.model.ts",
+        "hash": "5383471121193337132",
+        "deps": [
+          "npm:@fullcalendar/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/store/calendar.reducer.ts",
+        "hash": "2168207824346313225",
+        "deps": [
+          "npm:@ngrx/store"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/appointments/store/calendar.selectors.ts",
+        "hash": "13128693094802756225",
+        "deps": [
+          "npm:@ngrx/store"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/catalog-routing.module.ts",
+        "hash": "5257600201477852272",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/router"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/catalog.module.ts",
+        "hash": "2718805904422728162",
+        "deps": [
+          "npm:primeng/button",
+          "npm:@ngrx/effects",
+          "npm:@ngrx/store",
+          "npm:primeng/speeddial",
+          "npm:ag-grid-angular",
+          "npm:@fortawesome/angular-fontawesome",
+          "npm:@angular/core",
+          "npm:@angular/common",
+          "npm:primeng/dialog",
+          "npm:@angular/forms"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/model/treatment.model.ts",
+        "hash": "5311592087182600328"
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/services/treatment-api.service.spec.ts",
+        "hash": "9487847216291906187",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/services/treatment-api.service.ts",
+        "hash": "2249092866538428497",
+        "deps": [
+          "npm:@angular/core",
+          "npm:rxjs"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/services/treatments-grid-api.service.spec.ts",
+        "hash": "5306842176038253649",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/services/treatments-grid-api.service.ts",
+        "hash": "5056782957012045211",
+        "deps": [
+          "npm:@angular/core",
+          "npm:ag-grid-angular"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/store/treatment-list/treatment-list.actions.ts",
+        "hash": "9765213510334100047",
+        "deps": [
+          "npm:@ngrx/store"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/store/treatment-list/treatment-list.effects.ts",
+        "hash": "11825004721274858257",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@ngrx/effects",
+          "npm:rxjs"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/store/treatment-list/treatment-list.reducer.ts",
+        "hash": "12492808880775465668",
+        "deps": [
+          "npm:@ngrx/store"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/store/treatment-list/treatment-list.selectors.ts",
+        "hash": "10235707752508058204",
+        "deps": [
+          "npm:@ngrx/store"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/store/treatment-list/treatment-list.state.ts",
+        "hash": "17642122753415026264"
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/store/treatment/treatment.actions.ts",
+        "hash": "8277545700369998337",
+        "deps": [
+          "npm:@ngrx/store"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/store/treatment/treatment.effects.ts",
+        "hash": "2771221873717409970",
+        "deps": [
+          "npm:rxjs",
+          "npm:@ngrx/effects",
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/store/treatment/treatment.reducers.ts",
+        "hash": "16200003821122831484",
+        "deps": [
+          "npm:@ngrx/store"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/store/treatment/treatment.selectors.ts",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment-new-quick/treatment-new-quick.component.html",
+        "hash": "11602333476154966201"
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment-new-quick/treatment-new-quick.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment-new-quick/treatment-new-quick.component.spec.ts",
+        "hash": "5573935465113230740",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment-new-quick/treatment-new-quick.component.ts",
+        "hash": "4988900237824027096",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/forms",
+          "npm:@ngrx/store",
+          "npm:rxjs",
+          "npm:primeng/button",
+          "npm:@angular/common",
+          "npm:primeng/api",
+          "npm:primeng/dialog"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment/action-cell/action-cell.component.html",
+        "hash": "17193027790642908125"
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment/action-cell/action-cell.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment/action-cell/action-cell.component.spec.ts",
+        "hash": "11989814905200818437",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment/action-cell/action-cell.component.ts",
+        "hash": "17213638849974092569",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@ngrx/store",
+          "npm:ag-grid-angular",
+          "npm:ag-grid-community",
+          "npm:rxjs",
+          "npm:primeng/button",
+          "npm:@angular/common"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment/numeric-cell/numeric-cell.component.html",
+        "hash": "11668792866446897643"
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment/numeric-cell/numeric-cell.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment/numeric-cell/numeric-cell.component.spec.ts",
+        "hash": "2555451824008277655",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment/numeric-cell/numeric-cell.component.ts",
+        "hash": "9680347778488596039",
+        "deps": [
+          "npm:@angular/core",
+          "npm:ag-grid-angular",
+          "npm:ag-grid-community",
+          "npm:@angular/forms"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment/treatment.component.html",
+        "hash": "434333161888340031"
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment/treatment.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment/treatment.component.spec.ts",
+        "hash": "17323236974762397163",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/catalog/treatment/treatment.component.ts",
+        "hash": "9802445907427516646",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@fortawesome/free-solid-svg-icons",
+          "npm:@ngrx/store",
+          "npm:ag-grid-angular",
+          "npm:ag-grid-community",
+          "npm:rxjs",
+          "npm:primeng/speeddial",
+          "npm:@angular/common",
+          "npm:@fortawesome/angular-fontawesome",
+          "npm:@angular/forms"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/home/home.module.ts",
+        "hash": "14973630395332935944",
+        "deps": [
+          "npm:@angular/router",
+          "npm:@angular/core",
+          "npm:@angular/common",
+          "npm:primeng/speeddial"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/home/index/index.component.html",
+        "hash": "12318668158430038674"
+      },
+      {
+        "file": "apps/karan/src/app/pages/home/index/index.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/home/index/index.component.spec.ts",
+        "hash": "14981426930374586363",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/home/index/index.component.ts",
+        "hash": "17633817891751480188",
+        "deps": [
+          "npm:@angular/core",
+          "npm:primeng/speeddial"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/inventory-new-quick/inventory-new-quick.component.html",
+        "hash": "14790524863178867658"
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/inventory-new-quick/inventory-new-quick.component.scss",
+        "hash": "18140924446652275182"
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/inventory-new-quick/inventory-new-quick.component.spec.ts",
+        "hash": "7182711979936122353",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/inventory-new-quick/inventory-new-quick.component.ts",
+        "hash": "7470796197201798468",
+        "deps": [
+          "npm:@angular/forms",
+          "npm:@angular/core",
+          "npm:rxjs",
+          "npm:primeng/button",
+          "npm:primeng/calendar",
+          "npm:@angular/common",
+          "npm:primeng/api",
+          "npm:primeng/dialog"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/inventory-routing.module.ts",
+        "hash": "12589939775651592656",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/router"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/inventory.module.ts",
+        "hash": "5829600423479244700",
+        "deps": [
+          "npm:@angular/forms",
+          "npm:@angular/common",
+          "npm:@angular/core",
+          "npm:@fortawesome/angular-fontawesome",
+          "npm:primeng/dialog",
+          "npm:primeng/speeddial",
+          "npm:ag-grid-angular",
+          "npm:primeng/calendar"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/inventory/inventory.component.html",
+        "hash": "8612230784376226468"
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/inventory/inventory.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/inventory/inventory.component.spec.ts",
+        "hash": "14126909779050093190",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/inventory/inventory.component.ts",
+        "hash": "8539293627876196099",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@fortawesome/free-solid-svg-icons",
+          "npm:ag-grid-angular",
+          "npm:ag-grid-community",
+          "npm:rxjs",
+          "npm:primeng/speeddial",
+          "npm:@angular/common",
+          "npm:@fortawesome/angular-fontawesome",
+          "npm:@angular/forms"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/model/inventory.model.ts",
+        "hash": "1104329927346392208"
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/services/inventory-api.service.spec.ts",
+        "hash": "1785661608705073699",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/services/inventory-api.service.ts",
+        "hash": "17354974683616602584",
+        "deps": [
+          "npm:rxjs",
+          "npm:@angular/common/http",
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/services/inventory-editor.service.spec.ts",
+        "hash": "1215738285039057388",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/inventory/services/inventory-editor.service.ts",
+        "hash": "1449486350537330502",
+        "deps": [
+          "npm:rxjs",
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/main/main.component.html",
+        "hash": "9083396826650736427"
+      },
+      {
+        "file": "apps/karan/src/app/pages/main/main.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/main/main.component.spec.ts",
+        "hash": "10370364629513049989",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/main/main.component.ts",
+        "hash": "15011025621743729458",
+        "deps": [
+          "npm:primeng/api",
+          "npm:@angular/core",
+          "npm:@angular/router"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/pages-routing.module.ts",
+        "hash": "6168207217963911130",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/router"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/pages.module.ts",
+        "hash": "5876087056846090333",
+        "deps": [
+          "npm:primeng/speeddial",
+          "npm:@angular/common",
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-clinical-photos/clinical-image-detail.model.ts",
+        "hash": "1320319227707284976"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-clinical-photos/patient-clinical-photos.component.html",
+        "hash": "5356639387118725473"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-clinical-photos/patient-clinical-photos.component.scss",
+        "hash": "18183601753462237163"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-clinical-photos/patient-clinical-photos.component.spec.ts",
+        "hash": "3609672220251610247",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-clinical-photos/patient-clinical-photos.component.ts",
+        "hash": "127051328667516589",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/forms",
+          "npm:primeng/button",
+          "npm:primeng/api",
+          "npm:primeng/galleria",
+          "npm:@angular/common"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/deciduous-teeth/deciduous-teeth.component.html",
+        "hash": "14484698244692945531"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/deciduous-teeth/deciduous-teeth.component.scss",
+        "hash": "7752929879788515075"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/deciduous-teeth/deciduous-teeth.component.spec.ts",
+        "hash": "612172300766869791",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/deciduous-teeth/deciduous-teeth.component.ts",
+        "hash": "7324314057387978035",
+        "deps": [
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/patient-dental-history.component.html",
+        "hash": "10085608742962133003"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/patient-dental-history.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/patient-dental-history.component.spec.ts",
+        "hash": "5090151313224965491",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/patient-dental-history.component.ts",
+        "hash": "4235405312638110936",
+        "deps": [
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/permanent-teeth/permanent-teeth.component.html",
+        "hash": "3544550663317177566"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/permanent-teeth/permanent-teeth.component.scss",
+        "hash": "17884815049604303911"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/permanent-teeth/permanent-teeth.component.spec.ts",
+        "hash": "11098283498955433220",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/permanent-teeth/permanent-teeth.component.ts",
+        "hash": "13321995258162849916",
+        "deps": [
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/services/teeth-lib.service.spec.ts",
+        "hash": "7530348273290184235",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/services/teeth-lib.service.ts",
+        "hash": "2695094106775012750",
+        "deps": [
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/tooth-form/tooth-form.component.html",
+        "hash": "15809647552459984680"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/tooth-form/tooth-form.component.scss",
+        "hash": "18140924446652275182"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/tooth-form/tooth-form.component.spec.ts",
+        "hash": "4704240417217425267",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-dental-history/tooth-form/tooth-form.component.ts",
+        "hash": "11532141734572312205",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/forms",
+          "npm:primeng/api",
+          "npm:primeng/listbox",
+          "npm:primeng/ripple",
+          "npm:primeng/button",
+          "npm:primeng/inputtextarea",
+          "npm:primeng/calendar",
+          "npm:primeng/dropdown",
+          "npm:@angular/common"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-details/patient-details.component.html",
+        "hash": "11052494590916123180"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-details/patient-details.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-details/patient-details.component.spec.ts",
+        "hash": "13142595168522127282",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-details/patient-details.component.ts",
+        "hash": "518574981571339022",
+        "deps": [
+          "npm:@angular/core",
+          "npm:primeng/api",
+          "npm:primeng/accordion",
+          "npm:@angular/common",
+          "npm:@angular/router"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-id-photo/patient-id-photo.component.html",
+        "hash": "9475360021558705600"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-id-photo/patient-id-photo.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-id-photo/patient-id-photo.component.spec.ts",
+        "hash": "2137918990170582452",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-id-photo/patient-id-photo.component.ts",
+        "hash": "10036843922824229103",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/forms",
+          "npm:primeng/button"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-id/patient-id.component.html",
+        "hash": "12136474286777195524"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-id/patient-id.component.scss",
+        "hash": "18140924446652275182"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-id/patient-id.component.spec.ts",
+        "hash": "701403815834828406",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-id/patient-id.component.ts",
+        "hash": "2585972890165579755",
+        "deps": [
+          "npm:@angular/core",
+          "npm:primeng/ripple",
+          "npm:primeng/button",
+          "npm:primeng/calendar",
+          "npm:primeng/inputtext",
+          "npm:@angular/forms"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-medical-history/patient-medical-history.component.html",
+        "hash": "852784547572285004"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-medical-history/patient-medical-history.component.scss",
+        "hash": "6851822596566051752"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-medical-history/patient-medical-history.component.spec.ts",
+        "hash": "5403654055965562213",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-medical-history/patient-medical-history.component.ts",
+        "hash": "403871854327302531",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/forms",
+          "npm:primeng/api",
+          "npm:primeng/listbox",
+          "npm:primeng/inputtext",
+          "npm:primeng/ripple",
+          "npm:primeng/button",
+          "npm:primeng/calendar",
+          "npm:primeng/autocomplete",
+          "npm:@angular/common"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-new-quick/patient-new-quick.component.html",
+        "hash": "7382835363593946078"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-new-quick/patient-new-quick.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-new-quick/patient-new-quick.component.spec.ts",
+        "hash": "2365572325926673799",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-new-quick/patient-new-quick.component.ts",
+        "hash": "12061114688053352292",
+        "deps": [
+          "npm:@angular/core",
+          "npm:rxjs",
+          "npm:@angular/common",
+          "npm:primeng/api",
+          "npm:primeng/dialog"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-notes/patient-notes.component.html",
+        "hash": "13990734801466214808"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-notes/patient-notes.component.scss",
+        "hash": "2353350024339877174"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-notes/patient-notes.component.spec.ts",
+        "hash": "4467611905428990912",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patient-notes/patient-notes.component.ts",
+        "hash": "15308729106780160691",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/forms",
+          "npm:primeng/api",
+          "npm:primeng/listbox",
+          "npm:primeng/ripple",
+          "npm:primeng/button",
+          "npm:primeng/chips",
+          "npm:primeng/chip",
+          "npm:@angular/common"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patients.module.ts",
+        "hash": "9272233920259707962",
+        "deps": [
+          "npm:@fortawesome/angular-fontawesome",
+          "npm:@angular/forms",
+          "npm:primeng/ripple",
+          "npm:primeng/dialog",
+          "npm:primeng/speeddial",
+          "npm:@angular/common",
+          "npm:@angular/core",
+          "npm:@angular/router",
+          "npm:primeng/accordion",
+          "npm:primeng/button",
+          "npm:primeng/dataview",
+          "npm:primeng/dropdown",
+          "npm:primeng/autocomplete",
+          "npm:primeng/menu",
+          "npm:primeng/inputtext",
+          "npm:primeng/panel",
+          "npm:primeng/steps",
+          "npm:primeng/chips",
+          "npm:primeng/chip",
+          "npm:primeng/listbox",
+          "npm:primeng/calendar",
+          "npm:primeng/inputtextarea",
+          "npm:primeng/carousel",
+          "npm:primeng/image",
+          "npm:primeng/galleria"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patients/patients.component.html",
+        "hash": "9048713597728039617"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patients/patients.component.scss",
+        "hash": "11888179026703399631"
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patients/patients.component.spec.ts",
+        "hash": "6809288562675105869",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/patients/patients.component.ts",
+        "hash": "17977863912195910635",
+        "deps": [
+          "npm:@angular/core",
+          "npm:primeng/api",
+          "npm:rxjs",
+          "npm:@fortawesome/free-solid-svg-icons",
+          "npm:primeng/speeddial",
+          "npm:@fortawesome/angular-fontawesome",
+          "npm:@angular/router",
+          "npm:primeng/inputtext",
+          "npm:primeng/dropdown",
+          "npm:primeng/dataview"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/services/patient-editor.service.spec.ts",
+        "hash": "11292790525037773825",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/patients/services/patient-editor.service.ts",
+        "hash": "6286709565104376918",
+        "deps": [
+          "npm:rxjs",
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/payments/payment-details/payment-details.component.html",
+        "hash": "7349986478235471680"
+      },
+      {
+        "file": "apps/karan/src/app/pages/payments/payment-details/payment-details.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/payments/payment-details/payment-details.component.spec.ts",
+        "hash": "7854609190919318662",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/payments/payment-details/payment-details.component.ts",
+        "hash": "17949049155921207570",
+        "deps": [
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/payments/payments.module.ts",
+        "hash": "10408202336158096099",
+        "deps": [
+          "npm:primeng/speeddial",
+          "npm:ag-grid-angular",
+          "npm:@fortawesome/angular-fontawesome",
+          "npm:@angular/forms",
+          "npm:@angular/router",
+          "npm:@angular/core",
+          "npm:@angular/common"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/payments/payments/payments.component.html",
+        "hash": "18061509693860258296"
+      },
+      {
+        "file": "apps/karan/src/app/pages/payments/payments/payments.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/payments/payments/payments.component.spec.ts",
+        "hash": "11572578731817285132",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/payments/payments/payments.component.ts",
+        "hash": "11849505353121818103",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@fortawesome/free-solid-svg-icons",
+          "npm:ag-grid-community",
+          "npm:rxjs",
+          "npm:primeng/speeddial",
+          "npm:ag-grid-angular",
+          "npm:@angular/router",
+          "npm:@angular/common",
+          "npm:@fortawesome/angular-fontawesome",
+          "npm:@angular/forms"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/settings/doctors/doctors.component.html",
+        "hash": "10580518607369010622"
+      },
+      {
+        "file": "apps/karan/src/app/pages/settings/doctors/doctors.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/settings/doctors/doctors.component.spec.ts",
+        "hash": "1944903753843087613",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/settings/doctors/doctors.component.ts",
+        "hash": "1332385171780949204",
+        "deps": [
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/settings/settings.module.ts",
+        "hash": "12515967856519684589",
+        "deps": [
+          "npm:@angular/common",
+          "npm:@angular/core",
+          "npm:@angular/router",
+          "npm:primeng/fieldset"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/settings/settings/settings.component.html",
+        "hash": "8445909777200371991"
+      },
+      {
+        "file": "apps/karan/src/app/pages/settings/settings/settings.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/settings/settings/settings.component.spec.ts",
+        "hash": "1076764593116187676",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/settings/settings/settings.component.ts",
+        "hash": "17599846408837174631",
+        "deps": [
+          "npm:@angular/core",
+          "npm:primeng/fieldset"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/statistics/statistics-routing.module.ts",
+        "hash": "11332941206335327784",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/router"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/statistics/statistics.module.ts",
+        "hash": "11294934710325310037",
+        "deps": [
+          "npm:primeng/speeddial",
+          "npm:@angular/core",
+          "npm:@angular/common"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/statistics/stats/stats.component.html",
+        "hash": "1692391776680836542"
+      },
+      {
+        "file": "apps/karan/src/app/pages/statistics/stats/stats.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/app/pages/statistics/stats/stats.component.spec.ts",
+        "hash": "12956269218448053382",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/pages/statistics/stats/stats.component.ts",
+        "hash": "12198577627331388645",
+        "deps": [
+          "npm:@angular/core",
+          "npm:primeng/speeddial"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/shared/loading-rows.component.ts",
+        "hash": "9709396580509557669",
+        "deps": [
+          "npm:@angular/core",
+          "npm:ag-grid-angular",
+          "npm:ag-grid-community"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/shared/no-rows.component.ts",
+        "hash": "15718984645162743031",
+        "deps": [
+          "npm:ag-grid-angular",
+          "npm:ag-grid-community",
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/app/shared/shared.module.ts",
+        "hash": "13141693668417140156",
+        "deps": [
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "apps/karan/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/karan/src/assets/img/logo-1024.png",
+        "hash": "4289973368043716624"
+      },
+      {
+        "file": "apps/karan/src/assets/img/profile-placeholder.png",
+        "hash": "15456935050677116181"
+      },
+      {
+        "file": "apps/karan/src/environments/environment.prod.ts",
+        "hash": "7965245570916970805"
+      },
+      {
+        "file": "apps/karan/src/environments/environment.ts",
+        "hash": "12755784568794106452"
+      },
+      {
+        "file": "apps/karan/src/favicon.ico",
+        "hash": "9303420814833116677"
+      },
+      {
+        "file": "apps/karan/src/index.html",
+        "hash": "4001674454987439738"
+      },
+      {
+        "file": "apps/karan/src/main.ts",
+        "hash": "15582882139834004853",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/platform-browser-dynamic",
+          "npm:@ngrx/store-devtools",
+          "npm:@ngrx/effects",
+          "npm:@ngrx/store",
+          "npm:@angular/router",
+          "npm:@angular/common/http",
+          "npm:@angular/platform-browser/animations",
+          "npm:@angular/platform-browser"
+        ]
+      },
+      {
+        "file": "apps/karan/src/polyfills.ts",
+        "hash": "13952578668946952738",
+        "deps": [
+          "npm:zone.js"
+        ]
+      },
+      {
+        "file": "apps/karan/src/styles.scss",
+        "hash": "5568461398566057925"
+      },
+      {
+        "file": "apps/karan/src/test-setup.ts",
+        "hash": "17711435995618823417",
+        "deps": [
+          "npm:jest-preset-angular/setup-jest"
+        ]
+      },
+      {
+        "file": "apps/karan/tsconfig.app.json",
+        "hash": "15989261137096458116"
+      },
+      {
+        "file": "apps/karan/tsconfig.editor.json",
+        "hash": "6367495026318685054"
+      },
+      {
+        "file": "apps/karan/tsconfig.json",
+        "hash": "17981161305287108769"
+      },
+      {
+        "file": "apps/karan/tsconfig.spec.json",
+        "hash": "6658172359945877284"
+      }
+    ],
+    "ui": [
+      {
+        "file": "libs/ui/.eslintrc.json",
+        "hash": "6545078182691800970"
+      },
+      {
+        "file": "libs/ui/README.md",
+        "hash": "3098996868279451883"
+      },
+      {
+        "file": "libs/ui/jest.config.ts",
+        "hash": "17276083826551503943"
+      },
+      {
+        "file": "libs/ui/project.json",
+        "hash": "15977258479146570692"
+      },
+      {
+        "file": "libs/ui/src/index.ts",
+        "hash": "17384152782077877822"
+      },
+      {
+        "file": "libs/ui/src/lib/formal/formal.component.html",
+        "hash": "11519820322725639736"
+      },
+      {
+        "file": "libs/ui/src/lib/formal/formal.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "libs/ui/src/lib/formal/formal.component.spec.ts",
+        "hash": "14726477003971301399",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "libs/ui/src/lib/formal/formal.component.ts",
+        "hash": "14412576920791798734",
+        "deps": [
+          "npm:@angular/core",
+          "npm:@angular/forms",
+          "npm:@ngx-formly/core"
+        ]
+      },
+      {
+        "file": "libs/ui/src/lib/formal/test.ts",
+        "hash": "14864560658751293673"
+      },
+      {
+        "file": "libs/ui/src/lib/layout/footer-basic/footer-basic.component.html",
+        "hash": "16319447960098762849"
+      },
+      {
+        "file": "libs/ui/src/lib/layout/footer-basic/footer-basic.component.spec.ts",
+        "hash": "10261718960586244559",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "libs/ui/src/lib/layout/footer-basic/footer-basic.component.ts",
+        "hash": "2117160932226662082",
+        "deps": [
+          "npm:@angular/core",
+          "npm:primeng/api"
+        ]
+      },
+      {
+        "file": "libs/ui/src/lib/layout/footer-basic/footer-basic.module.ts",
+        "hash": "5558144708063217466",
+        "deps": [
+          "npm:@angular/router",
+          "npm:@fortawesome/angular-fontawesome",
+          "npm:@angular/core",
+          "npm:@angular/common",
+          "npm:primeng/tooltip"
+        ]
+      },
+      {
+        "file": "libs/ui/src/lib/layout/header-basic/header-basic.component.html",
+        "hash": "4181642436584509735"
+      },
+      {
+        "file": "libs/ui/src/lib/layout/header-basic/header-basic.component.spec.ts",
+        "hash": "349639104381474161",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "libs/ui/src/lib/layout/header-basic/header-basic.component.ts",
+        "hash": "15017228569311961501",
+        "deps": [
+          "npm:@angular/core",
+          "npm:primeng/api",
+          "npm:rxjs"
+        ]
+      },
+      {
+        "file": "libs/ui/src/lib/layout/header-basic/header-basic.module.ts",
+        "hash": "313927853868567825",
+        "deps": [
+          "npm:@rx-angular/template/let",
+          "npm:@angular/router",
+          "npm:@angular/core",
+          "npm:@angular/common"
+        ]
+      },
+      {
+        "file": "libs/ui/src/lib/layout/header-basic/header-menu-type.directive.ts",
+        "hash": "7169615106788730651",
+        "deps": [
+          "npm:@angular/core",
+          "npm:primeng/api"
+        ]
+      },
+      {
+        "file": "libs/ui/src/lib/layout/layout.module.ts",
+        "hash": "16374556022379776502",
+        "deps": [
+          "npm:@fortawesome/angular-fontawesome",
+          "npm:@angular/common",
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "libs/ui/src/lib/layout/sidebar-basic/sidebar-basic.component.html",
+        "hash": "17685302043142792020"
+      },
+      {
+        "file": "libs/ui/src/lib/layout/sidebar-basic/sidebar-basic.component.spec.ts",
+        "hash": "11959124346690430114",
+        "deps": [
+          "npm:@angular/core/testing"
+        ]
+      },
+      {
+        "file": "libs/ui/src/lib/layout/sidebar-basic/sidebar-basic.component.ts",
+        "hash": "217349595455627829",
+        "deps": [
+          "npm:rxjs",
+          "npm:@angular/core",
+          "npm:primeng/api"
+        ]
+      },
+      {
+        "file": "libs/ui/src/lib/layout/sidebar-basic/sidebar-basic.module.ts",
+        "hash": "16588232390667501730",
+        "deps": [
+          "npm:@angular/common",
+          "npm:@angular/core",
+          "npm:@angular/router",
+          "npm:@rx-angular/template/let"
+        ]
+      },
+      {
+        "file": "libs/ui/src/lib/ui.module.ts",
+        "hash": "12490080967948025520",
+        "deps": [
+          "npm:@angular/common",
+          "npm:@angular/core",
+          "npm:@angular/forms",
+          "npm:@ngx-formly/core",
+          "npm:@ngx-formly/primeng",
+          "npm:primeng/button"
+        ]
+      },
+      {
+        "file": "libs/ui/src/test-setup.ts",
+        "hash": "17711435995618823417",
+        "deps": [
+          "npm:jest-preset-angular/setup-jest"
+        ]
+      },
+      {
+        "file": "libs/ui/tsconfig.json",
+        "hash": "12234268620382124197"
+      },
+      {
+        "file": "libs/ui/tsconfig.lib.json",
+        "hash": "14999110739244744162"
+      },
+      {
+        "file": "libs/ui/tsconfig.spec.json",
+        "hash": "6658172359945877284"
+      }
+    ],
     "workspace-plugin": [
       {
         "file": "tools/workspace-plugin/.eslintrc.json",
@@ -2687,6 +2641,90 @@
         "hash": "11550347367511341917"
       }
     ],
+    "karan-e2e": [
+      {
+        "file": "apps/karan-e2e/.eslintrc.json",
+        "hash": "14060216369337943343"
+      },
+      {
+        "file": "apps/karan-e2e/cypress.json",
+        "hash": "3196639194025924426"
+      },
+      {
+        "file": "apps/karan-e2e/project.json",
+        "hash": "1827823748266250265"
+      },
+      {
+        "file": "apps/karan-e2e/src/fixtures/example.json",
+        "hash": "11614668686582597233"
+      },
+      {
+        "file": "apps/karan-e2e/src/integration/app.spec.ts",
+        "hash": "3860958445721626253"
+      },
+      {
+        "file": "apps/karan-e2e/src/support/app.po.ts",
+        "hash": "11157016311132186162"
+      },
+      {
+        "file": "apps/karan-e2e/src/support/commands.ts",
+        "hash": "7314691991044890572"
+      },
+      {
+        "file": "apps/karan-e2e/src/support/index.ts",
+        "hash": "3666078656922506009"
+      },
+      {
+        "file": "apps/karan-e2e/tsconfig.json",
+        "hash": "17327834683392158647"
+      }
+    ],
+    "gapl-med-client": [
+      {
+        "file": "libs/gapl-med-client/.babelrc",
+        "hash": "4734508471883268701"
+      },
+      {
+        "file": "libs/gapl-med-client/.eslintrc.json",
+        "hash": "13800677001662881425"
+      },
+      {
+        "file": "libs/gapl-med-client/README.md",
+        "hash": "12273905443178249020"
+      },
+      {
+        "file": "libs/gapl-med-client/jest.config.ts",
+        "hash": "6396107815733652382"
+      },
+      {
+        "file": "libs/gapl-med-client/project.json",
+        "hash": "12067738908246972839"
+      },
+      {
+        "file": "libs/gapl-med-client/src/index.ts",
+        "hash": "15281887561366008087"
+      },
+      {
+        "file": "libs/gapl-med-client/src/lib/gapl-med-client.spec.ts",
+        "hash": "472299341554604841"
+      },
+      {
+        "file": "libs/gapl-med-client/src/lib/gapl-med-client.ts",
+        "hash": "7227294999840016875"
+      },
+      {
+        "file": "libs/gapl-med-client/tsconfig.json",
+        "hash": "17079550796797979564"
+      },
+      {
+        "file": "libs/gapl-med-client/tsconfig.lib.json",
+        "hash": "13034901906147047048"
+      },
+      {
+        "file": "libs/gapl-med-client/tsconfig.spec.json",
+        "hash": "2406015174838385060"
+      }
+    ],
     "backoffice-e2e": [
       {
         "file": "apps/backoffice-e2e/.eslintrc.json",
@@ -2723,6 +2761,52 @@
       {
         "file": "apps/backoffice-e2e/tsconfig.json",
         "hash": "17327834683392158647"
+      }
+    ],
+    "ngrxdb": [
+      {
+        "file": "libs/ngrxdb/.babelrc",
+        "hash": "4734508471883268701"
+      },
+      {
+        "file": "libs/ngrxdb/.eslintrc.json",
+        "hash": "13800677001662881425"
+      },
+      {
+        "file": "libs/ngrxdb/README.md",
+        "hash": "931213454022000888"
+      },
+      {
+        "file": "libs/ngrxdb/jest.config.ts",
+        "hash": "5862443539104502594"
+      },
+      {
+        "file": "libs/ngrxdb/project.json",
+        "hash": "15869734248720760733"
+      },
+      {
+        "file": "libs/ngrxdb/src/index.ts",
+        "hash": "3131825276193631844"
+      },
+      {
+        "file": "libs/ngrxdb/src/lib/ngrxdb.spec.ts",
+        "hash": "4089030574305306213"
+      },
+      {
+        "file": "libs/ngrxdb/src/lib/ngrxdb.ts",
+        "hash": "461114317734280040"
+      },
+      {
+        "file": "libs/ngrxdb/tsconfig.json",
+        "hash": "17079550796797979564"
+      },
+      {
+        "file": "libs/ngrxdb/tsconfig.lib.json",
+        "hash": "13034901906147047048"
+      },
+      {
+        "file": "libs/ngrxdb/tsconfig.spec.json",
+        "hash": "2406015174838385060"
       }
     ]
   }

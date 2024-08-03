@@ -1,14 +1,32 @@
 import { IdValue } from './../../../core/utils/crud';
 import { SafeCrudArray } from '../../../core/utils/crud';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'primeng/api';
+import { ListboxModule } from 'primeng/listbox';
+import { RippleModule } from 'primeng/ripple';
+import { ButtonModule } from 'primeng/button';
+import { ChipsModule } from 'primeng/chips';
+import { ChipModule } from 'primeng/chip';
+import { NgFor } from '@angular/common';
 
 
 
 @Component({
-  selector: 'gita-patient-notes',
-  templateUrl: './patient-notes.component.html',
-  styleUrls: ['./patient-notes.component.scss'],
+    selector: 'gita-patient-notes',
+    templateUrl: './patient-notes.component.html',
+    styleUrls: ['./patient-notes.component.scss'],
+    standalone: true,
+    imports: [
+        ReactiveFormsModule,
+        NgFor,
+        ChipModule,
+        ChipsModule,
+        ButtonModule,
+        RippleModule,
+        ListboxModule,
+        SharedModule,
+    ],
 })
 export class PatientNotesComponent implements OnInit {
 

@@ -7,13 +7,11 @@ import { StatsComponent } from './stats/stats.component';
 
 
 @NgModule({
-  declarations: [
-    StatsComponent
-  ],
-  imports: [
-    CommonModule,
-    StatisticsRoutingModule,
-    SpeedDialModule
-  ]
+    imports: [
+        CommonModule,
+        StatisticsRoutingModule,
+        SpeedDialModule,
+        StatsComponent
+    ]
 })
 export class StatisticsModule { }

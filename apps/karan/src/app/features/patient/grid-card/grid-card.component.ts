@@ -1,9 +1,10 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'gita-grid-card',
-  templateUrl: './grid-card.component.html',
-  styleUrls: ['./grid-card.component.scss'],
+    selector: 'gita-grid-card',
+    templateUrl: './grid-card.component.html',
+    styleUrls: ['./grid-card.component.scss'],
+    standalone: true,
 })
 export class GridCardComponent {
   @Input() patient!: number;

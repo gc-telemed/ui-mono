@@ -1,5 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { FormControl, FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
+import { FormControl, FormGroup, NonNullableFormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { DateInput } from '@fullcalendar/core';
 import { EventApi, EventInput } from '@fullcalendar/core';
 import { Store } from '@ngrx/store';
@@ -9,6 +9,13 @@ import { eventUnselected } from '../store/calendar.actions';
 import { RGBObj } from './../../../core/models/rgb.model';
 import { CalendarEventService } from './../services/calendar-event.service';
 import { CalendarViewService } from './../services/calendar-view.service';
+import { NgIf, AsyncPipe } from '@angular/common';
+import { CalendarModule } from 'primeng/calendar';
+import { ButtonModule } from 'primeng/button';
+import { ColorPickerModule } from 'primeng/colorpicker';
+import { ToggleButtonModule } from 'primeng/togglebutton';
+import { InputTextModule } from 'primeng/inputtext';
+import { DialogModule } from 'primeng/dialog';
 
 interface EventForm {
   id: FormControl<string>;
@@ -20,9 +27,21 @@ interface EventForm {
 }
 
 @Component({
-  selector: 'gita-event-editor',
-  templateUrl: './event-editor.component.html',
-  styleUrls: ['./event-editor.component.scss'],
+    selector: 'gita-event-editor',
+    templateUrl: './event-editor.component.html',
+    styleUrls: ['./event-editor.component.scss'],
+    standalone: true,
+    imports: [
+        DialogModule,
+        ReactiveFormsModule,
+        InputTextModule,
+        ToggleButtonModule,
+        ColorPickerModule,
+        ButtonModule,
+        CalendarModule,
+        NgIf,
+        AsyncPipe,
+    ],
 })
 export class EventEditorComponent implements OnInit, OnDestroy {
 

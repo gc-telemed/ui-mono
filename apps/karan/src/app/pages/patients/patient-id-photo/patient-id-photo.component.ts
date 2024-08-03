@@ -1,12 +1,15 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
 
 const localPlaceholder = "assets/img/profile-placeholder.png";
 
 @Component({
-  selector: 'gita-patient-id-photo',
-  templateUrl: './patient-id-photo.component.html',
-  styleUrls: ['./patient-id-photo.component.scss'],
+    selector: 'gita-patient-id-photo',
+    templateUrl: './patient-id-photo.component.html',
+    styleUrls: ['./patient-id-photo.component.scss'],
+    standalone: true,
+    imports: [ReactiveFormsModule, ButtonModule],
 })
 export class PatientIdPhotoComponent {
 

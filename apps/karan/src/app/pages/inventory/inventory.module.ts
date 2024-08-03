@@ -13,16 +13,16 @@ import { InventoryRoutingModule } from './inventory-routing.module';
 import { InventoryComponent } from './inventory/inventory.component';
 
 @NgModule({
-  declarations: [InventoryComponent, InventoryNewQuickComponent],
-  imports: [
-    CommonModule,
-    InventoryRoutingModule,
-    AgGridModule,
-    FontAwesomeModule,
-    SpeedDialModule,
-    DialogModule,
-    CalendarModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        CommonModule,
+        InventoryRoutingModule,
+        AgGridModule,
+        FontAwesomeModule,
+        SpeedDialModule,
+        DialogModule,
+        CalendarModule,
+        ReactiveFormsModule,
+        InventoryComponent, InventoryNewQuickComponent
+    ],
 })
 export class InventoryModule { }

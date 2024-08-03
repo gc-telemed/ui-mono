@@ -9,7 +9,6 @@ import { DoctorsComponent } from './doctors/doctors.component';
 const routes: Routes = [{ path: '', component: SettingsComponent }];
 
 @NgModule({
-  declarations: [SettingsComponent, DoctorsComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), FieldsetModule],
+    imports: [CommonModule, RouterModule.forChild(routes), FieldsetModule, SettingsComponent, DoctorsComponent],
 })
 export class SettingsModule {}

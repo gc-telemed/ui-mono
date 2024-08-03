@@ -1,17 +1,32 @@
 import { Component, ViewChild } from '@angular/core';
 import { faCopy, faPlusCircle, faSearch, faTrash } from '@fortawesome/free-solid-svg-icons';
-import { AgGridAngular } from 'ag-grid-angular';
+import { AgGridAngular, AgGridModule } from 'ag-grid-angular';
 import { CellClickedEvent, ColDef, GridReadyEvent, RowSelectedEvent } from 'ag-grid-community';
 import { Observable } from 'rxjs';
 import { localeDateFormat } from '../../../core/utils/date';
 import { InventoryUpdate } from '../model/inventory.model';
 import { InventoryApiService } from './../services/inventory-api.service';
 import { InventoryEditorService } from './../services/inventory-editor.service';
+import { InventoryNewQuickComponent } from '../inventory-new-quick/inventory-new-quick.component';
+import { SpeedDialModule } from 'primeng/speeddial';
+import { NgIf, AsyncPipe } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'gita-inventory',
-  templateUrl: './inventory.component.html',
-  styleUrls: ['./inventory.component.scss'],
+    selector: 'gita-inventory',
+    templateUrl: './inventory.component.html',
+    styleUrls: ['./inventory.component.scss'],
+    standalone: true,
+    imports: [
+        ReactiveFormsModule,
+        FontAwesomeModule,
+        NgIf,
+        AgGridModule,
+        SpeedDialModule,
+        InventoryNewQuickComponent,
+        AsyncPipe,
+    ],
 })
 export class InventoryComponent {
 

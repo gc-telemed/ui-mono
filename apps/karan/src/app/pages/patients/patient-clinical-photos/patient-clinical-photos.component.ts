@@ -1,13 +1,26 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { ClinicalImageDetail } from './clinical-image-detail.model';
 
-import { FormBuilder, FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
+import { SharedModule } from 'primeng/api';
+import { GalleriaModule } from 'primeng/galleria';
+import { NgIf, NgFor } from '@angular/common';
 
 const localPlaceholder = "assets/img/profile-placeholder.png";
 @Component({
-  selector: 'gita-patient-clinical-photos',
-  templateUrl: './patient-clinical-photos.component.html',
-  styleUrls: ['./patient-clinical-photos.component.scss'],
+    selector: 'gita-patient-clinical-photos',
+    templateUrl: './patient-clinical-photos.component.html',
+    styleUrls: ['./patient-clinical-photos.component.scss'],
+    standalone: true,
+    imports: [
+        NgIf,
+        NgFor,
+        GalleriaModule,
+        SharedModule,
+        ReactiveFormsModule,
+        ButtonModule,
+    ],
 })
 export class PatientClinicalPhotosComponent {
 

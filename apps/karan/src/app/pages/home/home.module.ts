@@ -9,7 +9,6 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [IndexComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), SpeedDialModule],
+    imports: [CommonModule, RouterModule.forChild(routes), SpeedDialModule, IndexComponent],
 })
 export class HomeModule { }

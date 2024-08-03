@@ -19,24 +19,22 @@ import { NumericCellComponent } from './treatment/numeric-cell/numeric-cell.comp
 import { TreatmentEffects } from './store/treatment/treatment.effects';
 
 @NgModule({
-  declarations: [
-    TreatmentComponent,
-    TreatmentNewQuickComponent,
-    ActionCellComponent,
-    NumericCellComponent,
-  ],
-  imports: [
-    CommonModule,
-    CatalogRoutingModule,
-    FontAwesomeModule,
-    AgGridModule,
-    SpeedDialModule,
-    DialogModule,
-    ButtonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    StoreModule.forFeature(treatmentListFeature),
-    EffectsModule.forFeature([TreatmentListEffects, TreatmentEffects]),
-  ],
+    imports: [
+        CommonModule,
+        CatalogRoutingModule,
+        FontAwesomeModule,
+        AgGridModule,
+        SpeedDialModule,
+        DialogModule,
+        ButtonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        StoreModule.forFeature(treatmentListFeature),
+        EffectsModule.forFeature([TreatmentListEffects, TreatmentEffects]),
+        TreatmentComponent,
+        TreatmentNewQuickComponent,
+        ActionCellComponent,
+        NumericCellComponent,
+    ],
 })
 export class CatalogModule { }

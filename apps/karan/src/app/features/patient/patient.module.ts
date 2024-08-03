@@ -9,8 +9,7 @@ const COMPS = [
 ]
 
 @NgModule({
-  declarations: [...COMPS],
-  imports: [CommonModule],
-  exports: [...COMPS]
+    imports: [CommonModule, ...COMPS],
+    exports: [...COMPS]
 })
 export class PatientModule { }

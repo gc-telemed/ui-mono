@@ -1,14 +1,29 @@
 import { InventoryApiService } from './../services/inventory-api.service';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { InventoryEditorService } from './../services/inventory-editor.service';
 
 import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ButtonModule } from 'primeng/button';
+import { CalendarModule } from 'primeng/calendar';
+import { NgIf, AsyncPipe } from '@angular/common';
+import { SharedModule } from 'primeng/api';
+import { DialogModule } from 'primeng/dialog';
 
 @Component({
-  selector: 'gita-inventory-new-quick',
-  templateUrl: './inventory-new-quick.component.html',
-  styleUrls: ['./inventory-new-quick.component.scss'],
+    selector: 'gita-inventory-new-quick',
+    templateUrl: './inventory-new-quick.component.html',
+    styleUrls: ['./inventory-new-quick.component.scss'],
+    standalone: true,
+    imports: [
+        DialogModule,
+        SharedModule,
+        NgIf,
+        ReactiveFormsModule,
+        CalendarModule,
+        ButtonModule,
+        AsyncPipe,
+    ],
 })
 export class InventoryNewQuickComponent {
 

@@ -1,10 +1,21 @@
 import { MenuItem } from 'primeng/api';
 import { Component, OnInit } from '@angular/core';
+import { FooterComponent } from '../../core/layout/footer/footer.component';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from '../../core/layout/header/header.component';
+import { SidebarComponent } from '../../core/layout/sidebar/sidebar.component';
 
 @Component({
-  selector: 'gita-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss'],
+    selector: 'gita-main',
+    templateUrl: './main.component.html',
+    styleUrls: ['./main.component.scss'],
+    standalone: true,
+    imports: [
+        SidebarComponent,
+        HeaderComponent,
+        RouterOutlet,
+        FooterComponent,
+    ],
 })
 export class MainComponent implements OnInit {
 

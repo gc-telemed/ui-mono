@@ -7,7 +7,6 @@ import { MainComponent } from './main/main.component';
 import { PagesRoutingModule } from './pages-routing.module';
 
 @NgModule({
-  declarations: [MainComponent],
-  imports: [CommonModule, PagesRoutingModule, CoreModule, SpeedDialModule],
+    imports: [CommonModule, PagesRoutingModule, CoreModule, SpeedDialModule, MainComponent],
 })
 export class PagesModule { }

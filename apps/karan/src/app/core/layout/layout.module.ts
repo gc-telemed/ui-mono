@@ -14,16 +14,16 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 const COMPS = [HeaderComponent, FooterComponent, SidebarComponent];
 
 @NgModule({
-  declarations: [...COMPS],
-  imports: [
-    CommonModule,
-    FontAwesomeModule,
-    UiModule,
-    RxLet,
-    MenubarModule,
-    InputTextModule,
-    StoreModule.forFeature('layout', layoutReducer),
-  ],
-  exports: [...COMPS]
+    imports: [
+        CommonModule,
+        FontAwesomeModule,
+        UiModule,
+        RxLet,
+        MenubarModule,
+        InputTextModule,
+        StoreModule.forFeature('layout', layoutReducer),
+        ...COMPS,
+    ],
+    exports: [...COMPS]
 })
 export class LayoutModule { }

@@ -3,11 +3,26 @@ import { faCopy, faEnvelopeOpenText, faPlusCircle, faSearch, faTrash } from '@fo
 import { ColDef, GridApi, GridReadyEvent, RowSelectedEvent, SelectionChangedEvent, ValueFormatterParams } from 'ag-grid-community';
 import { Subject } from 'rxjs';
 import { localeDateFormat } from '../../../core/utils/date';
+import { SpeedDialModule } from 'primeng/speeddial';
+import { AgGridModule } from 'ag-grid-angular';
+import { RouterLink } from '@angular/router';
+import { NgIf } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'gita-payments',
-  templateUrl: './payments.component.html',
-  styleUrls: ['./payments.component.scss'],
+    selector: 'gita-payments',
+    templateUrl: './payments.component.html',
+    styleUrls: ['./payments.component.scss'],
+    standalone: true,
+    imports: [
+        ReactiveFormsModule,
+        FontAwesomeModule,
+        NgIf,
+        RouterLink,
+        AgGridModule,
+        SpeedDialModule,
+    ],
 })
 export class PaymentsComponent implements OnDestroy {
 

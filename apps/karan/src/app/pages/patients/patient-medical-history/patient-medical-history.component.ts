@@ -1,14 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { FilterService } from 'primeng/api';
+import { FormArray, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FilterService, SharedModule } from 'primeng/api';
 import { medicalConditions } from '../../../core/models/medical-conditions.data';
 import { IdValue, SafeCrudArray } from '../../../core/utils/crud';
 import { MedicalCondition } from './../../../core/models/medical-conditions.data';
+import { ListboxModule } from 'primeng/listbox';
+import { InputTextModule } from 'primeng/inputtext';
+import { RippleModule } from 'primeng/ripple';
+import { ButtonModule } from 'primeng/button';
+import { CalendarModule } from 'primeng/calendar';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'gita-patient-medical-history',
-  templateUrl: './patient-medical-history.component.html',
-  styleUrls: ['./patient-medical-history.component.scss'],
+    selector: 'gita-patient-medical-history',
+    templateUrl: './patient-medical-history.component.html',
+    styleUrls: ['./patient-medical-history.component.scss'],
+    standalone: true,
+    imports: [
+        ReactiveFormsModule,
+        NgFor,
+        AutoCompleteModule,
+        SharedModule,
+        CalendarModule,
+        ButtonModule,
+        RippleModule,
+        NgIf,
+        InputTextModule,
+        ListboxModule,
+    ],
 })
 export class PatientMedicalHistoryComponent implements OnInit {
 
