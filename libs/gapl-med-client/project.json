@@ -3,22 +3,17 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/gapl-med-client/src",
   "projectType": "library",
+  "tags": ["rxjs", "api-client", "emr", "ehr"],
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/gapl-med-client/**/*.ts"]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/gapl-med-client"],
       "options": {
-        "jestConfig": "libs/gapl-med-client/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/gapl-med-client/jest.config.ts"
       }
     }
-  },
-  "tags": ["rxjs", "api-client", "emr", "ehr"]
+  }
 }

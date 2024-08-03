@@ -3,22 +3,17 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ngrxdb/src",
   "projectType": "library",
+  "tags": ["ngrx", "rxdb", "rxjs", "indexeddb"],
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/ngrxdb/**/*.ts"]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ngrxdb"],
       "options": {
-        "jestConfig": "libs/ngrxdb/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ngrxdb/jest.config.ts"
       }
     }
-  },
-  "tags": ["ngrx", "rxdb", "rxjs", "indexeddb"]
+  }
 }

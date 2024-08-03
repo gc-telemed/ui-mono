@@ -4,8 +4,7 @@
 /dist
 /tmp
 /out-tsc
-.nx/**
-.nx/cache/**
+.nx/
 # dependencies
 node_modules
 
@@ -40,3 +39,5 @@ testem.log
 Thumbs.db
 
 .angular
+.nx/cache
+.nx/workspace-data/file-map.json

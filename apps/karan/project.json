@@ -4,6 +4,7 @@
   "projectType": "application",
   "sourceRoot": "apps/karan/src",
   "prefix": "gita",
+  "tags": ["clinical"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -56,10 +57,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "karan:build:production"
+          "buildTarget": "karan:build:production"
         },
         "development": {
-          "browserTarget": "karan:build:development"
+          "buildTarget": "karan:build:development"
         }
       },
       "defaultConfiguration": "development",
@@ -71,23 +72,18 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "karan:build"
+        "buildTarget": "karan:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["apps/karan/**/*.ts", "apps/karan/**/*.html"]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/karan"],
       "options": {
-        "jestConfig": "apps/karan/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/karan/jest.config.ts"
       }
     }
-  },
-  "tags": ["clinical"]
+  }
 }

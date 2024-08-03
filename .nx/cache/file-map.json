@@ -2367,17 +2367,16 @@
       },
       {
         "file": "apps/karan/src/main.ts",
-        "hash": "15582882139834004853",
+        "hash": "767795033389530240",
         "deps": [
           "npm:@angular/core",
-          "npm:@angular/platform-browser-dynamic",
-          "npm:@ngrx/store-devtools",
+          "npm:@angular/common/http",
+          "npm:@angular/platform-browser",
+          "npm:@angular/platform-browser/animations",
+          "npm:@angular/router",
           "npm:@ngrx/effects",
           "npm:@ngrx/store",
-          "npm:@angular/router",
-          "npm:@angular/common/http",
-          "npm:@angular/platform-browser/animations",
-          "npm:@angular/platform-browser"
+          "npm:@ngrx/store-devtools"
         ]
       },
       {

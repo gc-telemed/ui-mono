@@ -1,18 +1,17 @@
 import { enableProdMode, importProvidersFrom } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 
-import { environment } from './environments/environment';
-import { AppComponent } from './app/app.component';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideRouter, Routes, withEnabledBlockingInitialNavigation } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { PagesModule } from './app/pages/pages.module';
-import { withEnabledBlockingInitialNavigation, provideRouter, Routes } from '@angular/router';
-import { withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
-import { provideAnimations } from '@angular/platform-browser/animations';
-import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AppComponent } from './app/app.component';
 import { API_URL } from './app/core/api/api.config';
+import { PagesModule } from './app/pages/pages.module';
+import { environment } from './environments/environment';
 
 const routes: Routes = [
     {
@@ -29,7 +28,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
     providers: [
-        importProvidersFrom(BrowserModule, PagesModule, StoreModule.forRoot({}, {}), EffectsModule.forRoot([]), StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })),
+        importProvidersFrom(BrowserModule, PagesModule, StoreModule.forRoot({}, {}), EffectsModule.forRoot([]), StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production , connectInZone: true})),
         { provide: API_URL, useValue: environment.apiUrl },
         provideAnimations(),
         provideHttpClient(withInterceptorsFromDi()),

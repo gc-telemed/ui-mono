@@ -28,7 +28,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     CoreModule,
     AppRoutingModule,
     StoreModule.forRoot({ layout: layoutReducer }, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production , connectInZone: true}),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
