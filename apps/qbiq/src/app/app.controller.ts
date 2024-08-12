@@ -12,16 +12,27 @@ const prisma = new PrismaClient({
 export class AppController {
   constructor(private readonly dmmfService: DmmfService) {}
 
-  @Get('/models')
+  @Get('/all/models')
   getModels() {
     return this.dmmfService.getDMMF().datamodel.models;
   }
 
-  @Get('/meta/:model')
-  getData(@Param('model') model: string) {
+  @Get('/mini/:model')
+  getMetaData(@Param('model') model: string) {
     const prismModel = (prisma as any)[model];
     if (prismModel) {
       return prismModel['fields'];
+    } else {
+      throw new NotFoundException()
+    }
+  }
+
+  @Get('/full/:model')
+  getFullMetaData(@Param('model') model: string) {
+    const allModels = this.dmmfService.getDMMF().datamodel.models
+    const selectedModel = allModels.find(mod => mod.dbName === model)
+    if (selectedModel) {
+      return selectedModel.fields;
     } else {
       throw new NotFoundException()
     }

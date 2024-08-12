@@ -1,4 +1,4 @@
-<div class="flex flex-col place-items-center rounded-none w-full px-4 py-1 bg-cover mt-6 card bg-base-200">
+<div class="flex flex-col-reverse place-items-center rounded-none w-full px-4 py-1 bg-cover mt-6 card bg-base-200">
   <p-table [value]="$fields | async" [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="header">
         <tr>
@@ -16,6 +16,20 @@
             <td>{{ $resp.isList }}</td>
             <td>{{ $resp.isEnum }}</td>
         </tr>
+    </ng-template>
+  </p-table>
+
+  <p-table [value]="$fullResponses | async" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th *ngFor="let fullField of $fullFields | async">{{fullField}}</th>
+        </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-$resp>
+        <tr>
+            <td *ngFor="let fullField of $fullFields | async">{{ $resp[fullField] }}</td>
+                  </tr>
     </ng-template>
   </p-table>
 </div>
