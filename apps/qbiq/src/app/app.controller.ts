@@ -1,7 +1,7 @@
 import { Controller, Get, NotFoundException, Param } from '@nestjs/common';
 
 import { PrismaClient } from '../client';
-import { DmmfService } from './de-sruc/services/dmmfservice.service';
+import { DmmfService } from './de-sruc/services/dmmf.service';
 
 
 const prisma = new PrismaClient({
