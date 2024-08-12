@@ -2,10 +2,12 @@ import { Module } from '@nestjs/common';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { DmmfService } from './de-sruc/services/dmmfservice.service';
+
 
 @Module({
   imports: [],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, DmmfService],
 })
 export class AppModule {}
