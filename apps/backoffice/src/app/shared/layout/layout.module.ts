@@ -13,15 +13,13 @@ const COMPS = [
 ];
 
 @NgModule({
-  declarations: [
-    ...COMPS
-  ],
-  imports: [
-    CommonModule,
-    UiModule
-  ],
-  exports: [
-    ...COMPS
-  ]
+    imports: [
+        CommonModule,
+        UiModule,
+        ...COMPS
+    ],
+    exports: [
+        ...COMPS
+    ]
 })
 export class LayoutModule { }

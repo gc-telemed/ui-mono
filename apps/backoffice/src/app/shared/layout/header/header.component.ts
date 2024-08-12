@@ -5,11 +5,14 @@ import { map, Subject, takeUntil } from 'rxjs';
 
 import { collapseSidebar, expandSidebar } from '../store/layout/layout.actions';
 import { selectLayout } from '../store/layout/layout.selectors';
+import { HeaderBasicModule } from '../../../../../../../libs/ui/src/lib/layout/header-basic/header-basic.module';
 
 @Component({
-  selector: 'gita-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+    selector: 'gita-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    standalone: true,
+    imports: [HeaderBasicModule],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 

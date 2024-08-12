@@ -1,11 +1,14 @@
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { PrimeNGConfig, SelectItem } from 'primeng/api';
+import { PrimeNGConfig, SelectItem, SharedModule } from 'primeng/api';
 import { first, take } from 'rxjs';
+import { DataViewModule } from 'primeng/dataview';
 
 @Component({
-  selector: 'gita-patient',
-  templateUrl: './patient.component.html',
-  styleUrls: ['./patient.component.scss']
+    selector: 'gita-patient',
+    templateUrl: './patient.component.html',
+    styleUrls: ['./patient.component.scss'],
+    standalone: true,
+    imports: [DataViewModule, SharedModule]
 })
 export class PatientComponent implements OnInit, AfterViewInit {
 

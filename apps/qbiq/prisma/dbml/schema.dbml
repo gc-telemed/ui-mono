@@ -4,9 +4,10 @@
 
 Table person {
   id String [pk]
-  username String [unique, not null]
-  firstName String
+  firstName String [not null]
   lastName String [not null]
+  membership Membership [not null, default: 'NonMember']
+  role Role [not null, default: 'Patient']
   password String
   phoneCode Int [not null, default: 977]
   phoneNumber Int
@@ -16,7 +17,6 @@ Table person {
   country Country [not null, default: 'Nepal']
   email String [unique]
   emailVerified DateTime
-  payerType DiscountType [not null, default: 'RegularMember']
   image String
   accounts account [not null]
   sessions session [not null]
@@ -24,9 +24,10 @@ Table person {
   createdAt DateTime [default: `now()`, not null]
   updatedAt DateTime [not null]
   verificationTokens verification_token [not null]
-  payments payment [not null]
+  paid payment [not null]
+  received payment [not null]
 
-  Note: 'AuthJS'
+  Note: 'Phome or email based login apart from OAuth/OIDC'
 }
 
 Table account {
@@ -89,15 +90,17 @@ Table authenticator {
 
 Table payment {
   id String [pk]
-  patientName String [not null]
-  phoneNumber String [not null]
+  payerId String [not null]
+  payer person [not null]
   paymentMethod PaymentMethod [not null, default: 'CashAtCounter']
-  totalPayableAmount Decimal [not null]
+  totalAmount Decimal [not null]
   discountApplied Decimal [not null, default: 0]
   paidAmount Decimal [not null, default: 0]
   reasonForVisit String [not null]
   receiverId String [not null]
   receiver person [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
 }
 
 Table appointment {
@@ -951,10 +954,20 @@ Enum Country {
   Zimbabwe
 }
 
-Enum DiscountType {
-  FirstTimer
+Enum Membership {
+  NonMember
+  RegisterdMember
   RegularMember
   PremiumMember
+}
+
+Enum Role {
+  Patient
+  FrontDesk
+  BackOffice
+  Doctor
+  Admin
+  Owner
 }
 
 Enum PaymentMethod {
@@ -971,6 +984,8 @@ Ref: session.userId > person.id [delete: Cascade]
 Ref: verification_token.userId > person.id [delete: Cascade]
 
 Ref: authenticator.userId > person.id [delete: Cascade]
+
+Ref: payment.payerId > person.id
 
 Ref: payment.receiverId > person.id
 

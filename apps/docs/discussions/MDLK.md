@@ -44,3 +44,204 @@ But you don't have the domain models yet. You don't know who the client is and w
 What if you could build infrastructure layer of your 'usual software' and cleanly separate the business logic layer? If you do, you have written some modules you usually reach for when solving the same problems. Else you still might have reusable modules and libs lying around but most of them would be tightly coupled with the intricacies and specificity of those business verticals and domain specific concepts. 
 
 At this point it is clear that most of the code is just waiting to emerge from an excercise in understanding the customer needs and their domain of interst. 
+
+
+```JSON
+{
+  "id": {
+    "modelName": "Payment",
+    "name": "id",
+    "typeName": "String",
+    "isList": false,
+    "isEnum": false
+  },
+  "personId": {
+    "modelName": "Payment",
+    "name": "personId",
+    "typeName": "String",
+    "isList": false,
+    "isEnum": false
+  },
+  "paymentMethod": {
+    "modelName": "Payment",
+    "name": "paymentMethod",
+    "typeName": "PaymentMethod",
+    "isList": false,
+    "isEnum": true
+  },
+  "totalAmount": {
+    "modelName": "Payment",
+    "name": "totalAmount",
+    "typeName": "Decimal",
+    "isList": false,
+    "isEnum": false
+  },
+  "discountApplied": {
+    "modelName": "Payment",
+    "name": "discountApplied",
+    "typeName": "Decimal",
+    "isList": false,
+    "isEnum": false
+  },
+  "paidAmount": {
+    "modelName": "Payment",
+    "name": "paidAmount",
+    "typeName": "Decimal",
+    "isList": false,
+    "isEnum": false
+  },
+  "reasonForVisit": {
+    "modelName": "Payment",
+    "name": "reasonForVisit",
+    "typeName": "String",
+    "isList": false,
+    "isEnum": false
+  },
+  "receiverId": {
+    "modelName": "Payment",
+    "name": "receiverId",
+    "typeName": "String",
+    "isList": false,
+    "isEnum": false
+  },
+  "createdAt": {
+    "modelName": "Payment",
+    "name": "createdAt",
+    "typeName": "DateTime",
+    "isList": false,
+    "isEnum": false
+  },
+  "updatedAt": {
+    "modelName": "Payment",
+    "name": "updatedAt",
+    "typeName": "DateTime",
+    "isList": false,
+    "isEnum": false
+  }
+}
+```
+
+
+```JSON
+{
+  "id": {
+    "modelName": "Person",
+    "name": "id",
+    "typeName": "String",
+    "isList": false,
+    "isEnum": false
+  },
+  "firstName": {
+    "modelName": "Person",
+    "name": "firstName",
+    "typeName": "String",
+    "isList": false,
+    "isEnum": false
+  },
+  "lastName": {
+    "modelName": "Person",
+    "name": "lastName",
+    "typeName": "String",
+    "isList": false,
+    "isEnum": false
+  },
+  "membership": {
+    "modelName": "Person",
+    "name": "membership",
+    "typeName": "Membership",
+    "isList": false,
+    "isEnum": true
+  },
+  "role": {
+    "modelName": "Person",
+    "name": "role",
+    "typeName": "Role",
+    "isList": false,
+    "isEnum": true
+  },
+  "password": {
+    "modelName": "Person",
+    "name": "password",
+    "typeName": "String",
+    "isList": false,
+    "isEnum": false
+  },
+  "phoneCode": {
+    "modelName": "Person",
+    "name": "phoneCode",
+    "typeName": "Int",
+    "isList": false,
+    "isEnum": false
+  },
+  "phoneNumber": {
+    "modelName": "Person",
+    "name": "phoneNumber",
+    "typeName": "Int",
+    "isList": false,
+    "isEnum": false
+  },
+  "streetName": {
+    "modelName": "Person",
+    "name": "streetName",
+    "typeName": "String",
+    "isList": false,
+    "isEnum": false
+  },
+  "city": {
+    "modelName": "Person",
+    "name": "city",
+    "typeName": "String",
+    "isList": false,
+    "isEnum": false
+  },
+  "areaCode": {
+    "modelName": "Person",
+    "name": "areaCode",
+    "typeName": "String",
+    "isList": false,
+    "isEnum": false
+  },
+  "country": {
+    "modelName": "Person",
+    "name": "country",
+    "typeName": "Country",
+    "isList": false,
+    "isEnum": true
+  },
+  "email": {
+    "modelName": "Person",
+    "name": "email",
+    "typeName": "String",
+    "isList": false,
+    "isEnum": false
+  },
+  "emailVerified": {
+    "modelName": "Person",
+    "name": "emailVerified",
+    "typeName": "DateTime",
+    "isList": false,
+    "isEnum": false
+  },
+  "image": {
+    "modelName": "Person",
+    "name": "image",
+    "typeName": "String",
+    "isList": false,
+    "isEnum": false
+  },
+  "createdAt": {
+    "modelName": "Person",
+    "name": "createdAt",
+    "typeName": "DateTime",
+    "isList": false,
+    "isEnum": false
+  },
+  "updatedAt": {
+    "modelName": "Person",
+    "name": "updatedAt",
+    "typeName": "DateTime",
+    "isList": false,
+    "isEnum": false
+  }
+}
+```

@@ -1,14 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { MenuItem } from 'primeng/api';
+import { Router, RouterOutlet } from '@angular/router';
+import { MenuItem, SharedModule } from 'primeng/api';
 import { PageService } from './page.service';
+import { AsyncPipe } from '@angular/common';
+import { SidebarModule } from 'primeng/sidebar';
+import { SpeedDialModule } from 'primeng/speeddial';
+import { DockModule } from 'primeng/dock';
 
 
 @Component({
-  selector: 'gita-page',
-  templateUrl: './page.component.html',
-  styleUrls: ['./page.component.scss'],
-  providers: [PageService]
+    selector: 'gita-page',
+    templateUrl: './page.component.html',
+    styleUrls: ['./page.component.scss'],
+    providers: [PageService],
+    standalone: true,
+    imports: [DockModule, SharedModule, SpeedDialModule, RouterOutlet, SidebarModule, AsyncPipe]
 })
 export class PageComponent implements OnInit {
 

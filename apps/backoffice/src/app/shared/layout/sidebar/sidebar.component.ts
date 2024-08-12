@@ -5,11 +5,14 @@ import { Store } from '@ngrx/store';
 import { MenuItem } from 'primeng/api';
 import { map, Subject, takeUntil } from 'rxjs';
 import { collapseSidebar, expandSidebar } from '../store/layout/layout.actions';
+import { SidebarBasicModule } from '../../../../../../../libs/ui/src/lib/layout/sidebar-basic/sidebar-basic.module';
 
 @Component({
-  selector: 'gita-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss'],
+    selector: 'gita-sidebar',
+    templateUrl: './sidebar.component.html',
+    styleUrls: ['./sidebar.component.scss'],
+    standalone: true,
+    imports: [SidebarBasicModule],
 })
 export class SidebarComponent implements OnInit, OnDestroy {
 

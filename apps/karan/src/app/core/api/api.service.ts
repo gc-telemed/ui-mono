@@ -10,8 +10,8 @@ export class ApiService {
 
     constructor(private http: HttpClient, @Inject(API_URL) private apiUrl: string) { }
 
-    get<T>(url: string, params: HttpParams = new HttpParams()): Observable<T> {
-        return this.http.get<T>(`${this.apiUrl}${url}`, { params });
+    get<T>(url: string): Observable<T> {
+        return this.http.get<T>(`${this.apiUrl}${url}`);
     }
 
     post<P>(url: string, payload: P): Observable<number> {

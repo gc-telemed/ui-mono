@@ -44,10 +44,6 @@ const routes: Route[] = [
         loadChildren: () => import("./patient/patient.module").then(m => m.PatientModule)
       },
       {
-        path: "appointments",
-        loadChildren: () => import("./appointment/appointment.module").then(m => m.AppointmentModule)
-      },
-      {
         path: "",
         pathMatch: "full",
         loadChildren: () => import("./index/index.module").then(m => m.IndexModule)

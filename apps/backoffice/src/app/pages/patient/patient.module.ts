@@ -22,21 +22,19 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [
-    PatientComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    DataViewModule,
-    ButtonModule,
-    PanelModule,
-    DropdownModule,
-    DialogModule,
-    InputTextModule,
-    RatingModule,
-    RippleModule,
-    FormsModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule.forChild(routes),
+        DataViewModule,
+        ButtonModule,
+        PanelModule,
+        DropdownModule,
+        DialogModule,
+        InputTextModule,
+        RatingModule,
+        RippleModule,
+        FormsModule,
+        PatientComponent
+    ]
 })
 export class PatientModule { }

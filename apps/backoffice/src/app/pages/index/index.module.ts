@@ -10,11 +10,11 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [IndexComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    FontAwesomeModule
-  ],
+    imports: [
+        CommonModule,
+        RouterModule.forChild(routes),
+        FontAwesomeModule,
+        IndexComponent
+    ],
 })
 export class IndexModule { }

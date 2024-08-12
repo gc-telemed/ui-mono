@@ -19,6 +19,7 @@
     "baseUrl": ".",
     "paths": {
       "@cosyswork/gapl-med-client": ["libs/gapl-med-client/src/index.ts"],
+      "@cosyswork/iso": ["libs/iso/src/index.ts"],
       "@cosyswork/ngrxdb": ["libs/ngrxdb/src/index.ts"],
       "@gita/ui": ["libs/ui/src/index.ts"],
       "@gita/workspace-plugin": ["tools/workspace-plugin/src/index.ts"]

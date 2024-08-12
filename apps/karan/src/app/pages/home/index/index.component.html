@@ -15,7 +15,7 @@
           <div>
               <button type="button"
                   class="relative items-center px-5 mr-4 text-gray-50 transition-colors duration-150 bg-fuchsia-500 h-10 text-sm font-semibold rounded-lg shadow-md focus:shadow-outline hover:bg-indigo-800"
-                  [@if]="selectedOrRowId" (click)="deleteRowSelected()">
+                  *ngIf="selectedOrRowId" (click)="deleteRowSelected()">
                   <fa-icon [icon]="faTrash"></fa-icon>
                   <span> Delete Invoice</span>
               </button>
@@ -41,4 +41,9 @@
 <p-speedDial [radius]="120" direction="up-left" type="quarter-circle"
   class="fixed bottom-40 right-20 sm:bottom-24 sm:right-24 z-50 drop-shadow-2xl"
   buttonClassName="bg-indigo-700 hover:bg-black" showIcon="pi pi-user-plus" hideIcon="pi pi-times">
+</p-speedDial>
+
+<p-speedDial [radius]="120" direction="up-left" type="quarter-circle"
+    class="fixed bottom-40 right-20 sm:bottom-24 sm:right-24 z-50 drop-shadow-2xl"
+    buttonClassName="bg-indigo-700 hover:bg-black" showIcon="pi pi-user-plus" hideIcon="pi pi-times">
 </p-speedDial>

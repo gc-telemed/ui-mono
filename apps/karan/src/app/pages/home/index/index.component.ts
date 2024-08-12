@@ -1,18 +1,20 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { faPlusCircle, faEnvelopeOpenText, faCopy, faTrash, faSearch } from '@fortawesome/free-solid-svg-icons';
-import { GridApi, ColDef, GridReadyEvent, RowSelectedEvent, SelectionChangedEvent } from 'ag-grid-community';
+import { NgIf } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnDestroy } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faCopy, faEnvelopeOpenText, faPlusCircle, faSearch, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { AgGridModule } from 'ag-grid-angular';
+import { ColDef, GridApi, GridReadyEvent, RowSelectedEvent, SelectionChangedEvent } from 'ag-grid-community';
 import { SpeedDialModule } from 'primeng/speeddial';
 import { Subject } from 'rxjs';
 import { localeDateFormat } from '../../../core/utils/date';
-import { AgGridModule } from 'ag-grid-angular';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
     selector: 'gita-index',
     templateUrl: './index.component.html',
     styleUrls: ['./index.component.scss'],
     standalone: true,
-    imports: [AgGridModule, FontAwesomeModule, SpeedDialModule],
+    imports: [AgGridModule, FontAwesomeModule, SpeedDialModule, NgIf],
 })
 export class IndexComponent implements OnDestroy {
   gridApi!: GridApi;
@@ -30,9 +32,11 @@ export class IndexComponent implements OnDestroy {
     { field: "id", headerName: "ID", headerTooltip: "Unique ID for the given lead", flex: 1.8, sort: 'desc' },
     { field: "name", flex: 2.5 },
     { field: "phone", flex: 2, },
+    { field: "address", flex: 2},
     { field: "totalAmount", flex: 2 },
     { field: "paidAmount", flex: 2 },
     { field: "discount", flex: 2 },
+    { field: "reasonForVisit", flex: 3},
     { field: "billingDate", valueFormatter: localeDateFormat, headerName: "Received", headerTooltip: "Date when request was made", filter: "date", flex: 3 },
   ];
 
@@ -46,7 +50,7 @@ export class IndexComponent implements OnDestroy {
 
   rowData!: any; // TODO create model
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   onGridReady(_params: GridReadyEvent) {
     this.gridApi = _params.api;

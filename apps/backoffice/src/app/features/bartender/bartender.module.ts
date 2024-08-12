@@ -16,15 +16,13 @@ const COMPS = [
 ]
 
 @NgModule({
-  declarations: [
-    ...COMPS
-  ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  exports: [
-    ...COMPS
-  ]
+    imports: [
+        CommonModule,
+        RouterModule,
+        ...COMPS
+    ],
+    exports: [
+        ...COMPS
+    ]
 })
 export class BartenderModule { }

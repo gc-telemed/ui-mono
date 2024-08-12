@@ -12,18 +12,18 @@ import { SlideMenuModule } from 'primeng/slidemenu';
 import { SpeedDialModule } from 'primeng/speeddial';
 
 @NgModule({
-  declarations: [PageComponent],
-  imports: [
-    CommonModule,
-    CardModule,
-    PagesRoutingModule,
-    DockModule,
-    SlideMenuModule,
-    SidebarModule,
-    FeaturesModule,
-    ButtonModule,
-    LayoutModule,
-    SpeedDialModule
-  ],
+    imports: [
+        CommonModule,
+        CardModule,
+        PagesRoutingModule,
+        DockModule,
+        SlideMenuModule,
+        SidebarModule,
+        FeaturesModule,
+        ButtonModule,
+        LayoutModule,
+        SpeedDialModule,
+        PageComponent
+    ],
 })
 export class PagesModule { }

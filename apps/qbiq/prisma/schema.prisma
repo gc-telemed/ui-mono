@@ -1,7 +1,7 @@
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
   binaryTargets = ["native", "linux-musl-openssl-3.0.x", "debian-openssl-3.0.x"]
-  output = "../src/client"
+  output        = "../src/client"
 }
 
 datasource db {
@@ -216,13 +216,31 @@ enum Country {
   Zimbabwe
 }
 
-///AuthJS
+enum Membership {
+  NonMember
+  RegisterdMember
+  RegularMember
+  PremiumMember
+}
+
+enum Role {
+  Patient
+  FrontDesk
+  BackOffice
+  Doctor
+  Admin
+  Owner
+}
+
+/// Phome or email based login apart from OAuth/OIDC
 model Person {
   id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
 
-  username  String  @unique
-  firstName String?
+  firstName String
   lastName  String
+
+  membership Membership @default(NonMember)
+  role Role @default(Patient)
 
   password String?
 
@@ -237,8 +255,6 @@ model Person {
   email         String?   @unique
   emailVerified DateTime?
 
-  payerType DiscountType @default(RegularMember)
-
   image    String?
   accounts Account[]
   sessions Session[]
@@ -249,27 +265,27 @@ model Person {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-
   verificationTokens VerificationToken[]
-  payments Payment[]
+
+  paid     Payment[] @relation("payer")
+  received Payment[] @relation("receiver")
 
   @@map("person")
-
 }
 
 model Account {
-  userId            String  @db.Uuid
+  userId            String @db.Uuid
   type              String
   provider          String
   providerAccountId String
 
-  refresh_token     String?
-  access_token      String?
-  expires_at        Int?
-  token_type        String?
-  scope             String?
-  id_token          String?
-  session_state     String?
+  refresh_token String?
+  access_token  String?
+  expires_at    Int?
+  token_type    String?
+  scope         String?
+  id_token      String?
+  session_state String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -297,8 +313,8 @@ model VerificationToken {
   token      String
   expires    DateTime
 
-  userId  String @db.Uuid
-  user    Person @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String @db.Uuid
+  user   Person @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@id([identifier, token])
   @@map("verification_token")
@@ -321,14 +337,6 @@ model Authenticator {
   @@map("authenticator")
 }
 
-enum DiscountType {
-  FirstTimer
-  RegularMember
-  PremiumMember
-
-  @@map("discount_type")
-}
-
 enum PaymentMethod {
   CashAtCounter
   QRCodeEsewa
@@ -338,19 +346,24 @@ enum PaymentMethod {
   @@map("payment_method")
 }
 
-// Root
+// Root.
 model Payment {
-  id                 String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  patientName        String
-  phoneNumber        String
-  paymentMethod      PaymentMethod @default(CashAtCounter)
-  totalPayableAmount Decimal
-  discountApplied    Decimal       @default(0.0)
-  paidAmount         Decimal       @default(0.0)
-  reasonForVisit     String
+  id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
 
-  receiverId     String @db.Uuid
-  receiver      Person @relation(fields: [receiverId], references: [id])
+  payerId String @db.Uuid
+  payer    Person @relation(name: "payer", fields: [payerId], references: [id])
+
+  paymentMethod   PaymentMethod @default(CashAtCounter)
+  totalAmount     Decimal
+  discountApplied Decimal       @default(0.0)
+  paidAmount      Decimal       @default(0.0)
+  reasonForVisit  String
+
+  receiverId String @db.Uuid
+  receiver   Person @relation(name: "receiver", fields: [receiverId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@map("payment")
 }
