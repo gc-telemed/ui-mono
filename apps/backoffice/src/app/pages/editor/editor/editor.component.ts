@@ -1,33 +1,35 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { map, Observable, tap, zip } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
-import { TabularModule } from '../../../features/tabular/tabular.module';
+import { TableModule } from 'primeng/table';
+import { MiniModel } from './mini-meta.model';
 
 @Component({
     selector: 'gita-editor',
     templateUrl: './editor.component.html',
     styleUrls: ['./editor.component.scss'],
     standalone: true,
-    imports: [AsyncPipe, TabularModule],
+    imports: [AsyncPipe, TableModule],
 })
 export class EditorComponent implements OnInit {
 
-  $resp!: Observable<any>;
+  $resp!: Observable<MiniModel>;
+
+  $fields!: Observable<any>;
+
+  $fieldInfos!: Observable<any>;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.$resp = this.http.get("/api/meta/payment", {
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      }
-    }).pipe(
-      map(res => JSON.stringify(res, null, 4))
+    this.$resp = this.http.get<MiniModel>("/api/meta/payment");
+
+    this.$fields = this.$resp.pipe(
+      map(res => Array.from(Object.values(res)))
     );
 
-    this.$resp.subscribe(res => console.log("res", res));
+
   }
 
 
