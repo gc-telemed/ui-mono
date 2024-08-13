@@ -671,7 +671,7 @@ Table space_time_coordinates {
   BlogPost blog_post
 }
 
-Table BudgetEntry {
+Table budget_entry {
   id String [pk]
   serviceId String [not null]
   cost Float [not null]
@@ -682,32 +682,32 @@ Table BudgetEntry {
   createdAt DateTime [default: `now()`, not null]
   updatedAt DateTime [not null]
   budgetId String [not null]
-  budget Budget [not null]
-  service Service [not null]
+  budget budget [not null]
+  service service [not null]
 }
 
-Table Service {
+Table service {
   id String [pk]
   description String [not null]
   category String [not null]
   metadata Json [not null]
   createdAt DateTime [default: `now()`, not null]
   updatedAt DateTime [not null]
-  entryList BudgetEntry [not null]
+  entryList budget_entry [not null]
 }
 
-Table Budget {
+Table budget {
   id String [pk]
   createdAt DateTime [default: `now()`, not null]
   updatedAt DateTime [not null]
   fiscalYear Int [not null]
   reportId String
-  userList BudgetBudgetUser [not null]
-  entryList BudgetEntry [not null]
-  report Report
+  userList budget_with_budget_user [not null]
+  entryList budget_entry [not null]
+  report report
 }
 
-Table Report {
+Table report {
   id String [pk]
   budgetId String [unique, not null]
   totalCost Float [not null]
@@ -716,36 +716,36 @@ Table Report {
   totalSubtotal Float [not null]
   createdAt DateTime [default: `now()`, not null]
   updatedAt DateTime [not null]
-  budget Budget [not null]
+  budget budget [not null]
 }
 
-Table BudgetUser {
+Table budget_user {
   id String [pk]
   name String [not null]
   email String [unique, not null]
   password String [not null]
   createdAt DateTime [default: `now()`, not null]
   updatedAt DateTime [not null]
-  eventList BudEvent [not null]
-  budgetList BudgetBudgetUser [not null]
+  eventList budget_event [not null]
+  budgetList budget_with_budget_user [not null]
 }
 
-Table BudgetBudgetUser {
+Table budget_with_budget_user {
   id String [pk]
   userId String [not null]
   budgetId String [not null]
   role String [not null]
   ability String [not null]
   category String [not null]
-  budget Budget [not null]
-  user BudgetUser [not null]
+  budget budget [not null]
+  user budget_user [not null]
 
   indexes {
     (userId, budgetId) [unique]
   }
 }
 
-Table BudEvent {
+Table budget_event {
   id String [pk]
   type String [not null]
   description String [not null]
@@ -753,7 +753,7 @@ Table BudEvent {
   metadata Json [not null]
   budUserId String [not null]
   createdAt DateTime [default: `now()`, not null]
-  budUser BudgetUser [not null]
+  budUser budget_user [not null]
 }
 
 Enum Country {
@@ -1075,14 +1075,14 @@ Ref: blog_post_tag_arrow.postId > blog_post.id
 
 Ref: blog_post_tag_arrow.tagId > blog_post_tag.id
 
-Ref: BudgetEntry.budgetId > Budget.id
+Ref: budget_entry.budgetId > budget.id
 
-Ref: BudgetEntry.serviceId > Service.id
+Ref: budget_entry.serviceId > service.id
 
-Ref: Report.budgetId - Budget.id
+Ref: report.budgetId - budget.id
 
-Ref: BudgetBudgetUser.budgetId > Budget.id
+Ref: budget_with_budget_user.budgetId > budget.id
 
-Ref: BudgetBudgetUser.userId > BudgetUser.id
+Ref: budget_with_budget_user.userId > budget_user.id
 
-Ref: BudEvent.budUserId > BudgetUser.id
+Ref: budget_event.budUserId > budget_user.id

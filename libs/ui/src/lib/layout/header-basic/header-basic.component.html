@@ -9,7 +9,7 @@
                 </a>
             </ng-container>
             <span
-                class="text-indigo-800 hover:underline hover:underline-offset-4 hover:decoration-4 hover:decoration-indigo-800 text-3xl"><a>{{prodPref}}O.Q</a></span>
+                class="text-indigo-800 hover:underline hover:underline-offset-4 hover:decoration-4 hover:decoration-indigo-800 text-3xl"><a [routerLink]="['/']">{{prodPref}}O.Q</a></span>
         </span>
         <div class="hidden sm:flex">
             <ng-container *ngTemplateOutlet="headers || defaultHeaderTemplate; context: { $implicit: headerNavItems }">

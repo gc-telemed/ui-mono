@@ -1019,6 +1019,8 @@ model BudgetEntry {
   budgetId      String   @db.Uuid
   budget        Budget   @relation(fields: [budgetId], references: [id])
   service       Service  @relation(fields: [serviceId], references: [id])
+
+  @@map("budget_entry")
 }
 
 model Service {
@@ -1029,6 +1031,8 @@ model Service {
   createdAt   DateTime      @default(now())
   updatedAt   DateTime      @updatedAt
   entryList   BudgetEntry[]
+
+  @@map("service")
 }
 
 model Budget {
@@ -1040,6 +1044,8 @@ model Budget {
   userList   BudgetBudUser[]
   entryList  BudgetEntry[]
   report     Report?
+
+  @@map("budget")
 }
 
 model Report {
@@ -1052,6 +1058,8 @@ model Report {
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
   budget         Budget   @relation(fields: [budgetId], references: [id])
+
+  @@map("report")
 }
 
 model BudUser {
@@ -1064,7 +1072,7 @@ model BudUser {
   eventList  BudEvent[]
   budgetList BudgetBudUser[]
 
-  @@map("BudgetUser")
+  @@map("budget_user")
 }
 
 model BudgetBudUser {
@@ -1078,7 +1086,7 @@ model BudgetBudUser {
   user     BudUser @relation(fields: [userId], references: [id])
 
   @@unique([userId, budgetId])
-  @@map("BudgetBudgetUser")
+  @@map("budget_with_budget_user")
 }
 
 model BudEvent {
@@ -1090,4 +1098,6 @@ model BudEvent {
   budUserId    String   @db.Uuid
   createdAt    DateTime @default(now())
   budUser      BudUser  @relation(fields: [budUserId], references: [id])
+
+  @@map("budget_event")
 }

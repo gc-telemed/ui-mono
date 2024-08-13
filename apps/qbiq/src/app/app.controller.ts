@@ -17,6 +17,12 @@ export class AppController {
     return this.dmmfService.getDMMF().datamodel.models;
   }
 
+  @Get('/all/model-names')
+  getModelNames() {
+    return this.dmmfService.getDMMF().datamodel.models
+      .map(m => m.dbName ?? m.name);
+  }
+
   @Get('/mini/:model')
   getMetaData(@Param('model') model: string) {
     const prismModel = (prisma as any)[model];
